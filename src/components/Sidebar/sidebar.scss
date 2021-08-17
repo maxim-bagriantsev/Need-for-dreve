@@ -1,0 +1,31 @@
+.sidebar {
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  align-items: center;
+  ustify-content: space-between;
+  
+  background-color: #151B1F;
+}
+
+.icon {
+  align-self: start;
+
+  padding-top: 30px;
+}
+
+.language {
+  font-size: 13px;
+  font-style: normal;
+  text-align: center;
+  color: #0EC261;
+  font-weight: bold;
+  line-height: 15px;
+
+  padding-bottom: 30px;
+
+  align-self: end;
+}
+
+
