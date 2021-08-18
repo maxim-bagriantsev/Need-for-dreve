@@ -9,17 +9,46 @@
 .icon {
   align-self: start;
   padding-top: 30px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #EEEEEE;
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
 .language {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  text-align: center;
   font-size: 13px;
   font-style: normal;
-  text-align: center;
+  border: 1px solid;
+  border-color: #111518;
+  border-radius: 50%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: #0EC261;
   font-weight: bold;
   line-height: 15px;
-  padding-bottom: 30px;
   align-self: end;
+  cursor: pointer;
+}
+
+.language:hover {
+  border-color: #EEEEEE;
+  color: #EEEEEE;
+}
+
+.language:active {
+  border-color: #EEEEEE;
+  color: #0EC261;
 }
 
 /*# sourceMappingURL=sidebar.css.map */

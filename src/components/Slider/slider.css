@@ -1,10 +1,90 @@
 .slider {
-  background-color: green;
+  display: flex;
   width: 100%;
   height: 100vh;
   text-align: center;
   background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #000000 100%), url("https://github.com/maxim-bagriantsev/Need-for-dreve/blob/V-01/src/assets/images/free-parking.png?raw=true");
+}
+
+.slider-content {
+  width: 100%;
+  margin: 0;
+  margin-left: 96px;
+  padding-top: 237px;
+  align-items: center;
+  text-align: start;
+}
+
+.slider-content h1 {
+  font-weight: 500;
+  font-size: 40px;
+  font-style: normal;
+  line-height: 47px;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.slider-content h2 {
+  width: 495px;
+  font-weight: 300;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 21.6px;
+  color: #EEEEEE;
+  margin-bottom: 32px;
+}
+
+.slider-btn {
+  width: 164px;
+  height: 48px;
+  background: linear-gradient(90deg, #13493F 0%, #0C7B1B 100%);
+  border-radius: 4px;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.slider-btn:hover {
+  background: linear-gradient(90deg, #0B934A 2.61%, #026E47 112.6%);
+  background-blend-mode: darken;
+  border-radius: 4px;
+}
+
+.slider-btn:active {
+  background: linear-gradient(90deg, #076432 2.61%, #013C27 112.6%);
+  background-blend-mode: darken;
+  border-radius: 4px;
+}
+
+.slider-btn span {
+  text-transform: none;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.slider-btn-column {
+  cursor: pointer;
+  width: 64px;
+  height: 100vh;
+  border-style: none;
+  outline: none;
+  background: none;
+}
+
+.slider-btn-column:hover {
+  background: #0EC261;
+  opacity: 0.2;
 }
 
 /*# sourceMappingURL=slider.css.map */
