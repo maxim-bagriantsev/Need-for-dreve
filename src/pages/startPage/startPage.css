@@ -1,9 +1,10 @@
 .startPage {
   display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 0.23fr 3.4fr 3.2fr;
+  gap: 0px 0px;
   align-items: center;
   justify-content: space-between;
-  grid-template-columns: 64px 688px 688px;
-  gap: 0px 0px;
   background: #FFFFFF;
 }
 

@@ -9,4 +9,21 @@
   padding-right: 64px;
 }
 
+.main-header {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 98;
+}
+
+.logo-header {
+  font-size: 30px;
+  font-weight: bold;
+  color: #0EC261;
+  line-height: 35px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=main.css.map */

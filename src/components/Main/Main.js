@@ -4,9 +4,12 @@ import './main.css'
 export const Main = () => {
     return (
         <div className='main'>
-            <div>Main-Header
-                <div>Need for drive</div>
-                <div>Location</div>
+            <div className='main-header'>
+                <a href='#' className='logo-header'>Need for drive</a>
+                <div>
+                    <svg>!</svg>
+                    <span>Ульяновск</span>
+                </div>
             </div>
             <div>
                 Main - Content
