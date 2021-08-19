@@ -9,11 +9,17 @@
 
 .slider-content {
   width: 100%;
-  margin: 0;
-  margin-left: 96px;
-  padding-top: 237px;
-  align-items: center;
-  text-align: start;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 32px;
+}
+
+.slider-content-items {
+  margin-top: 237px;
+  text-align: left;
 }
 
 .slider-content h1 {
@@ -85,6 +91,41 @@
 .slider-btn-column:hover {
   background: #0EC261;
   opacity: 0.2;
+}
+
+.slider-dots {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.item-dot {
+  cursor: pointer;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #EEEEEE;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.item-dot-active {
+  cursor: pointer;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0EC261;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+@media (max-width: 1220px) {
+  .slider {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=slider.css.map */

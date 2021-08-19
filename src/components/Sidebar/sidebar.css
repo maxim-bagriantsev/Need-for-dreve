@@ -9,6 +9,7 @@
 .icon {
   align-self: start;
   padding-top: 30px;
+  padding-left: 20px;
   cursor: pointer;
 }
 
@@ -49,6 +50,21 @@
 .language:active {
   border-color: #EEEEEE;
   color: #0EC261;
+}
+
+@media (max-width: 520px) {
+  .sidebar {
+    position: absolute;
+    left: 100px;
+  }
+
+  .sidebar icon {
+    display: flex;
+  }
+
+  .sidebar, span {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=sidebar.css.map */

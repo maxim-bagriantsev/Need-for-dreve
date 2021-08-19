@@ -5,7 +5,9 @@ import {MenuOutlined} from "@ant-design/icons";
 export const Sidebar = () => {
     return (
         <div className='sidebar'>
-            <MenuOutlined className='icon' style={{ fontSize: '26px',color: '#FFFFFF',  }} />
+            <div className='icon'>
+                <MenuOutlined style={{fontSize: '26px', color: '#FFFFFF',}}/>
+            </div>
             <span className='language'>Eng</span>
         </div>
     )

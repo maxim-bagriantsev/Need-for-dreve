@@ -10,9 +10,6 @@ export const Main = () => {
                 <a href='#' className='logo-header'>Need for drive</a>
                 <div className='main-location'>
                     <img src={icon}/>
-{/*                    <svg className='main-location-icon'>
-                        <use xlinkHref={{icon}}/>
-                    </svg>*/}
                     <span>Ульяновск</span>
                 </div>
             </div>
@@ -21,12 +18,12 @@ export const Main = () => {
                 <h2 className='main-title'>Need for drive</h2>
                 <h3 className='main-title'>Поминутная аренда авто твоего города</h3>
                 <button className='main-btn'>
-                    <span>Забронировать</span>
+                    <span className='main-btn-item'>Забронировать</span>
                 </button>
             </div>
             <div className='main-footer'>
-                <span> © 2016-2019 «Need for drive»</span>
-                <a>8 (495) 234-22-44</a>
+                <span className='copyright'> © 2016-2019 «Need for drive»</span>
+                <a className='main-tel'>8 (495) 234-22-44</a>
             </div>
         </div>
     )

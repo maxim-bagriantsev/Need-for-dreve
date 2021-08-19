@@ -10,3 +10,9 @@
 
   background: #FFFFFF;
 }
+
+@media (max-width: 520px) {
+  .startPage {
+    grid-template-columns: none;
+  }
+}
