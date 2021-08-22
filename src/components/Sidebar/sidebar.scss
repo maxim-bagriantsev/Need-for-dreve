@@ -8,10 +8,13 @@
 
 .icon {
   align-self: start;
+  margin: 0 auto;
   padding-top: 30px;
-  padding-left: 20px;
   cursor: pointer;
+  font-size: 26px;
+  color: #FFFFFF;
 }
+
 
 .icon:hover {
   color: #EEEEEE;
@@ -51,6 +54,7 @@
   border-color: #EEEEEE;
   color: #0EC261;
 }
+
 
 @media (max-width: 520px) {
   .sidebar {

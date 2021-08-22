@@ -1,7 +1,6 @@
 import React from "react";
-import './main.css'
+import '../Main/main.scss'
 import icon from '../../assets/icons/location.svg'
-
 
 export const Main = () => {
     return (
@@ -23,7 +22,7 @@ export const Main = () => {
             </div>
             <div className='main-footer'>
                 <span className='copyright'> © 2016-2019 «Need for drive»</span>
-                <a className='main-tel'>8 (495) 234-22-44</a>
+                <a className='main-tel' href='tel: +74952342244'>8 (495) 234-22-44</a>
             </div>
         </div>
     )

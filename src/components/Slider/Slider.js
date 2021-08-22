@@ -1,10 +1,10 @@
 import React from "react";
-import './slider.css'
+
+import './slider.scss'
 import VectorLeft from '../../assets/icons/Vector left.svg'
 import VectorRigth from '../../assets/icons/Vector rigth.svg'
 
 export const Slider = () => {
-
     return (
         <div className='slider'>
             <button className='slider-btn-column'>
@@ -12,9 +12,9 @@ export const Slider = () => {
             </button>
             <div className='slider-content'>
                 <div className='slider-content-items'>
-                    <h1>Бесплатная парковка</h1>
-                    <h2>Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в
-                        аэропортах.</h2>
+                    <h2>Бесплатная парковка</h2>
+                    <h3>Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в
+                        аэропортах.</h3>
                     <button className='slider-btn'>
                         <span>Подробнее</span>
                     </button>

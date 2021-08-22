@@ -35,6 +35,15 @@
   text-decoration: none;
 }
 
+.logo-header:hover {
+  color: #0EC261;
+}
+
+
+a:hover {
+  text-decoration: none;
+}
+
 .main-location {
   display: flex;
   align-items: center;
@@ -102,6 +111,10 @@
 .main-btn:active {
   background: linear-gradient(90deg, #076432 2.61%, #013C27 112.6%);
   background-blend-mode: darken;
+}
+
+.main-btn:focus{
+  outline: none;
 }
 
 .main-btn span {
