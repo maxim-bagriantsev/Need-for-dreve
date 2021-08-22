@@ -21,8 +21,8 @@ export const Main = () => {
                 </button>
             </div>
             <div className='main-footer'>
-                <span className='copyright'> © 2016-2019 «Need for drive»</span>
-                <a className='main-tel' href='tel: +74952342244'>8 (495) 234-22-44</a>
+                <div> © 2016-2019 «Need for drive»</div>
+                <a href='tel: +74952342244'>8 (495) 234-22-44</a>
             </div>
         </div>
     )

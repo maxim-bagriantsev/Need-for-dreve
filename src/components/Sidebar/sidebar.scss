@@ -48,17 +48,20 @@
   color: #0EC261;
 }
 
-
 @media (max-width: 520px) {
-  .sidebar {
+  .sidebar,.humburger-box {
+    margin-top: -5px;
     position: absolute;
-    left: 100px;
-  }
-  .sidebar icon {
-    display: flex;
+    width: 60px;
+    height: 60px;
+    background-color: #FFFFFF;
   }
 
-  .sidebar, span {
+  .humburger-box svg {
+    color: #151B1F;
+  }
+
+  .sidebar .language {
     display: none;
   }
 }

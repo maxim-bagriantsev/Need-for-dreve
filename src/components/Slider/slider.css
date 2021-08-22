@@ -105,6 +105,18 @@
   outline: none;
 }
 
+.slider-bnt-left {
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 500px;
+}
+
+.slider-bnt-rigth {
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 500px;
+}
+
 .slider-dots {
   display: flex;
   justify-content: center;

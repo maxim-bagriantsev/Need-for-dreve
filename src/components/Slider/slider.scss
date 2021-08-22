@@ -21,7 +21,6 @@
   margin-top: 330px;
   text-align: left;
   line-height: 90%;
-
 }
 
 .slider-content h2 {
@@ -87,7 +86,6 @@
   color: #FFFFFF;
 }
 
-
 .slider-btn-column {
   cursor: pointer;
   width: 64px;
@@ -104,6 +102,18 @@
 
 .slider-btn-column:focus{
   outline: none;
+}
+
+.slider-bnt-left {
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 500px;
+}
+
+.slider-bnt-rigth {
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 500px;
 }
 
 .slider-dots {

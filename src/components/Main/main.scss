@@ -113,7 +113,7 @@ a:hover {
   background-blend-mode: darken;
 }
 
-.main-btn:focus{
+.main-btn:focus {
   outline: none;
 }
 
@@ -132,14 +132,13 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   font-weight: 400;
   font-size: 13px;
   font-style: normal;
   line-height: 15px;
 }
 
-.main-footer span {
+.main-footer div {
   color: #999999;
 }
 
@@ -178,7 +177,7 @@ a:hover {
   .main-content {
     height: 100%;
     flex-direction: column;
-    padding-top: 150px;
+    padding-top: 80px;
     justify-content: flex-start;
   }
 
@@ -214,29 +213,34 @@ a:hover {
     position: fixed;
     bottom: 0px;
     height: 72px;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-end;
-    justify-content: center;
     background-color: #151B1F;
-    padding-right: 16px;
+    padding-right: 10px;
   }
 
-  .main-footer .copyright {
-    position: center;
-    color: #999999;
-    padding-top: 10px;
-  }
-
-  .main-footer .main-tel {
-    position: center;
-    color: #0ec261;
-    padding-bottom: 20px;
+  .main-footer a {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #0EC261;
   }
 
   .main-footer a:hover {
     color: white;
   }
+
+  .main-footer div {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #EEEEEE;
+  }
 }
+
+
 
 
 

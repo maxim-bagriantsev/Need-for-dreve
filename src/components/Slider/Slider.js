@@ -7,9 +7,11 @@ import VectorRigth from '../../assets/icons/Vector rigth.svg'
 export const Slider = () => {
     return (
         <div className='slider'>
-            <button className='slider-btn-column'>
-                <img src={VectorLeft} height='18'/>
-            </button>
+            <div>
+                <button className='slider-btn-column'></button>
+                <img className='slider-bnt-left' src={VectorLeft} height='20'/>
+            </div>
+
             <div className='slider-content'>
                 <div className='slider-content-items'>
                     <h2>Бесплатная парковка</h2>
@@ -26,9 +28,11 @@ export const Slider = () => {
                     <div className='item-dot'></div>
                 </div>
             </div>
-            <button className='slider-btn-column'>
-                <img src={VectorRigth} height='18'/>
-            </button>
+            <div>
+                <button className='slider-btn-column'></button>
+                <img className='slider-bnt-rigth' src={VectorRigth} height='20'/>
+            </div>
+
         </div>
     )
 }

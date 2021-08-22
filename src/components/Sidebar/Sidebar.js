@@ -16,7 +16,7 @@ export const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className='humburger-box'>
-                <MenuOutlined  onClick={() => setMunuActive(!menuActive)}/>
+                <MenuOutlined onClick={() => setMunuActive(!menuActive)}/>
                 <HumburgerMenu active={menuActive} setMunuActive={setMunuActive} items={items}/>
             </div>
             <span className='language'>Eng</span>
