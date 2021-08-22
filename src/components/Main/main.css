@@ -150,7 +150,7 @@ a:hover {
   color: #0EC261;
 }
 
-@media (max-width: 520px) {
+@media screen and (min-device-width: 320px) and (max-width: 767px) {
   .main {
     padding: 0;
     justify-content: flex-start;
@@ -194,16 +194,21 @@ a:hover {
     padding-right: 16px;
   }
 
-  .main-btn, .main-btn:hover {
+  .main-btn {
     width: 100%;
     margin-top: 0px;
     border-radius: 0px;
-    background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
   }
 
   .main-btn-item {
     display: flex;
     justify-content: center;
+  }
+
+  .main-btn:hover {
+    background: linear-gradient(90deg, #076432 2.61%, #013C27 112.6%);
+    background-blend-mode: darken;
+    border-radius: 0px;
   }
 
   .main-footer {

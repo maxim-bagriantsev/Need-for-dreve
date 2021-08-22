@@ -145,7 +145,12 @@
   margin-left: 4px;
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 520px) {
+  .slider {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
   .slider {
     display: none;
   }

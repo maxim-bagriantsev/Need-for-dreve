@@ -8,9 +8,14 @@
   background: #FFFFFF;
 }
 
-@media (max-width: 520px) {
+@media screen and (min-device-width: 320px) and (max-width: 767px) {
   .startPage {
     grid-template-columns: none;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-width: 1024px) {
+  .startPage {
+    display: flex;
   }
 }
 

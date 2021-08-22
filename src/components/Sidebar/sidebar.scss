@@ -7,11 +7,17 @@
 }
 
 .humburger-box {
-  align-self: start;
   margin: 0 auto;
-  padding-top: 30px;
   cursor: pointer;
-  font-size: 26px;
+  align-self: start;
+  padding-top: 30px;
+}
+
+.humburger-box svg {
+  color: #999999;
+}
+
+.humburger-box svg:hover {
   color: #FFFFFF;
 }
 
@@ -48,9 +54,9 @@
   color: #0EC261;
 }
 
-@media (max-width: 520px) {
-  .sidebar,.humburger-box {
-    margin-top: -5px;
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .sidebar {
+    margin-top: -10px;
     position: absolute;
     width: 60px;
     height: 60px;
@@ -58,10 +64,28 @@
   }
 
   .humburger-box svg {
+    display: flex;
+    margin: 0 auto;
     color: #151B1F;
   }
 
   .sidebar .language {
     display: none;
   }
+
+  .humburger-box svg {
+    margin: 0 auto;
+    align-items: center;
+  }
 }
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+  .sidebar {
+    width: 85px;
+    height: 100vh;
+  }
+}
+
+
+
+

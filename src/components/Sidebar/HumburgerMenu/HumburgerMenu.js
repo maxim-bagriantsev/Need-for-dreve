@@ -11,7 +11,7 @@ export const HumburgerMenu = ({items, active, setMunuActive}) => {
         <div className={active ? 'menu active' : 'menu'} onClick={() => setMunuActive(false)}>
             <div className='menu-content'>
                 <div className='menu-content-left'>
-                    <div className='humburger-box'>
+                    <div className='humburger-box-close'>
                         <CloseOutlined/>
                     </div>
                     <ul onClick={e => e.stopPropagation()}>
@@ -20,8 +20,8 @@ export const HumburgerMenu = ({items, active, setMunuActive}) => {
                                 <a href={item.href}>{item.value}</a>
                             </li>)}
                     </ul>
-                    <div className='humburger-menu-icons'>
-                        <div className='icons-items'>
+                    <div className='humburger-menu-icons' onClick={e => e.stopPropagation()}>
+                        <div className='icons-items' >
                             <img className='icon-item' src={telegramIcon}/>
                         </div>
                         <div className='icons-items'>

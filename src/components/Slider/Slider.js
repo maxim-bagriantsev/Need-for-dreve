@@ -11,7 +11,6 @@ export const Slider = () => {
                 <button className='slider-btn-column'></button>
                 <img className='slider-bnt-left' src={VectorLeft} height='20'/>
             </div>
-
             <div className='slider-content'>
                 <div className='slider-content-items'>
                     <h2>Бесплатная парковка</h2>
