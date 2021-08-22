@@ -6,19 +6,13 @@
   background-color: #151B1F;
 }
 
-.icon {
+.humburger-box {
   align-self: start;
   margin: 0 auto;
   padding-top: 30px;
   cursor: pointer;
   font-size: 26px;
   color: #FFFFFF;
-}
-
-.icon:hover {
-  color: #EEEEEE;
-  opacity: 0.7;
-  transition: 0.3s;
 }
 
 .language {

@@ -3,9 +3,9 @@
   width: 100vw;
   height: 100vh;
   top: 0px;
-  left: 64px;
+  left: 0px;
   transform: translateX(-130%);
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .menu.active {
@@ -13,12 +13,19 @@
 }
 
 .menu-content {
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1.14fr 1fr;
   height: 100%;
+  width: 100%;
+}
+
+.menu-content-left {
   background-color: #151B1F;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.5s;
+}
+
+.menu-content-rigth {
+  background-color: #151B1F;
+  opacity: 0.7;
 }
 
 ul li a {
@@ -43,14 +50,14 @@ ul {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 307px;
-  margin-left: 100px;
+  margin-top: 250px;
+  margin-left: 80px;
 }
 
 .humburger-menu-icons {
   display: flex;
   flex-direction: row;
-  margin-left: 140px;
+  margin-left: 120px;
   cursor: pointer;
 }
 
@@ -75,6 +82,14 @@ ul {
 .icons-items:hover {
   background-color: #0EC261;
   border-style: none;
+}
+
+.humburger-box {
+  margin-left: 22px;
+  padding-top: 30px;
+  cursor: pointer;
+  font-size: 26px;
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 768px) {

@@ -15,11 +15,11 @@ export const Sidebar = () => {
 
     return (
         <div className='sidebar'>
-            <div className='icon'>
-                <MenuOutlined onClick={() => setMunuActive(!menuActive)}/>
+            <div className='humburger-box'>
+                <MenuOutlined  onClick={() => setMunuActive(!menuActive)}/>
+                <HumburgerMenu active={menuActive} setMunuActive={setMunuActive} items={items}/>
             </div>
             <span className='language'>Eng</span>
-            <HumburgerMenu active={menuActive} setActive={setMunuActive} items={items}/>
         </div>
     )
 }
