@@ -18,5 +18,13 @@
     display: flex;
   }
 }
+@media screen and (min-device-width: 1024px) and (max-width: 1439px) {
+  .startPage {
+    display: grid;
+    grid-auto-flow: column dense;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 0.23fr 3.6fr 3fr;
+  }
+}
 
 /*# sourceMappingURL=startPage.css.map */

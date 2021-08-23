@@ -36,6 +36,7 @@ ul li a {
   font-weight: 500;
   line-height: 37.5px;
   margin: 10px 0;
+
 }
 
 ul li {
@@ -51,14 +52,15 @@ ul {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 250px;
-  margin-left: 80px;
+  margin-top: 280px;
+  margin-left: 130px;
+
 }
 
 .humburger-menu-icons {
   display: flex;
   flex-direction: row;
-  margin-left: 120px;
+  margin-left: 170px;
   cursor: pointer;
 }
 
@@ -93,38 +95,42 @@ ul {
   padding-top: 30px;
 }
 
+.humburger-box-close span {
+  width: 20px;
+}
+
 @media screen and (min-device-width: 320px) and(max-width: 767px) {
   .menu-content {
     background-color: #151B1F;
     width: 100%;
     height: 100%;
   }
+  ul {
+    margin: 0 auto;
+    padding-left: 20px;
+    margin-top: 50px;
+  }
+
+  .humburger-box-close svg {
+    color: #EEEEEE;
+  }
+
+  .humburger-menu-icons {
+    margin: 10px auto;
+    padding-left: 20px;
+  }
+
+  .humburger-box {
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 26px;
+  }
+
+  .menu-content-rigth {
+    background-color: #151B1F;
+  }
 }
 
-ul {
-  margin: 0 auto;
-  padding-left: 20px;
-  margin-top: 50px;
-}
-
-.humburger-box-close svg {
-  color: #EEEEEE;
-}
-
-.humburger-menu-icons {
-  margin: 10px auto;
-  padding-left: 20px;
-}
-
-.humburger-box {
-  margin: 0 auto;
-  cursor: pointer;
-  font-size: 26px;
-}
-
-.menu-content-rigth {
-  background-color: #151B1F;
-}
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
   .menu-content {
@@ -157,6 +163,43 @@ ul {
 
   .menu-content-rigth {
     background-color: #151B1F;
+  }
+}
+
+@media screen and (min-device-width: 1024px) and(max-width: 1439px) {
+  .menu-content {
+    display: grid;
+    grid-template-columns: 3.6fr 2.7fr;;
+
+  }
+  .menu-content-left {
+    background-color: #151B1F;
+  }
+
+  .menu-content-rigth {
+
+    background-color: #151B1F;
+  }
+  ul {
+    margin: 0 auto;
+    padding-left: 100px;
+    margin-top: 200px;
+  }
+
+  .humburger-box-close svg {
+    color: #EEEEEE;
+  }
+
+  .humburger-menu-icons {
+    margin: 10px auto;
+    margin-top: 20px;
+    padding-left: 100px;
+  }
+
+  .humburger-box {
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 26px;
   }
 }
 
