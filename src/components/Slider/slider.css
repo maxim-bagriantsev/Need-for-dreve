@@ -1,27 +1,33 @@
 .slider {
   display: flex;
   height: 100vh;
-  width: auto;
+  width: 100%;
   max-width: 100%;
   text-align: center;
   background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #000000 100%), url("https://github.com/maxim-bagriantsev/Need-for-dreve/blob/V-01/src/assets/images/free-parking.png?raw=true");
+  padding: 32px 0px;
+  align-items: center;
 }
 
 .slider-content {
+  margin-left: 33px;
+  margin-right: 33px;
+  display: inline;
   width: 100%;
-  height: 100vh;
-  display: flex;
+  justify-content: space-around;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
-  margin-left: 32px;
 }
 
 .slider-content-items {
-  margin-top: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
   text-align: left;
   line-height: 90%;
+  margin-bottom: auto;
 }
 
 .slider-content h2 {
@@ -89,17 +95,21 @@
 }
 
 .slider-btn-column {
+  display: flex;
   cursor: pointer;
   width: 64px;
   height: 100vh;
   border-style: none;
   outline: none;
   background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .slider-btn-column:hover {
-  background: #0EC261;
-  opacity: 0.2;
+  background: rgba(14, 194, 97, 0.2);
 }
 
 .slider-btn-column:focus {
@@ -107,23 +117,21 @@
 }
 
 .slider-bnt-left {
-  position: absolute;
-  margin-left: -40px;
-  margin-top: 500px;
+  margin: 0 auto;
 }
 
 .slider-bnt-rigth {
-  position: absolute;
-  margin-left: -40px;
-  margin-top: 500px;
+  margin: 0 auto;
 }
 
 .slider-dots {
+  width: 35%;
+  position: fixed;
   display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  flex-direction: row;
   margin-bottom: 32px;
+  bottom: 0;
+  justify-content: center;
 }
 
 .item-dot {
@@ -146,71 +154,46 @@
   margin-left: 4px;
 }
 
-@media (max-width: 520px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .slider {
     display: none;
   }
 }
-@media (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .slider {
     display: none;
   }
 }
-@media screen and (min-device-width: 1024px) and (max-width: 1439px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
   .slider {
-    width: 100%;
-    height: 100vh;
+    width: 410px;
+    padding: 0;
   }
 
   .slider-content {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     margin-left: 32px;
   }
 
   .slider-content-items {
-    margin-top: 350px;
-    text-align: left;
-    line-height: 90%;
+    width: 282px;
+  }
+
+  .slider-content h2 {
+    font-size: 32px;
+    line-height: 37.5px;
+  }
+
+  .slider-content h3 {
+    font-size: 22px;
+    line-height: 22px;
   }
 
   .slider-btn-column {
     width: 32px;
   }
 
-  .slider-bnt-left {
+  .slider-dots {
     position: absolute;
-    margin-left: -20px;
-    margin-top: 380px;
-  }
-
-  .slider-bnt-rigth {
-    position: absolute;
-    margin-left: -20px;
-    margin-top: 380px;
-  }
-
-  .slider-content h2 {
-    width: 282px;
-    font-weight: 500;
-    font-size: 32px;
-    font-style: normal;
-    line-height: 37.5px;
-    color: #FFFFFF;
-    margin-bottom: 8px;
-  }
-
-  .slider-content h3 {
-    width: 282px;
-    font-weight: 300;
-    font-size: 22px;
-    font-style: normal;
-    line-height: 22px;
-    color: #EEEEEE;
-    margin-bottom: 32px;
   }
 }
 

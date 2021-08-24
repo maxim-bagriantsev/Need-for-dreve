@@ -15,13 +15,13 @@ export const HumburgerMenu = ({items, active, setMunuActive}) => {
                         <CloseOutlined/>
                     </div>
                     <ul onClick={e => e.stopPropagation()}>
-                        {items.map(item =>
-                            <li>
+                        {items.map((item, id) =>
+                            <li key={id}>
                                 <a href={item.href}>{item.value}</a>
                             </li>)}
                     </ul>
                     <div className='humburger-menu-icons' onClick={e => e.stopPropagation()}>
-                        <div className='icons-items' >
+                        <div className='icons-items'>
                             <img className='icon-item' src={telegramIcon}/>
                         </div>
                         <div className='icons-items'>
