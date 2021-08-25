@@ -1,207 +1,134 @@
 .slider {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  max-width: 100%;
-  text-align: center;
-  background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #000000 100%), url("https://github.com/maxim-bagriantsev/Need-for-dreve/blob/V-01/src/assets/images/free-parking.png?raw=true");
-  padding: 32px 0px;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    background: gray;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #000000 100%), url("https://github.com/maxim-bagriantsev/Need-for-dreve/blob/V-01/src/assets/images/free-parking.png?raw=true");
 }
-
 .slider-content {
-  margin-left: 33px;
-  margin-right: 33px;
-  display: inline;
-  width: 100%;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: flex-start;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
-.slider-content-items {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  text-align: left;
-  line-height: 90%;
-  margin-bottom: auto;
+.slider-content-item {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-.slider-content h2 {
-  font-weight: 500;
-  font-size: 40px;
-  font-style: normal;
-  line-height: 47px;
-  color: #FFFFFF;
-  margin-bottom: 8px;
+.slider h2, h3 {
+    margin: 0;
 }
 
-.slider-content h3 {
-  width: 495px;
-  font-weight: 300;
-  font-size: 24px;
-  font-style: normal;
-  line-height: 21.6px;
-  color: #EEEEEE;
-  margin-bottom: 32px;
+.slider-content-item h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
 }
 
-.slider-btn {
-  width: 164px;
-  height: 48px;
-  background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
-  background-blend-mode: darken;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-  text-transform: none;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  border: none;
-  outline: none;
-
+.slider-content-item h3 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 22px;
+    color: #EEEEEE;
+    margin-bottom: 32px;
 }
 
-.slider-btn:hover {
-  background: linear-gradient(90deg, #0B934A 2.61%, #026E47 112.6%);
-  background-blend-mode: darken;
-  border-radius: 4px;
-  outline: none;
+.btn-arrow {
+    cursor: pointer;
+    height: 100vh;
+    width: 64px;
+    border-style: none;
+    outline: none;
+    background: none;
 }
 
-.slider-btn:active {
-  background: linear-gradient(90deg, #076432 2.61%, #013C27 112.6%);
-  background-blend-mode: darken;
-  border-radius: 4px;
+.btn-arrow-icon {
+    stroke: #EEEEEE;
 }
 
-.slider-btn:focus {
-  outline: none;
+.btn-arrow:hover {
+    background: rgba(14, 194, 97, 0.2);
 }
 
-.slider-btn span {
-  text-transform: none;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  color: #FFFFFF;
+.slider-btn-1 {
+    cursor: pointer;
+    width: 164px;
+    height: 48px;
+    background: linear-gradient(90deg, #13493F 0%, #0C7B1B 100%);
+    border-radius: 4px;
+    border-style: none;
+    outline: none;
+    color: #EEEEEE;
 }
 
-.slider-btn-column {
-  display: flex;
-  cursor: pointer;
-  width: 64px;
-  height: 100vh;
-  border-style: none;
-  outline: none;
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.slider-btn-1:hover {
+    background: linear-gradient(90deg, #003026 2.61%, #006202 112.6%);
+    background-blend-mode: darken;
+    border-radius: 4px;
 }
 
-.slider-btn-column:hover {
-  background: rgba(14, 194, 97, 0.2);
+.slider-btn-1:active {
+    background: linear-gradient(90deg, #00160C 2.61%, #004800 112.6%);
+    background-blend-mode: darken;
+    border-radius: 4px;
 }
 
-.slider-btn-column:focus {
-  outline: none;
-}
-
-.slider-bnt-left {
-  margin: 0 auto;
-}
-
-
-.slider-bnt-rigth {
-  margin: 0 auto;
+.slider-btn-1 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .slider-dots {
-  width: 35%;
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 32px;
-  bottom: 0;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
 }
 
-.item-dot {
-  cursor: pointer;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #EEEEEE;
-  margin-right: 4px;
-  margin-left: 4px;
+.slider-dot-active {
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #0EC261;
+    margin-right: 4px;
+    margin-left: 4px;
 }
 
-.item-dot-active {
-  cursor: pointer;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #0EC261;
-  margin-right: 4px;
-  margin-left: 4px;
+.slider-dot {
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #EEEEEE;
+    margin-right: 4px;
+    margin-left: 4px;
 }
 
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .slider {
-    display: none;
-  }
-
+@media (max-width: 1220px) {
+    .slider {
+        display: none;
+    }
 }
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .slider {
-    display: none;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .slider {
-    width: 410px;
-    padding: 0;
-  }
-  .slider-content {
-    margin-left: 32px;
-  }
-  .slider-content-items {
-    width: 282px;
-  }
-  .slider-content h2 {
-    font-size: 32px;
-    line-height: 37.5px;
-  }
-  .slider-content h3 {
-    font-size: 22px;
-    line-height: 22px;
-  }
-  .slider-btn-column {
-    width: 32px;
-  }
-  .slider-dots {
-    position: absolute;
-  }
-}
-
-
-
-
-
-
-
-
 

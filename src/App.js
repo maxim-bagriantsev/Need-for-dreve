@@ -1,12 +1,13 @@
 import React from 'react';
-
-
-import {StartPage} from "./pages/startPage/StartPage";
+import {StartPage} from './pages/index';
 
 export const App = () => {
     return (
         <StartPage/>
-    );
+    )
 }
+
+
+
 
 
