@@ -8,7 +8,7 @@ export const Header = () => {
             <h1 className='without_class'>Need for drive</h1>
             <div className='location'>
                 <svg className='location-icon' width='18' height='20'>
-                    <use xlinkHref={`${icons}#Location`}></use>
+                    <use xlinkHref={`${icons}#Location`}/>
                 </svg>
                 <span>
                     <a>Ульяновск</a>

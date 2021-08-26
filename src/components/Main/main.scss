@@ -98,6 +98,81 @@
 }
 
 
+@media (max-width: 767px) {
+    .main {
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .main-header {
+        margin-right: 32px;
+        margin-top: 16px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .main-header h1 {
+        margin-bottom: 8px;
+    }
+
+    .main-content {
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 40%;
+
+    }
+
+    .main-content h1, .main-content h2 {
+        font-size: 32px;
+        line-height: 36px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 8px;
+    }
+
+    .main-content h3 {
+        font-size: 18px;
+        line-height: 21px;
+        padding-right: 16px;
+        padding-left: 16px;
+
+    }
+
+    .button, .button:hover {
+        width: 100%;
+        margin-top: 64px;
+        border-radius: 0px;
+    }
+
+    .main-footer {
+        position: fixed;
+        bottom: 0px;
+        height: 72px;
+        flex-direction: column-reverse;
+        align-items: flex-end !important;
+        justify-content: space-between;
+        background-color: #151B1F;
+        padding-right: 16px;
+    }
+
+    .main-footer span {
+        margin-bottom: 16px;
+    }
+
+    .main-footer a {
+        margin-top: 16px;
+        color: #0ec261 !important;
+    }
+
+    .main-footer a:hover {
+        color: white !important;
+    }
+}
+
+
+/*
 @media (max-width: 520px) {
     .main {
         padding: 0;
@@ -148,13 +223,13 @@
 
     .main-footer {
         position: fixed;
-        flex-direction: column-reverse;
-        align-items: flex-end;
-        justify-content: space-between;
         bottom: 0px;
         height: 72px;
-        padding-right: 16px;
+        flex-direction: column-reverse;
+        align-items: flex-end !important;
+        justify-content: space-between;
         background-color: #151B1F;
+        padding-right: 16px;
     }
 
     .main-footer span {
@@ -163,10 +238,10 @@
 
     .main-footer a {
         margin-top: 16px;
-        color: #0ec261;
+        color: #0ec261 !important;
     }
 
     .main-footer a:hover {
-        color: white;
+        color: white !important;
     }
-}
+}*/

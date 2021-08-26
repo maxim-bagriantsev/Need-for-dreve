@@ -20,13 +20,13 @@ export const Menu = ({isMenuOpen, openMenu}) => {
                 </li>
                 <div className='menu-social-icons'>
                     <svg className='menu-social-icon' width='32' height='32'>
-                        <use xlinkHref={`${icons}#Telegram`}></use>
+                        <use xlinkHref={`${icons}#Telegram`}/>
                     </svg>
                     <svg className='menu-social-icon' width='32' height='32'>
-                        <use xlinkHref={`${icons}#Facebook`}></use>
+                        <use xlinkHref={`${icons}#Facebook`}/>
                     </svg>
                     <svg className='menu-social-icon' width='32' height='32'>
-                        <use xlinkHref={`${icons}#Instagram`}></use>
+                        <use xlinkHref={`${icons}#Instagram`}/>
                     </svg>
                 </div>
             </div>

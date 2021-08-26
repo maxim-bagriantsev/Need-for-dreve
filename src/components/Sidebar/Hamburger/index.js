@@ -13,7 +13,7 @@ export const Hamburger = ({openMenu, isMenuOpen}) => {
             className={isMenuOpen ? 'hamburger-is-open' : 'hamburger'}
             onClick={(event) => onClick(event)}>
             <div className='hamburger-box'>
-                <div className='hamburger-inner'></div>
+                <div className='hamburger-inner'/>
             </div>
         </button>
     )

@@ -7,7 +7,7 @@ export const Slider = () => {
         <div className='slider'>
             <button className='btn-arrow'>
                 <svg className='btn-arrow-icon' width='10' height='20'>
-                    <use xlinkHref={`${icons}#Arrow-Left`}></use>
+                    <use xlinkHref={`${icons}#Arrow-Left`}/>
                 </svg>
             </button>
             <div className='slider-content'>
@@ -20,15 +20,15 @@ export const Slider = () => {
                     </button>
                 </div>
                 <div className='slider-dots'>
-                    <div className='slider-dot-active'></div>
-                    <div className='slider-dot'></div>
-                    <div className='slider-dot'></div>
-                    <div className='slider-dot'></div>
+                    <div className='slider-dot-active'/>
+                    <div className='slider-dot'/>
+                    <div className='slider-dot'/>
+                    <div className='slider-dot'/>
                 </div>
             </div>
             <button className='btn-arrow'>
                 <svg className='btn-arrow-icon' width='10' height='20'>
-                    <use xlinkHref={`${icons}#Arrow-Right`}></use>
+                    <use xlinkHref={`${icons}#Arrow-Right`}/>
                 </svg>
             </button>
         </div>
