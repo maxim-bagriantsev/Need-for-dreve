@@ -14,13 +14,14 @@
   left: 0;
 }
 
-.menu_hidden {
+.menu-hidden {
   width: 0;
-  transition: 0.3s;
+  transition: 0.4s;
+  -webkit-transition-property: background;
   z-index: -1;
 }
 
-.menu_hidden .menu-list {
+.menu-hidden .menu-list {
   display: none;
 }
 
@@ -41,7 +42,6 @@
 .reveal-menu_hidden {
   width: 0;
   transition: 0.4s;
-
   z-index: 1;
 }
 

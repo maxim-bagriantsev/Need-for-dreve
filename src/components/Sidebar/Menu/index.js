@@ -11,12 +11,11 @@ export const Menu = ({isMenuOpen, openMenu}) => {
 
     return (
         <div>
-            <div className={isMenuOpen ? 'menu' : 'menu_hidden'}>
+            <div className={isMenuOpen ? 'menu' : 'menu-hidden'}>
                 <li className='menu-list'>
-                    <ul>ПАРКОВКА</ul>
-                    <ul>СТРАХОВКА</ul>
-                    <ul>БЕНЗИН</ul>
-                    <ul>ОБСЛУЖИВАНИЕ</ul>
+                    {['ПАРКОВКА', 'СТРАХОВКА', 'БЕНЗИН', 'ОБСЛУЖИВАНИЕ']
+                        .map(i => (
+                            <ul key={i}>{i}</ul>))}
                 </li>
                 <div className='menu-social-icons'>
                     <svg className='menu-social-icon' width='32' height='32'>
