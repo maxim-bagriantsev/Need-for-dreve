@@ -1,8 +1,39 @@
 import React from 'react';
 import './slider.scss';
 import icons from '../../assets/icons.svg';
+import free_parking from '../../assets/imeges/free-parking.png'
+import insurance from '../../assets/imeges/insurance.png'
+import gasoline from '../../assets/imeges/gasoline.png'
+import service from '../../assets/imeges/service.png'
+
+
+const slides = [
+    {
+        img: free_parking,
+        title: 'Бесплатная парковка',
+        text: 'Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.'
+    },
+    {
+        img: insurance,
+        title: 'Бесплатная парковка',
+        text: 'Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.'
+    },
+    {
+        img: gasoline,
+        title: 'Бесплатная парковка',
+        text: 'Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.'
+    },
+    {
+        img: service,
+        title: 'Бесплатная парковка',
+        text: 'Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.'
+    }
+]
+
 
 export const Slider = () => {
+
+
     return (
         <div className='slider'>
             <button className='btn-arrow'>

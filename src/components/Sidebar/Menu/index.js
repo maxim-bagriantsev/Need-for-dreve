@@ -32,7 +32,7 @@ export const Menu = ({isMenuOpen, openMenu}) => {
             <div
                 className={isMenuOpen ? 'reveal-menu' : 'reveal-menu_hidden'}
                 onClick={(e) => onClick(e)}
-            ></div>
+            />
         </div>
     )
 }

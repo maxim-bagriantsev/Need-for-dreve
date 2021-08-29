@@ -85,7 +85,7 @@
   fill: white;
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1023px) {
   .reveal-menu {
     width: 0%;
   }
@@ -96,6 +96,10 @@
 }
 
 @media (max-width: 767px) {
+  .main {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+  }
   .reveal-menu {
     width: 0%;
   }
@@ -112,6 +116,13 @@
   .menu-social-icons {
     margin-left: 24px;
   }
+}
+
+@media (max-width: 1439px) {
+  .reveal-menu {
+    padding-left: 64px;
+  }
+
 }
 
 @keyframes fadein {

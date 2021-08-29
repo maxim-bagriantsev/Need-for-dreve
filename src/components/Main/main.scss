@@ -120,8 +120,7 @@
     height: 100%;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 40%;
-
+    padding-top: 112px;
   }
 
   .main-content h1, .main-content h2 {
@@ -172,3 +171,9 @@
   }
 }
 
+@media (max-width: 1439px) {
+  .main {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
