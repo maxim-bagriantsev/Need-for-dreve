@@ -97,8 +97,8 @@
 
 @media (max-width: 767px) {
   .main {
-    padding-left: 0px!important;
-    padding-right: 0px!important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
   .reveal-menu {
     width: 0%;
@@ -121,6 +121,7 @@
 @media (max-width: 1439px) {
   .reveal-menu {
     padding-left: 64px;
+    width: 100%;
   }
 
 }
