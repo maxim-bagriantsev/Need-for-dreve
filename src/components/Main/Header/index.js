@@ -5,7 +5,7 @@ import './header.scss'
 export const Header = () => {
     return (
         <div className='main-header'>
-            <h1 className='without_class'>Need for drive</h1>
+            <h2 className='without_class'>Need for drive</h2>
             <div className='location'>
                 <svg className='location-icon' width='18' height='20'>
                     <use xlinkHref={`${icons}#Location`}/>
