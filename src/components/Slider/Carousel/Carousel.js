@@ -52,7 +52,7 @@ export const Carousel = () => {
                             <div className='slider-content-item'>
                                 <h2>Страховка</h2>
                                 <h3>Полная страховка автомобиля</h3>
-                                <button className='slider-btn-1'>
+                                <button className='slider-btn-2'>
                                     <span>Подробнее</span>
                                 </button>
                             </div>
@@ -65,9 +65,9 @@ export const Carousel = () => {
                         <button className='btn-arrow'/>
                         <div className='slider-content'>
                             <div className='slider-content-item'>
-                                <h2>Страховка</h2>
-                                <h3>Полная страховка автомобиля</h3>
-                                <button className='slider-btn-1'>
+                                <h2>Бензин</h2>
+                                <h3>Полный бак на любой заправке города за наш счёт</h3>
+                                <button className='slider-btn-3'>
                                     <span>Подробнее</span>
                                 </button>
                             </div>
@@ -80,9 +80,9 @@ export const Carousel = () => {
                         <button className='btn-arrow'/>
                         <div className='slider-content'>
                             <div className='slider-content-item'>
-                                <h2>Страховка</h2>
-                                <h3>Полная страховка автомобиля</h3>
-                                <button className='slider-btn-1'>
+                                <h2>Обслуживание</h2>
+                                <h3>Автомобиль проходит еженедельное ТО</h3>
+                                <button className='slider-btn-4'>
                                     <span>Подробнее</span>
                                 </button>
                             </div>
