@@ -5,6 +5,11 @@ import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "./carousel.scss";
 
+import free_parking from '../../../assets/imeges/free-parking.png'
+import insurance from '../../../assets/imeges/insurance.png'
+import gasoline from '../../../assets/imeges/gasoline.png'
+import service from '../../../assets/imeges/service.png'
+
 import SwiperCore, {
     Navigation, Pagination, Mousewheel, Keyboard
 } from 'swiper';
@@ -24,9 +29,8 @@ export const Carousel = () => {
                 slidesPerview={0}
                 className="slider">
                 <SwiperSlide>
-                    <div className='slider'>
+                    <div className='slider' style={{backgroundImage: `url(${free_parking})`}}>
                         <button className='btn-arrow'/>
-
                         <div className='slider-content'>
                             <div className='slider-content-item'>
                                 <h2>Бесплатная парковка</h2>
@@ -37,11 +41,50 @@ export const Carousel = () => {
                                     <span>Подробнее</span>
                                 </button>
                             </div>
-                            <div className='slider-dots'>
-                                <div className='slider-dot-active'/>
-                                <div className='slider-dot'/>
-                                <div className='slider-dot'/>
-                                <div className='slider-dot'/>
+                        </div>
+                        <button className='btn-arrow'/>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='slider' style={{backgroundImage: `url(${insurance})`}}>
+                        <button className='btn-arrow'/>
+                        <div className='slider-content'>
+                            <div className='slider-content-item'>
+                                <h2>Страховка</h2>
+                                <h3>Полная страховка автомобиля</h3>
+                                <button className='slider-btn-1'>
+                                    <span>Подробнее</span>
+                                </button>
+                            </div>
+                        </div>
+                        <button className='btn-arrow'/>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='slider' style={{backgroundImage: `url(${gasoline})`}}>
+                        <button className='btn-arrow'/>
+                        <div className='slider-content'>
+                            <div className='slider-content-item'>
+                                <h2>Страховка</h2>
+                                <h3>Полная страховка автомобиля</h3>
+                                <button className='slider-btn-1'>
+                                    <span>Подробнее</span>
+                                </button>
+                            </div>
+                        </div>
+                        <button className='btn-arrow'/>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='slider' style={{backgroundImage: `url(${service})`}}>
+                        <button className='btn-arrow'/>
+                        <div className='slider-content'>
+                            <div className='slider-content-item'>
+                                <h2>Страховка</h2>
+                                <h3>Полная страховка автомобиля</h3>
+                                <button className='slider-btn-1'>
+                                    <span>Подробнее</span>
+                                </button>
                             </div>
                         </div>
                         <button className='btn-arrow'/>

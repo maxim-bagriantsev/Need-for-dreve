@@ -7,7 +7,6 @@
   box-sizing: border-box;
   background: gray;
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #000000 100%), url('https://github.com/maxim-bagriantsev/Need-for-drive/blob/V-01/src/assets/imeges/free-parking.png?raw=true');
 }
 
 .slider-content {
@@ -63,6 +62,33 @@
   font-size: 22px;
 }
 
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: .3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+
+.swiper-pagination-bullet span {
+  display: inline-block;
+  opacity: 1;
+  background: #EEEEEE;
+}
+
+.swiper-pagination-bullet {
+  background: #EEEEEE;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #0EC261;
+}
+
 .btn-arrow:hover {
   background: rgba(14, 194, 97, 0.2);
 }
@@ -99,36 +125,6 @@
   color: #FFFFFF;
 }
 
-.slider-dots {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 32px;
-}
-
-.slider-dot-active {
-  cursor: pointer;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #0EC261;
-  margin-right: 4px;
-  margin-left: 4px;
-}
-
-.slider-dot {
-  cursor: pointer;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #EEEEEE;
-  margin-right: 4px;
-  margin-left: 4px;
-}
-
 @media (max-width: 1023px) {
   .slider {
     display: none;
@@ -151,6 +147,5 @@
   .btn-arrow {
     width: 32px;
   }
-
 }
 

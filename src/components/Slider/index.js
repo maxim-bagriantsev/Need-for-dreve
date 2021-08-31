@@ -1,6 +1,5 @@
 import React from 'react';
 import './slider.scss';
-import icons from '../../assets/icons.svg';
 import free_parking from '../../assets/imeges/free-parking.png'
 import insurance from '../../assets/imeges/insurance.png'
 import gasoline from '../../assets/imeges/gasoline.png'
@@ -10,22 +9,22 @@ import {Carousel} from "./Carousel/Carousel";
 
 const slides = [
     {
-        img: free_parking,
+        img1: free_parking,
         title: 'Бесплатная парковка',
         text: 'Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.'
     },
     {
-        img: insurance,
+        img2: insurance,
         title: 'Бесплатная парковка',
         text: 'Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.'
     },
     {
-        img: gasoline,
+        img3: gasoline,
         title: 'Бесплатная парковка',
         text: 'Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.'
     },
     {
-        img: service,
+        img4: service,
         title: 'Бесплатная парковка',
         text: 'Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.'
     }
@@ -34,7 +33,7 @@ const slides = [
 
 export const Slider = () => {
 
-    return <Carousel/>
+    return <Carousel slides={slides}/>
 
 }
 
