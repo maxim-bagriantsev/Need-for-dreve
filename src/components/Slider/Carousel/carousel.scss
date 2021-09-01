@@ -1,5 +1,6 @@
 .slider {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,8 +17,8 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 32px;
-  margin-right: 32px;
+  margin-left: 96px;
+  margin-right: 96px;
 }
 
 .slider-content-item {
@@ -47,19 +48,31 @@
   margin-bottom: 32px;
 }
 
-.btn-arrow {
-  cursor: pointer;
-  height: 100vh;
-  width: 64px;
-  border-style: none;
-  outline: none;
-  background: none;
-}
-
 .swiper-button-prev::after,
 .swiper-button-next::after {
+  position: absolute;
   color: #EEEEEE;
   font-size: 22px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  margin: 0;
+  top: 0;
+  width: 64px;
+  height: 100%;
+
+  &:hover {
+    background-color: rgba(14, 194, 97, 0.2);
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
 }
 
 .swiper-pagination {
@@ -89,10 +102,6 @@
   background: #0EC261;
 }
 
-.btn-arrow:hover {
-  background: rgba(14, 194, 97, 0.2);
-}
-
 // Стиль кнопки первого слайдера!
 .slider-btn-1 {
   cursor: pointer;
@@ -109,7 +118,6 @@
   background: linear-gradient(90deg, #003026 2.61%, #006202 112.6%);
   background-blend-mode: darken;
   border-radius: 4px;
-
 }
 
 .slider-btn-1:active {
@@ -226,7 +234,6 @@
   color: #FFFFFF;
 }
 
-
 @media (max-width: 1023px) {
   .slider {
     display: none;
@@ -243,11 +250,19 @@
     font-size: 22px;
     line-height: 22px;
   }
+
   .slider {
     width: 100%;
   }
-  .btn-arrow {
+
+  .swiper-button-prev,
+  .swiper-button-next {
     width: 32px;
+  }
+
+  .slider-content {
+    margin-left: 64px;
+    margin-right: 64px;
   }
 }
 
