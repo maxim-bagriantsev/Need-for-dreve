@@ -24,7 +24,7 @@ const itemMenu = [
 ]
 
 export const OrderMenu = () => {
-    const stepMenu = itemMenu.map((item, id) => {
+    const stepsMenu = itemMenu.map((item, id) => {
         return (
             <>
                 <li key={id}>{item.text}</li>
@@ -40,7 +40,7 @@ export const OrderMenu = () => {
             <Header/>
             <div className='steps-menu'>
                 <ul>
-                    {stepMenu}
+                    {stepsMenu}
                 </ul>
             </div>
         </div>

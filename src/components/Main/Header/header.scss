@@ -1,42 +1,42 @@
 .main-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-header h2 {
-    font-size: 30px;
-    line-height: 35px;
-    font-style: normal;
-    font-weight: bold;
-    color: #0ec261;
+  font-size: 30px;
+  line-height: 35px;
+  font-style: normal;
+  font-weight: bold;
+  color: #0ec261;
 }
 
 .location {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .location-icon {
-    stroke: #999999;
+  stroke: #999999;
 }
 
 .location:hover a {
-    color: #0ec261;
+  color: #0ec261;
 }
 
 .location:hover .location-icon {
-    stroke: #0ec261;
+  stroke: #0ec261;
 }
 
 .location a {
-    margin-left: 7px;
-    font-size: 14px;
-    line-height: 16px;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: normal;
-    color: #999999;
+  margin-left: 7px;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  color: #999999;
 }
