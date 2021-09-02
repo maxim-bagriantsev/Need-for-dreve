@@ -24,24 +24,23 @@ const itemMenu = [
 ]
 
 export const OrderMenu = () => {
+    const stepMenu = itemMenu.map((item, id) => {
+        return (
+            <>
+                <li key={id}>{item.text}</li>
+                <svg className='icon-play-button' width='8' height='10'>
+                    <use xlinkHref={`${icons}#Play-button`}/>
+                </svg>
+            </>
+        )
+    })
+
     return (
         <div className='order-content'>
             <Header/>
             <div className='steps-menu'>
                 <ul>
-                    <li>Местоположение</li>
-                    <svg className='icon-play-button' width='8' height='10'>
-                        <use xlinkHref={`${icons}#Play-button`}/>
-                    </svg>
-                    <li>Модель</li>
-                    <svg className='icon-play-button' width='8' height='10'>
-                        <use xlinkHref={`${icons}#Play-button`}/>
-                    </svg>
-                    <li>Дополнительно</li>
-                    <svg className='icon-play-button' width='8' height='10'>
-                        <use xlinkHref={`${icons}#Play-button`}/>
-                    </svg>
-                    <li>Итого</li>
+                    {stepMenu}
                 </ul>
             </div>
         </div>
