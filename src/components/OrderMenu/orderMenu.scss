@@ -1,0 +1,56 @@
+.order-content {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.order-content .main-header {
+  width: auto;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.steps-menu {
+  padding-left: 64px;
+  height: 32px;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+}
+
+.steps-menu ul, li {
+  left: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.steps-menu ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.4px;
+  font-style: normal;
+  color: #999999;
+  cursor: pointer;
+}
+
+.steps-menu li:hover {
+  color: #0EC261;
+}
+
+//Иконка - play (треугольник)
+.icon-play-button {
+  display: flex;
+  align-items: center;
+  margin: 4px 16px 4px 16px;
+  fill: #999999;
+}
+
+
