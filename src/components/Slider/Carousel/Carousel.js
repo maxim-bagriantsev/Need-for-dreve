@@ -24,19 +24,20 @@ export const Carousel = () => {
         return (
             <SwiperSlide key={id}>
                 <div className='slider' style={{backgroundImage: `url(${slide.img})`}}>
-                    <div className='slider-content'>
-                        <div className='slider-content-item'>
-                            <div className='swiper-button-prev'/>
-                            <h2>{slide.title}</h2>
-                            <h3>{slide.text}</h3>
-                            <button className={slide.classNameButton}>
-                                <span>Подробнее</span>
-                            </button>
-                            <div className='swiper-button-next'/>
+                    <div className='background-layer'>
+                        <div className='slider-content'>
+                            <div className='slider-content-item'>
+                                <div className='swiper-button-prev'/>
+                                <h2>{slide.title}</h2>
+                                <h3>{slide.text}</h3>
+                                <button className={slide.classNameButton}>
+                                    <span>Подробнее</span>
+                                </button>
+                                <div className='swiper-button-next'/>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </SwiperSlide>
         )
     })

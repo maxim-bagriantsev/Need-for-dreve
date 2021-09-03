@@ -1,7 +1,7 @@
 import React from "react";
 import {Header} from "../Main/Header";
 import './orderMenu.scss'
-
+import {Select} from 'antd';
 import icons from "../../assets/icons.svg";
 
 const itemMenu = [
@@ -23,6 +23,13 @@ const itemMenu = [
     }
 ]
 
+const {Option} = Select;
+
+function handleChange(value) {
+    console.log(`selected ${value}`);
+}
+
+
 export const OrderMenu = () => {
     const stepsMenu = itemMenu.map((item, id) => {
         return (
@@ -42,6 +49,20 @@ export const OrderMenu = () => {
                 <ul>
                     {stepsMenu}
                 </ul>
+            </div>
+
+            <div className='order-settings'>
+                <div className='setting-search'>
+                    <div className='input-town'>
+                        <p className='input-town-title'>Город</p>
+                    </div>
+                    <p>Пункт выдачи</p>
+                    <p>Выбор на карте</p>
+                    <img src="" alt=""/>
+                </div>
+                <div className='info-order'>
+                    Ваш заказ
+                </div>
             </div>
         </div>
     )

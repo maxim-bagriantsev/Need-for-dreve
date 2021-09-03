@@ -9,20 +9,20 @@
   background-size: cover;
 }
 
-.slider:after {
-  background-color: rgba(0, 0, 0, 0.2)
+.background-layer {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);;
 }
 
 .slider-content {
   height: 100vh;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-start;
   margin-left: 96px;
   margin-right: 96px;
-
 }
 
 .slider-content-item {
@@ -32,7 +32,6 @@
 
 .slider h2, h3 {
   margin: 0;
-
 }
 
 .slider-content-item h2 {

@@ -3,7 +3,6 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -19,9 +18,9 @@
   height: 32px;
   margin-top: 32px;
   display: flex;
-  align-items: center;
   border: 1px solid #EEEEEE;
   box-sizing: border-box;
+  align-items: center;
 }
 
 .steps-menu ul, li {
@@ -31,6 +30,7 @@
 }
 
 .steps-menu ul {
+  /*margin-top: 5px;*/
   display: flex;
   flex-direction: row;
   font-size: 14px;
@@ -48,9 +48,40 @@
 //Иконка - play (треугольник)
 .icon-play-button {
   display: flex;
-  align-items: center;
+  /* align-items: center;*/
   margin: 4px 16px 4px 16px;
   fill: #999999;
 }
+
+.order-settings {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 64px;
+}
+
+.info-order {
+  padding-right: 64px;
+}
+
+.input-town {
+  display: flex;
+  line-height: 16px;
+  font-weight: 300;
+}
+
+.input-town-title {
+  margin-right: 10px;
+  display: flex;
+
+}
+
+.select-town {
+  text-align: center;
+  border: none;
+}
+
+
 
 
