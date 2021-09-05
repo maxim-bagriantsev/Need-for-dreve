@@ -90,11 +90,12 @@
   }
 
   .main-header {
-    margin-right: 32px;
+    display: flex;
+
     margin-top: 16px;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-end;
+    margin-right: 32px;
   }
 
   .main-header h1 {
@@ -128,6 +129,7 @@
     width: 100%;
     margin-top: 64px;
     border-radius: 0px;
+
   }
 
   .main-footer {
@@ -161,4 +163,5 @@
     padding-left: 32px;
     padding-right: 32px;
   }
+
 }

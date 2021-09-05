@@ -22,8 +22,8 @@ export const Carousel = () => {
     const elementSlide = slides.map((slide, id) => {
 
         return (
-            <SwiperSlide key={id}>
-                <div className='slider' style={{backgroundImage: `url(${slide.img})`}}>
+            <SwiperSlide>
+                <div key={id} className='slider' style={{backgroundImage: `url(${slide.img})`}}>
                     <div className='background-layer'>
                         <div className='slider-content'>
                             <div className='slider-content-item'>
@@ -50,6 +50,7 @@ export const Carousel = () => {
                 mousewheel={true}
                 keyboard={true}
                 loop={true}
+                loopedSlides={5}
                 slidesPerview={0}
                 className="slider">
                 {elementSlide}

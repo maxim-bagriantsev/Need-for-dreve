@@ -4,13 +4,15 @@
   display: flex;
   flex-direction: column;
   padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .order-content .main-header {
+  display: flex;
+  flex-direction: row;
   width: auto;
   padding-left: 64px;
   padding-right: 64px;
+  justify-content: space-between;
 }
 
 .steps-menu {
@@ -48,40 +50,276 @@
 //Иконка - play (треугольник)
 .icon-play-button {
   display: flex;
-  /* align-items: center;*/
   margin: 4px 16px 4px 16px;
   fill: #999999;
 }
 
-.order-settings {
+// Меню настроек
+.step-settings {
+  height: 100%;
   font-size: 14px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 64px;
+  padding: 0px 63px 0 63px;
 }
 
-.info-order {
-  padding-right: 64px;
+//Шаг 1
+
+.step-one {
+
 }
 
-.input-town {
+.search {
+  margin-top: 32px;
   display: flex;
-  line-height: 16px;
-  font-weight: 300;
-}
-
-.input-town-title {
-  margin-right: 10px;
-  display: flex;
-
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-right: 450px;
 }
 
 .select-town {
+  display: flex;
+  align-items: center;
+}
+
+.select-town p {
+  text-align: right;
+  font-weight: 300;
+  line-height: 16px;
+  font-style: normal;
+}
+
+// стилизация input-placeholder
+::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 300;
+  line-height: 16px;
+  font-style: normal;
+}
+
+// стилизация input-placeholder - при клике убирается содержимое
+:focus::-webkit-input-placeholder {
+  color: transparent
+}
+
+.input-town {
+  width: 200px;
+  height: 20px;
+  border-style: none;
+  outline: none;
+  border-bottom: 1px solid #999;
+  margin-left: 8px;
+  padding-left: 8px;
+}
+
+//Карта
+.map {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.map p {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  font-weight: 300;
+  line-height: 16px;
+  font-style: normal;
+  margin-top: 48px;
+  box-sizing: border-box;
+}
+
+.yandex-map {
+  width: 100%;
+}
+
+.info-order {
+  position: static;
+
+  flex-direction: column;
+  width: 320px;
+  border-left: 1px solid #EEEEEE;
+  padding: 32px 0 0 32px;
+  text-align: right;
+}
+
+.info-order p {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  margin-bottom: 40px;
+}
+
+.info-order-btn {
+  width: 287px;
+  height: 48px;
+  border-radius: 8px;
+  color: #EEEEEE;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+
+}
+
+.info-order-btn p {
+  margin: 0 auto;
   text-align: center;
-  border: none;
+  color: #FFFFFF;
+}
+
+@media (max-width: 470px) {
+  .steps-menu {
+    padding: 0 10px;
+    border: 1px solid #EEEEEE;
+  }
+}
+
+@media (max-width: 767px) {
+  .order-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+  .order-content .main-header {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .steps-menu {
+    height: auto;
+    padding: 0 10px;
+    overflow: hidden;
+    overflow-x: scroll;
+    border-bottom: none;
+  }
+  ::-webkit-scrollbar-button {
+
+    background-repeat: no-repeat;
+    width: 0px;
+    height: 0px
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #ecedee
+  }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color: #999999;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #0EC261;
+  }
+
+  ::-webkit-scrollbar {
+    width: 100%;
+    height: 5px;
+  }
+
+  .step-settings {
+    font-size: 14px;
+    flex-direction: column;
+    padding: 0 32px 0 32px;
+    margin-top: 20px;
+  }
+
+  .search {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: start;
+  }
+  .info-order {
+    border: none;
+    text-align: right;
+    width: auto;
+    padding: 0;
+  }
+  .select-town {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+  }
+  .select-town p {
+    text-align: start;
+    font-weight: 500;
+  }
+  .input-town {
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
+  .info-order-btn {
+    width: 100%;
+  }
+
+  .map p {
+    font-weight: 500;
+  }
 }
 
 
+@media (min-width: 768px) and (max-width: 1439px) {
+
+  .order-content {
+    overflow: hidden;
+  }
+  .order-content .main-header {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .steps-menu {
+
+    padding-left: 32px;
+  }
+
+  .step-settings {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .step-one {
+    width: 50%;
+  }
+
+  .search {
+    width: 100%;
+    display: flex;
+    margin-top: 32px;
+    align-items: flex-start;
+  }
+
+  .info-order {
+    margin-top: 32px;
+    width: 50%;
+    padding: 0;
+  }
+  .select-town {
+    margin-right: 20px;
+
+  }
+  .select-town p {
+
+  }
+  .input-town {
+
+  }
+
+  .info-order-btn {
+
+  }
+
+
+  .map {
+    width: 90%;
+
+  }
+}
 
 
