@@ -9,7 +9,7 @@ export const App = () => {
         <Router>
             <NavLink to='/'/>
             <Route exact path='/' component={StartPage}/>
-            <Route exact path='/order' component={OrderPage}/>
+            <Route exact path='/step1' component={OrderPage}/>
         </Router>
     )
 }

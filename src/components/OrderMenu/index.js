@@ -1,34 +1,13 @@
 import React from "react";
-
-import './orderMenu.scss'
 import icons from "../../assets/icons.svg";
-import {BrowserRouter as Router, Link, Route} from "react-router-dom";
-import {Step1} from "./Step1";
+import {BrowserRouter as Router, NavLink, Route} from "react-router-dom";
 import {Header} from "../Main/Header";
+import {Step1} from "./Step1";
 import {Step2} from "./Step2";
+import {itemMenu} from "./const";
+import {Button} from "./Button";
+import './orderMenu.scss'
 
-const itemMenu = [
-    {
-        id: 1,
-        text: 'Местоположение',
-        link: '/order'
-    },
-    {
-        id: 2,
-        text: 'Модель',
-        link: '/model'
-    },
-    {
-        id: 3,
-        text: 'Дополнительно',
-        link: '/moreprops'
-    },
-    {
-        id: 4,
-        text: 'Итого',
-        link: '/result'
-    }
-]
 
 export const OrderMenu = () => {
 
@@ -36,7 +15,7 @@ export const OrderMenu = () => {
         return (
             <>
                 <li>
-                    <Link key={id} to={item.link}>{item.text}</Link>
+                    <NavLink key={id} to={item.link}>{item.text}</NavLink>
                 </li>
                 <svg className='icon-play-button' width='8' height='10'>
                     <use xlinkHref={`${icons}#Play-button`}/>
@@ -55,19 +34,16 @@ export const OrderMenu = () => {
                     </ul>
                 </div>
                 <div className='step-settings'>
-                    <Route path="/order" children={<Step1/>}/>
-                    <Route path="/model" children={<Step2/>}/>
-                  {/*  <Route path="/moreprops" children={<Step3/>}/>
-                    <Route path="/result" children={<Step4/>}/>*/}
+                    <Route path="/step1" children={<Step1/>}/>
+                    <Route path="/step2" children={<Step2/>}/>
+                    {/*  <Route path="/step3" children={<Step3/>}/>
+                    <Route path="/step4" children={<Step4/>}/>*/}
                     <div className='info-order'>
                         <p>Ваш заказ:</p>
-                        <button className='info-order-btn'>
-                            <p>Выбрать модель</p>
-                        </button>
+                        <Button/>
                     </div>
                 </div>
             </Router>
-
         </div>
     )
 }
