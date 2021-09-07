@@ -40,6 +40,19 @@ export const OrderMenu = () => {
                     <Route path="/step4" children={<Step4/>}/>*/}
                     <div className='info-order'>
                         <p>Ваш заказ:</p>
+                        <div className='info-order-data'>
+                            <div className='address'>
+                                <div className='address-point'>
+                                    <p>Пункт выдачи</p>
+                                </div>
+                                <div className='address-name'>
+                                    <p>Ульяновск,
+                                        Нариманова 42
+                                    </p>
+                                </div>
+                            </div>
+                            <p>Цена: от 8 000 до 12 000 ₽ </p>
+                        </div>
                         <Button/>
                     </div>
                 </div>
