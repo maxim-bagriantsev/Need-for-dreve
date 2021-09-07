@@ -1,10 +1,24 @@
 import React from "react";
 import {Map, Placemark, YMaps} from "react-yandex-maps";
 import './map.scss'
-
+import {placeMark} from './const'
 
 
 export const Maps = () => {
+
+    const maps = placeMark.map((map, id) => {
+
+        return (
+            <Placemark key={id}
+                       defaultGeometry={map.defaultGeometry}
+                       properties={{
+                           balloonContentBody:
+                           map.balloonContentBody
+                       }}
+            />
+        )
+    })
+
     return (
         <div className='map'>
             <p>Выбор на карте:</p>
@@ -23,47 +37,9 @@ export const Maps = () => {
                         controls: ['zoomControl', 'fullscreenControl'],
                     }}
                 >
-                    <Placemark
-                        defaultGeometry={[55.75, 37.57]}
-                        properties={{
-                            balloonContentBody:
-                                'Москва',
-                        }}
-                    />
-                    <Placemark
-                        defaultGeometry={[53.2001, 50.15]}
-                        properties={{
-                            balloonContentBody:
-                                'Самара',
-                        }}
-                    />
-                    <Placemark
-                        defaultGeometry={[54.3282, 48.3866]}
-                        properties={{
-                            hintContent: 'Ульяновск',
-                            balloonContentBody:
-                                'Ульяновск',
-                        }}
-                    />
-                    <Placemark
-                        defaultGeometry={[55.83043, 49.06608]}
-                        properties={{
-                            hintContent: 'Казань',
-                            balloonContentBody:
-                                'Казань',
-                        }}
-                    />
-                    <Placemark
-                        defaultGeometry={[56.3287, 44.002]}
-                        properties={{
-                            hintContent: 'Нижний Новогород',
-                            balloonContentBody:
-                                'Нижний Новогород',
-                        }}
-                    />
+                    {maps}
                 </Map>
             </YMaps>
         </div>
-
     )
 }

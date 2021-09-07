@@ -25,11 +25,21 @@ export const RadioButton = () => {
 export const Step2 = () => {
 
     return (
-        <div>
-            <RadioButton
-                buttonStyle='solid'
-                size='large'
-            />
-        </div>
+        <>
+            <div>
+                <RadioButton
+                    buttonStyle='solid'
+                    size='large'
+                />
+            </div>
+            <div className='all-list-cars'>
+                <div className='item-car'>
+                    <p className='title-modelCar'>ElANTRA</p>
+                    <p className='price-car'>12 000 - 25 000 ₽</p>
+                    <img src="" alt=""/>
+                </div>
+            </div>
+        </>
+
     )
 }
