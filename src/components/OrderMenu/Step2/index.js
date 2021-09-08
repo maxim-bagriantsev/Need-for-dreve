@@ -1,45 +1,16 @@
 import React from 'react';
-import {Radio} from "antd";
+import {RadioButton} from "./RadioBatton";
 import './step2.scss'
-
-const RadioGroup = Radio.Group;
-
-export const RadioButton = () => {
-    const [value, setValue] = React.useState(1);
-
-    const onChange = e => {
-        console.log('radio checked', e.target.value);
-        setValue(e.target.value);
-    };
-
-    return (
-        <RadioGroup onChange={onChange} value={value}>
-            <Radio value={1}>Все модели</Radio>
-            <Radio value={2}>Эконом</Radio>
-            <Radio value={3}>Премиум</Radio>
-        </RadioGroup>
-    );
-};
+import {Cars} from './Cars'
 
 
 export const Step2 = () => {
-
     return (
-        <>
+        <div className='step-two'>
             <div>
-                <RadioButton
-                    buttonStyle='solid'
-                    size='large'
-                />
+                <RadioButton/>
             </div>
-            <div className='all-list-cars'>
-                <div className='item-car'>
-                    <p className='title-modelCar'>ElANTRA</p>
-                    <p className='price-car'>12 000 - 25 000 ₽</p>
-                    <img src="" alt=""/>
-                </div>
-            </div>
-        </>
-
+            <Cars/>
+        </div>
     )
 }

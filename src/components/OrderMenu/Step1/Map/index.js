@@ -3,7 +3,6 @@ import {Map, Placemark, YMaps} from "react-yandex-maps";
 import './map.scss'
 import {placeMark} from './const'
 
-
 export const Maps = () => {
 
     const maps = placeMark.map((map, id) => {

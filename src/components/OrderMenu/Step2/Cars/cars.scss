@@ -1,0 +1,25 @@
+.item-car {
+  border: 1px solid #EEEEEE;
+  width: calc(50% - 2px);
+}
+
+.item-car img {
+  float: right;
+}
+
+.item-car-info {
+  margin: 16px;
+}
+
+.item-car-info h3 {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 21px;
+}
+
+.price-car {
+  margin: 0;
+  color: #999999;
+}
