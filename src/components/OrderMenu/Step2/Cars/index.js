@@ -10,7 +10,7 @@ export const Cars = () => {
                     <h3 className='title-modelCar'>{car.model}</h3>
                     <p className='price-car'>{car.price}</p>
                 </div>
-                <img src={car.img} alt=""/>
+                <img src={car.img}/>
             </div>
         )
     })

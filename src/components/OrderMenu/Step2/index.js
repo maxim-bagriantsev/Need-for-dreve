@@ -7,9 +7,7 @@ import {Cars} from './Cars'
 export const Step2 = () => {
     return (
         <div className='step-two'>
-            <div>
-                <RadioButton/>
-            </div>
+            <RadioButton/>
             <Cars/>
         </div>
     )

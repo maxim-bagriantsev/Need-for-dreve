@@ -51,6 +51,14 @@ export const OrderMenu = () => {
                                     </p>
                                 </div>
                             </div>
+                            <div className='model'>
+                                <div className='model-point'>
+                                    <p>Модель</p>
+                                </div>
+                                <div className='model-name'>
+                                    <p>Hyndai, i30 N </p>
+                                </div>
+                            </div>
                             <p>Цена: от 8 000 до 12 000 ₽ </p>
                         </div>
                         <Button/>
