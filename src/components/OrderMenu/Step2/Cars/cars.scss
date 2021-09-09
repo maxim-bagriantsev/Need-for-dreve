@@ -4,7 +4,7 @@
 }
 
 .item-car img {
-  float: right;
+    float: right;
 }
 
 .item-car-info {
@@ -22,4 +22,21 @@
 .price-car {
   margin: 0;
   color: #999999;
+}
+
+
+@media (max-width: 767px) {
+  .item-car {
+    border: 1px solid #EEEEEE;
+    width: calc(100% - 2px);
+  }
+  .item-car img {
+
+  }
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+  .item-car img {
+    width: 100%;
+
+  }
 }

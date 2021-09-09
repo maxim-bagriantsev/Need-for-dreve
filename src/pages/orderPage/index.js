@@ -4,11 +4,12 @@ import {Sidebar} from "../../components/Sidebar";
 import './orderPage.scss';
 
 
-
 export const OrderPage = () => {
     return (
         <div className='order'>
-            <Sidebar/>
+            <div className='wrapper'>
+                <Sidebar/>
+            </div>
             <OrderMenu/>
         </div>
     )

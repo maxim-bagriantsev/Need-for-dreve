@@ -14,3 +14,17 @@
   text-align: center;
   color: #FFFFFF;
 }
+
+@media (max-width: 767px) {
+  .info-order-btn {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .info-order-btn{
+
+  }
+}
+
+

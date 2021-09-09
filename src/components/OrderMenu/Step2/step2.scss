@@ -1,12 +1,38 @@
 .step-two {
+  height: 100%;
 
 }
 
 .all-list-cars {
-  width: 736px;
-  margin-top: 48px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 736px;
+  margin-top: 48px;
 }
+
+
+@media (max-width: 470px) {
+  .all-list-cars {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .all-list-cars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .all-list-cars {
+    width: 100%;
+  }
+}
+
+
 

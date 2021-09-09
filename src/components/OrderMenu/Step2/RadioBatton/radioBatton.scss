@@ -58,8 +58,8 @@ label {
 
   /* Рисуем внешний круг */
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: white;
   border-radius: 50%;
   border: 4px solid #0EC261;
@@ -80,3 +80,12 @@ label {
   transform: translate(-50%, -50%) scale(1);
 }
 
+@media (max-width: 470px) {
+  .button-radio {
+    margin-top: 20px;
+    display: block;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+}
