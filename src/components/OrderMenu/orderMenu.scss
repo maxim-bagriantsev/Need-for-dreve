@@ -20,8 +20,6 @@
 .steps-menu {
   padding-left: 64px;
   height: 32px;
-
-  /*margin-top: 32px;*/
   display: flex;
   border-top: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;;
@@ -36,6 +34,7 @@
 }
 
 .steps-menu ul {
+  padding-top: 15px;
   display: flex;
   flex-direction: row;
   font-size: 14px;
@@ -72,7 +71,7 @@ li a {
   flex-direction: row;
   justify-content: space-between;
   padding: 0px 63px 0 63px;
-  }
+}
 
 .info-order {
   position: static;
@@ -219,6 +218,7 @@ li a {
     padding-right: 0px;
   }
   .steps-menu {
+    margin-top: 32px;
     height: 40px;
     padding: 0 32px;
     overflow: hidden;
@@ -262,6 +262,7 @@ li a {
 
   }
   .info-order {
+    margin-top: 32px;
     border: none;
     text-align: right;
     width: auto;
@@ -284,6 +285,7 @@ li a {
 
   .info-order-btn {
     width: 100%;
+    margin-bottom: 32px;
   }
 
   .map p {
@@ -303,13 +305,13 @@ li a {
   .order-content .main-header {
     padding-left: 32px;
     padding-right: 32px;
+    position: sticky;
   }
   .steps-menu {
     padding-left: 32px;
   }
 
   .step-settings {
-    /*height: 100vh;*/
     padding-left: 32px;
     padding-right: 32px;
     overflow: hidden;
@@ -328,10 +330,13 @@ li a {
   }
 
   .info-order {
-
     padding-top: 32px;
     width: 40%;
-
+  }
+  .info-order-btn {
+    width: 250px;
+    margin-right: 32px;
+    align-items: center;
   }
 
   .select-town {

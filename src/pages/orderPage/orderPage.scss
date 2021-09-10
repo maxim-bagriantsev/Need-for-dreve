@@ -4,8 +4,19 @@
 }
 
 .wrapper > .sidebar {
-  position: fixed;
   z-index: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .wrapper > .sidebar {
+    position: fixed;
+  }
+}
+
+@media (min-width: 1439px) {
+  .wrapper > .sidebar {
+    position: fixed;
+  }
 }
 
 

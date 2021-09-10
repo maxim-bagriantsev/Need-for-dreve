@@ -1,22 +1,25 @@
 .button-radio {
   width: 100%;
-  margin-top: 41px;
+  margin-top: 32px;
   display: flex;
   flex-direction: row;
 }
 
-.form-group + .form-group {
+.form-group {
 
 }
 
 .form-group label {
   color: #999999;
   margin-right: 16px;
+  text-align: center;
 }
 
-label {
-  cursor: pointer;
-  color: #121212;
+.radion-1 {
+
+}
+.radion-1 span{
+  text-align: center;
 }
 
 label {
@@ -35,6 +38,7 @@ label {
   height: 0;
   position: absolute;
   z-index: -1;
+
 }
 
 /* *********************************
@@ -44,13 +48,14 @@ label {
 .custom-radio-btn {
   position: relative;
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   background: white;
   border: 1px solid #999999;
   border-radius: 50%;
   vertical-align: text-top;
   margin-right: 8px;
+  margin-top: 2px;
 }
 
 .custom-radio-btn::before {
@@ -58,11 +63,11 @@ label {
 
   /* Рисуем внешний круг */
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: white;
   border-radius: 50%;
-  border: 4px solid #0EC261;
+  border: 3px solid #0EC261;
 
   /* Выравниваем по центру */
   position: absolute;

@@ -26,11 +26,16 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .wrapper-cars {
+    width: auto;
+    overflow-x: scroll;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .all-list-cars {
-    width: 100%;
+    flex-wrap: wrap;
+    width: 368px;
   }
 }
 

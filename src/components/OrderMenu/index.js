@@ -7,6 +7,9 @@ import {Step2} from "./Step2";
 import {itemMenu} from "./const";
 import {Button} from "./Button";
 import './orderMenu.scss'
+import {Step3} from "./Step3";
+
+
 
 
 export const OrderMenu = () => {
@@ -36,8 +39,8 @@ export const OrderMenu = () => {
                 <div className='step-settings'>
                     <Route path="/step1" children={<Step1/>}/>
                     <Route path="/step2" children={<Step2/>}/>
-                    {/*  <Route path="/step3" children={<Step3/>}/>
-                    <Route path="/step4" children={<Step4/>}/>*/}
+                    <Route path="/step3" children={<Step3/>}/>
+                    {/*<Route path="/step4" children={<Step4/>}/>*/}
                     <div className='info-order'>
                         <p>Ваш заказ:</p>
                         <div className='info-order-data'>

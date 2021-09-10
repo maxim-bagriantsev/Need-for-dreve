@@ -1,6 +1,6 @@
 .item-car {
   border: 1px solid #EEEEEE;
-  width: calc(50% - 2px);
+  width: calc(50% - 0px);
 }
 
 .item-car img {
@@ -31,12 +31,15 @@
     width: calc(100% - 2px);
   }
   .item-car img {
-
+    width: 50%;
   }
 }
 @media (min-width: 768px) and (max-width: 1439px) {
   .item-car img {
     width: 100%;
-
+  }
+  .item-car {
+    flex-wrap: wrap;
+    width: 368px;
   }
 }
