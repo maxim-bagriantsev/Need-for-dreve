@@ -5,9 +5,6 @@ import {SelectDate} from "./SelectDate";
 import {TariffRadioButton} from "./TariffRadioButton";
 import {AdditionalRadioButton} from "./AdditionalChecbox";
 
-
-
-
 export const Step3 = () => {
     return (
         <div className='step-three'>
