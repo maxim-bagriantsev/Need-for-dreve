@@ -168,7 +168,6 @@ li a {
   line-height: 16px;
   align-items: flex-end;
   background-color: #fff;
-
   margin: 0 0 -4px;
 }
 
@@ -190,11 +189,13 @@ li a {
   text-align: end;
 }
 
-@media (max-width: 470px) {
+@media (max-width: 500px) {
   .steps-menu {
     padding: 0 10px;
     border: 1px solid #EEEEEE;
-
+    overflow: hidden;
+    overflow-x: scroll;
+    border-bottom: none;
   }
   .info-order-data {
     margin-left: 0;
@@ -221,9 +222,7 @@ li a {
     margin-top: 32px;
     height: 40px;
     padding: 0 32px;
-    overflow: hidden;
-    overflow-x: scroll;
-    border-bottom: none;
+    border-bottom: 1px solid #EEEEEE;
   }
 
   ::-webkit-scrollbar-button {
