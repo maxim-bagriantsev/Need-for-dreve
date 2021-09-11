@@ -93,7 +93,6 @@ li a {
 // Информация о заказе
 .info-order-data {
   text-align: start;
-  margin-left: 32px;
   margin-top: 32px;
 }
 
@@ -172,7 +171,7 @@ li a {
 }
 
 .model-point p {
-  width: 100px;
+  width: auto;
   font-size: 14px;
   background-color: #fff;
   align-items: flex-end;
@@ -269,6 +268,7 @@ li a {
   }
   .select-town {
     margin: 0 auto;
+    margin-top: 20px;
     align-items: start !important;
     display: flex;
     flex-direction: column;
@@ -316,7 +316,6 @@ li a {
     overflow: hidden;
   }
 
-
   .step-one {
     width: 50%;
   }
@@ -332,6 +331,7 @@ li a {
     padding-top: 32px;
     width: 40%;
   }
+
   .info-order-btn {
     width: 250px;
     margin-right: 32px;

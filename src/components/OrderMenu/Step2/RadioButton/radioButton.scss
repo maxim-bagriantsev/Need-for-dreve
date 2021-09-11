@@ -1,6 +1,5 @@
 .button-radio {
   width: 100%;
-  margin-top: 32px;
   display: flex;
   flex-direction: row;
 }
@@ -18,14 +17,15 @@
 .radion-1 {
 
 }
-.radion-1 span{
+
+.radion-1 span {
   text-align: center;
 }
 
 label {
   content: "";
   cursor: pointer;
-  color: #121212;
+  color: #999999;
 }
 
 /* *********************************

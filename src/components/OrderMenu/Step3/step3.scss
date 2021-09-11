@@ -11,11 +11,25 @@
 .start-date {
   display: flex;
   margin-top: 16px;
+  text-align: center;
+  align-items: center;
+}
+
+.start-date span {
+  width: 19px;
+  margin-right: 8px;
+  text-align: end;
 }
 
 .end-date {
   display: flex;
-  margin-top: 13px;
+  text-align: center;
+  align-items: center;
+}
+
+.end-date span {
+  width: 19px;
+  margin-right: 8px;
 }
 
 //Выбор тарифа
@@ -23,7 +37,13 @@
   margin-top: 32px;
 }
 
+.radio-btn-group {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+}
+
 //Дополнительные услуги
-.select-additional-services{
+.select-additional-services {
   margin-top: 32px;
 }
