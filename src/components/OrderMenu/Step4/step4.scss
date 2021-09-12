@@ -1,0 +1,26 @@
+.total-order {
+  width: 100%;
+  display: flex;
+  margin-top: 32px;
+  margin-bottom: 8px;
+    justify-content: space-between;
+}
+
+.total-order h3{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+}
+
+.total-order p{
+  margin-bottom: 8px;
+  line-height: 16px;
+}
+
+.car-number {
+  padding: 4px 8px;
+  border: 1px solid #999999;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 4px;
+}

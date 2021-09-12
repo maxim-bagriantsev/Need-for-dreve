@@ -4,10 +4,11 @@ import {BrowserRouter as Router, NavLink, Route} from "react-router-dom";
 import {Header} from "../Main/Header";
 import {Step1} from "./Step1";
 import {Step2} from "./Step2";
+import {Step3} from "./Step3";
+import {Step4} from "./Step4";
+import {InfoOrder} from "./InfoOrder";
 import {itemMenu} from "./const";
 import './orderMenu.scss'
-import {Step3} from "./Step3";
-import {InfoOrder} from "./InfoOrder";
 
 
 export const OrderMenu = () => {
@@ -38,65 +39,8 @@ export const OrderMenu = () => {
                     <Route path="/step1" children={<Step1/>}/>
                     <Route path="/step2" children={<Step2/>}/>
                     <Route path="/step3" children={<Step3/>}/>
-                    {/*<Route path="/step4" children={<Step4/>}/>*/}
+                    <Route path="/step4" children={<Step4/>}/>
                     <InfoOrder/>
-                    {/* <div className='info-order'>
-                        <p>Ваш заказ:</p>
-                        <div className='info-order-data'>
-                            <div className='address'>
-                                <div className='address-point'>
-                                    <p>Пункт выдачи</p>
-                                </div>
-                                <div className='address-name'>
-                                    <p>Ульяновск,
-                                        Нариманова 42
-                                    </p>
-                                </div>
-                            </div>
-                            <div className='model'>
-                                <div className='model-point'>
-                                    <p>Модель</p>
-                                </div>
-                                <div className='model-name'>
-                                    <p>Hyndai, i30 N</p>
-                                </div>
-                            </div>
-                            <div className='model'>
-                                <div className='model-point'>
-                                    <p>Цвет</p>
-                                </div>
-                                <div className='model-name'>
-                                    <p>Голубой</p>
-                                </div>
-                            </div>
-                            <div className='model'>
-                                <div className='model-point'>
-                                    <p>Длительность аренды</p>
-                                </div>
-                                <div className='model-name'>
-                                    <p>1д 2ч</p>
-                                </div>
-                            </div>
-                            <div className='model'>
-                                <div className='model-point'>
-                                    <p>Тариф</p>
-                                </div>
-                                <div className='model-name'>
-                                    <p>На сутки</p>
-                                </div>
-                            </div>
-                            <div className='model'>
-                                <div className='model-point'>
-                                    <p>Полный бак</p>
-                                </div>
-                                <div className='model-name'>
-                                    <p>Да</p>
-                                </div>
-                            </div>
-                            <p>Цена: от 8 000 до 12 000 ₽ </p>
-                        </div>
-                        <Button/>
-                    </div>*/}
                 </div>
             </Router>
         </div>
