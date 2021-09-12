@@ -6,7 +6,7 @@ import i30N from "../../../assets/imeges/i30.png"
 export const Step4 = () => {
     return (
         <div className='total-order'>
-            <div>
+            <div >
                 <h3>Hyndai, i30 N</h3>
                 <p className='car-number'>K 761 HA 73</p>
                 <p>
@@ -19,7 +19,7 @@ export const Step4 = () => {
                 </p>
             </div>
             <div>
-                <img src={i30N}/>
+                <img className='total-car-img' src={i30N}/>
             </div>
         </div>
     )
