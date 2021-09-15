@@ -22,8 +22,8 @@ export const Carousel = () => {
     const elementSlide = slides.map((slide, id) => {
 
         return (
-            <SwiperSlide>
-                <div key={id} className='slider' style={{backgroundImage: `url(${slide.img})`}}>
+            <SwiperSlide key={id}>
+                <div className='slider' style={{backgroundImage: `url(${slide.img})`}}>
                     <div className='background-layer'>
                         <div className='slider-content'>
                             <div className='slider-content-item'>

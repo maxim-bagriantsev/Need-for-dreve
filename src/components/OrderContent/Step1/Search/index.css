@@ -1,0 +1,31 @@
+.ant-input-affix-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 20px;
+    min-width: 0;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    line-height: 1.5715;
+    background-color: #fff;
+    background-image: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #999;
+    border-radius: 0px;
+    transition: all 0.3s;
+    display: inline-flex;
+}
+
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    border-color:  #999;
+    border-right-width: 1px !important;
+    z-index: 1;
+}
+
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0);
+}

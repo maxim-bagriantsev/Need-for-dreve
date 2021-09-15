@@ -1,5 +1,5 @@
 import React from 'react';
-import {OrderMenu} from "../../components/OrderMenu";
+import {OrderContent} from "../../components/OrderContent";
 import {Sidebar} from "../../components/Sidebar";
 import './orderPage.scss';
 
@@ -10,7 +10,7 @@ export const OrderPage = () => {
             <div className='wrapper'>
                 <Sidebar/>
             </div>
-            <OrderMenu/>
+            <OrderContent/>
         </div>
     )
 }

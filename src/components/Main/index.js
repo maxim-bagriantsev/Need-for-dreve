@@ -13,7 +13,7 @@ export const Main = () => {
                 <h1 className='without_class'>Каршеринг</h1>
                 <h2 className='without_class'>Need for drive</h2>
                 <h3 className='without_class'>Поминутная аренда авто твоего города</h3>
-                <NavLink to='step1' style={{width: '100%'}}>
+                <NavLink to='/orderPage/step1' style={{width: '100%'}}>
                     <button className='button'>
                         <span>Забронировать</span>
                     </button>

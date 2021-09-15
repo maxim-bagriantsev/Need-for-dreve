@@ -1,0 +1,46 @@
+.item-car {
+  border: 1px solid #EEEEEE;
+  width: calc(50% - 0px);
+}
+
+.item-car img {
+  float: right;
+}
+
+.item-car-info {
+  margin: 16px;
+}
+
+.item-car-info h3 {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 21px;
+}
+
+.price-car {
+  margin: 0;
+  color: #999999;
+}
+
+
+@media (max-width: 767px) {
+  .item-car {
+    border: 1px solid #EEEEEE;
+    width: calc(100% - 2px);
+  }
+  .item-car img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .item-car {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .item-car img {
+    width: auto;
+  }
+}

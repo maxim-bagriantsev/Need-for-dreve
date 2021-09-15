@@ -1,0 +1,53 @@
+.ant-picker {
+    position: relative;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    border-bottom: 1px solid #999999;
+    width: 224px;
+}
+
+.ant-picker:hover {
+    border-bottom: 1px solid #999999;
+}
+
+.ant-picker-clear::after {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+    background: #0ec261;
+    border: none;
+}
+
+.ant-btn-primar:active, .ant-btn-primar:focus, .ant-btn-primary {
+    background: #0ec261 !important;
+    border-color: #0ec261 !important;
+}
+
+.ant-picker-suffix {
+    display: none;
+}
+
+.ant-picker-focused {
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
