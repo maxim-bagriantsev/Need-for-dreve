@@ -45,6 +45,10 @@
   cursor: pointer;
 }
 
+.steps-menu ul svg:last-child {
+  display: none;
+}
+
 li a {
   color: #999999;
 }
@@ -52,6 +56,7 @@ li a {
 .steps-menu ul li a {
   text-decoration: none;
 }
+
 
 .steps-menu ul li a:hover {
   color: #0EC261;
@@ -348,11 +353,21 @@ li a {
   }
 }
 
-@media (min-width: 1439px) and (max-width: 2048px) {
+@media (min-width: 1440px) and (max-width: 1749px) {
   .order-content .main-header {
+    justify-content: space-between;
+    margin-left: 249px;
+    margin-right: 0px;
+  }
+}
+
+@media (min-width: 1750px) {
+  .order-content .main-header {
+    justify-content: space-between;
     margin-left: 249px;
     margin-right: 249px;
   }
+
   .step-settings {
     margin-left: 249px;
     margin-right: 249px;
@@ -366,3 +381,4 @@ li a {
   }
 
 }
+
