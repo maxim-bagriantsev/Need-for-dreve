@@ -1,0 +1,58 @@
+.confirm-page {
+  width: 100%;
+  height: calc(100%);
+  background: rgba(0, 120, 201, 0.1);
+  margin: 0 auto;
+  align-items: center;
+}
+
+.confirm-order-menu {
+  margin: 0 auto;
+  align-items: center;
+}
+
+.confirm-title {
+  text-align: center;
+}
+
+.confirm-btn {
+  width: 177px;
+  height: 48px;
+  margin-right: 16px;
+  cursor: pointer;
+  border-style: none;
+  outline-style: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+  background-blend-mode: darken;
+}
+
+.confirm-btn-title {
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+
+.return-btn {
+  width: 177px;
+  height: 48px;
+  cursor: pointer;
+  border-style: none;
+  outline-style: none;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #493013 0%, #7B0C3B 100%);
+  background-blend-mode: darken;
+}
+
+.return-btn-title {
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-align: center;
+}

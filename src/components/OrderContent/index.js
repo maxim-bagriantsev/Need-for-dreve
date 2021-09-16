@@ -43,6 +43,7 @@ export const OrderContent = () => {
                 <StepRouter/>
                 <InfoOrder/>
             </div>
+
         </div>
     )
 }
