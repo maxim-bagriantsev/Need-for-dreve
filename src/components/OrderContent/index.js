@@ -1,16 +1,10 @@
 import React, {Fragment} from "react";
 import icons from "../../assets/icons.svg";
 import {NavLink} from "react-router-dom";
-import {Route, Switch} from "react-router";
 import {Header} from "../Main/Header";
-import {Step1} from "./Step1";
-import {Step2} from "./Step2";
-import {Step3} from "./Step3";
-import {Step4} from "./Step4";
 import {InfoOrder} from "./InfoOrder";
 import {itemMenu} from "./const";
 import './orderContent.scss'
-import {AppRouter} from "../AppRouter/Router";
 import {StepRouter} from "./StepRouter";
 
 
@@ -43,7 +37,6 @@ export const OrderContent = () => {
                 <StepRouter/>
                 <InfoOrder/>
             </div>
-
         </div>
     )
 }

@@ -202,8 +202,17 @@ li a {
     overflow-x: scroll;
     border-bottom: none;
   }
+  .info-order {
+    margin-left: 0;
+  }
   .info-order-data {
     margin-left: 0;
+  }
+  .select-town {
+    margin: 0 auto !important;
+  }
+  .search {
+    margin-top: 20px !important;
   }
 }
 
@@ -212,8 +221,6 @@ li a {
     display: flex;
     flex-direction: column;
     padding-top: 0;
-  }
-  .order-content {
     margin-left: 0;
   }
 
@@ -261,10 +268,7 @@ li a {
     padding: 0 32px 0 32px;
   }
 
-  .search {
 
-
-  }
   .info-order {
     margin-top: 32px;
     border: none;
@@ -273,12 +277,18 @@ li a {
     padding: 0;
   }
   .select-town {
-    margin: 0 auto;
+    margin: 0 auto !important;
     margin-top: 20px;
     align-items: start !important;
     display: flex;
     flex-direction: column;
   }
+
+  .search {
+    margin-top: 20px !important;
+  }
+
+
   .select-town p {
     text-align: start;
     font-weight: 500;
@@ -349,7 +359,7 @@ li a {
   }
 
   .map {
-    width: 90%;
+    width: 100%;
   }
 }
 
