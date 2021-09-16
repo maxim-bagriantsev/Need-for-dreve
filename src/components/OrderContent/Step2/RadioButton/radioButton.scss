@@ -6,16 +6,16 @@
 
 .form-group {
 
+  align-items: center;
 }
 
 .form-group label {
   color: #999999;
   margin-right: 16px;
-  text-align: center;
 }
 
 .radion-1 {
-
+  align-items: center;
 }
 
 .radion-1 span {
@@ -53,11 +53,10 @@ label {
   background: white;
   border: 1px solid #999999;
   border-radius: 50%;
-  /*vertical-align: text-top;*/
   margin-right: 8px;
-  margin-top: 2px;
   vertical-align: bottom;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
+  align-items: center;
 }
 
 .custom-radio-btn::before {
