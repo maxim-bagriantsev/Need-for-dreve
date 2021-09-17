@@ -45,7 +45,9 @@
     border: none;
 }
 
-.ant-btn-primar:active, .ant-btn-primar:focus, .ant-btn-primary {
+.ant-btn-sm {
+    width: 35px;
+    height: 35px;
     background: #0ec261 !important;
     border-color: #0ec261 !important;
 }

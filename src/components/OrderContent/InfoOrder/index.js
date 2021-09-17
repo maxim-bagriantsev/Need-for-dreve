@@ -1,6 +1,7 @@
 import React from "react";
-import {Button} from "../Button";
 import './infoOrder.scss'
+import {InfoOrderButton} from "../InfoOrderButton";
+
 
 export const InfoOrder = () => {
     return (
@@ -59,7 +60,7 @@ export const InfoOrder = () => {
                 </div>
                 <p>Цена: от 8 000 до 12 000 ₽ </p>
             </div>
-            <Button/>
+            <InfoOrderButton/>
         </div>
     )
 }
