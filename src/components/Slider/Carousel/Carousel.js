@@ -17,7 +17,6 @@ import SwiperCore, {
 
 SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
 
-
 export const Carousel = () => {
     const elementSlide = slides.map((slide, id) => {
 

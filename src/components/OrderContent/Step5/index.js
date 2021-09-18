@@ -1,45 +1,49 @@
 import React from 'react';
-import {Sidebar} from "../../Sidebar";
-import {OrderContent} from "../index";
 import {Header} from "../../Main/Header";
-import {StepRouter} from "../StepRouter";
 import {InfoOrder} from "../InfoOrder";
-import {StepBackwardOutlined} from "@ant-design/icons";
 import i30N from "../../../assets/imeges/i30.png";
+import {Sidebar} from "../../Sidebar";
+import './orderFinish.scss';
 
 export const OrderFinish = () => {
+
     return (
         <div className='order'>
             <div className='wrapper'>
                 <Sidebar/>
             </div>
-            return (
             <div className='order-content'>
                 <Header/>
-                <div className='total-order'>
-                    <div>
-                        <h3>Hyndai, i30 N</h3>
-                        <p className='car-number'>K 761 HA 73</p>
-                        <p>
-                            <strong>Топливо </strong>
-                            100%
-                        </p>
-                        <p>
-                            <strong>Доступна с </strong>
-                            12.06.2019 12:00
-                        </p>
-                    </div>
-                    <div>
-                        <img className='total-car-img' src={i30N}/>
-                    </div>
+                <div className='steps-menu'>
+                    <section>
+                        <ul>
+                            Заказ номер RU58491823
+                        </ul>
+                    </section>
                 </div>
                 <div className='step-settings'>
-                    <StepRouter/>
+                    <div className='total-order'>
+                        <div className='total-order-content'>
+                            <h2>Ваш заказ подтверждён</h2>
+                            <h3>Hyndai, i30 N</h3>
+                            <p className='car-number'>K 761 HA 73</p>
+                            <p>
+                                <strong>Топливо </strong>
+                                100%
+                            </p>
+                            <p>
+                                <strong>Доступна с </strong>
+                                12.06.2019 12:00
+                            </p>
+                        </div>
+                        <div>
+                            <img className='total-car-img' src={i30N}/>
+                        </div>
+                    </div>
                     <InfoOrder/>
                 </div>
-
             </div>
         </div>
-    );
+    )
 };
 

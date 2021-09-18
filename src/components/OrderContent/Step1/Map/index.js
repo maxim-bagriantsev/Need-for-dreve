@@ -1,7 +1,7 @@
 import React from "react";
 import {Map, Placemark, YMaps} from "react-yandex-maps";
-import './map.scss'
-import {placeMark} from './const'
+import {placeMark} from './const';
+import './map.scss';
 
 export const Maps = () => {
 

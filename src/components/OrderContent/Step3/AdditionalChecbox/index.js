@@ -1,12 +1,10 @@
 import React from "react";
 import {Checkbox} from 'antd';
-import './index.css'
-
+import './index.css';
 
 function onChange(e) {
     console.log(`checked = ${e.target.checked}`);
 }
-
 
 export const AdditionalRadioButton = () => {
     return (

@@ -1,12 +1,11 @@
 import React from "react";
-import './step4.scss'
-
-import i30N from "../../../assets/imeges/i30.png"
+import i30N from "../../../assets/imeges/i30.png";
+import './step4.scss';
 
 export const Step4 = () => {
     return (
         <div className='total-order'>
-            <div >
+            <div>
                 <h3>Hyndai, i30 N</h3>
                 <p className='car-number'>K 761 HA 73</p>
                 <p>

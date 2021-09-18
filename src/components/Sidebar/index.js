@@ -13,10 +13,10 @@ export const Sidebar = () => {
     }
 
     return (
-            <div className='sidebar'>
-                <Hamburger isMenuOpen={isMenuOpen} openMenu={openMenu}/>
-                <Menu isMenuOpen={isMenuOpen} openMenu={openMenu}/>
-                <LanguageSelector/>
+        <div className='sidebar'>
+            <Hamburger isMenuOpen={isMenuOpen} openMenu={openMenu}/>
+            <Menu isMenuOpen={isMenuOpen} openMenu={openMenu}/>
+            <LanguageSelector/>
         </div>
     )
 }

@@ -109,14 +109,9 @@
     text-align: center;
 }
 
-
-
-
-
 .ant-modal-close {
     display: none;
 }
-
 
 @media (max-width: 767px) {
     .ant-modal-body {
@@ -127,7 +122,6 @@
     .ant-modal-footer {
         margin: 0 auto;
         flex-direction: column-reverse;
-
     }
 
     .ant-modal-footer .ant-btn + .ant-btn:not(.ant-dropdown-trigger) {

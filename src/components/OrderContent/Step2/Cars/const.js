@@ -36,9 +36,6 @@ export const cars = [
         price: '15 000 - 30 000 ₽',
         img: xtrail
     },
-
-
-
     {
         model: 'ElANTRA',
         price: '12 000 - 25 000 ₽',

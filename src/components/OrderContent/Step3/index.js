@@ -1,9 +1,9 @@
 import React from 'react';
-import './step3.scss'
 import {ColorRadioButton} from "./ColorRadioButton";
 import {SelectDate} from "./SelectDate";
 import {TariffRadioButton} from "./TariffRadioButton";
 import {AdditionalRadioButton} from "./AdditionalChecbox";
+import './step3.scss';
 
 export const Step3 = () => {
     return (

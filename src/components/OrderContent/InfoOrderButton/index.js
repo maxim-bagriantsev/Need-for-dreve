@@ -1,22 +1,33 @@
 import React, {useState} from 'react';
+import {Modal} from 'antd';
+import {NavLink} from "react-router-dom";
+import './button.scss';
 import 'antd/dist/antd.css';
 import './index.css';
-import {Button, Modal} from 'antd';
-import './button.scss'
 
 export const InfoOrderButton = () => {
-    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [visible, setVisible] = useState(false);
+    const [confirmLoading, setConfirmLoading] = useState(false);
 
     const showModal = () => {
-        setIsModalVisible(true);
+        setVisible(true);
     };
 
     const handleOk = () => {
-        setIsModalVisible(false);
+        setConfirmLoading(true);
+        setTimeout(() => {
+            setVisible(false);
+            setConfirmLoading(false);
+        }, 2000);
+        return (
+            <NavLink to='/orderFinish' style={{width: '100%'}} type="primary">
+            </NavLink>
+        )
     };
 
     const handleCancel = () => {
-        setIsModalVisible(false);
+        console.log('Clicked cancel button');
+        setVisible(false);
     };
     return (
         <>
@@ -24,17 +35,19 @@ export const InfoOrderButton = () => {
                 <p>Выбрать модель</p>
             </button>
             <Modal showModal={showModal}
-                   visible={isModalVisible}
+                   visible={visible}
                    onOk={handleOk}
                    onCancel={handleCancel}
+                   confirmLoading={confirmLoading}
                    width='auto'
                    height='500px'
                    closeIcon={false}
-                   wrapClassName='modal-window'
                    okText='Подтвердить'
                    cancelText='Вернуться'
             >
-                <p>Подтвердить заказ</p>
+                <NavLink to='/orderFinish' style={{width: '100%'}} type="primary">
+                    <p>Подвердить заказ</p>
+                </NavLink>
             </Modal>
         </>
     )

@@ -24,7 +24,6 @@
   color: #999999;
 }
 
-
 @media (max-width: 767px) {
   .item-car {
     border: 1px solid #EEEEEE;
@@ -40,6 +39,7 @@
     flex-wrap: wrap;
     width: 100%;
   }
+
   .item-car img {
     width: auto;
   }

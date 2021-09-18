@@ -9,5 +9,4 @@ export const radioBtnTariff = [
         text: 'На сутки, 1999 ₽/сутки',
         id: 'radio-5'
     },
-
 ]

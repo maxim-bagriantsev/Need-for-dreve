@@ -20,16 +20,10 @@
     transition: opacity 0.3s, color 0.3s;
 }
 
-.ant-picker-clear:hover {
-
-}
-
-
 /*отключение подсветки border-button у input*/
 .ant-picker:hover {
     border-bottom: 1px solid #999999;
 }
-
 
 .ant-picker-clear::after {
     position: absolute;

@@ -1,7 +1,6 @@
 import React from 'react';
-import './slider.scss';
-
 import {Carousel} from "./Carousel/Carousel";
+import './slider.scss';
 
 export const Slider = () => {
     return <Carousel/>

@@ -1,7 +1,7 @@
 import React from "react";
-import './step1.scss'
 import {Search} from "./Search";
 import {Maps} from "./Map";
+import './step1.scss';
 
 export const Step1 = () => {
 

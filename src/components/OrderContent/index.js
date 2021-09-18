@@ -4,9 +4,8 @@ import {NavLink} from "react-router-dom";
 import {Header} from "../Main/Header";
 import {InfoOrder} from "./InfoOrder";
 import {itemMenu} from "./const";
-import './orderContent.scss'
 import {StepRouter} from "./StepRouter";
-
+import './orderContent.scss';
 
 export const OrderContent = () => {
 

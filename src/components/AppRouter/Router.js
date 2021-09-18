@@ -4,7 +4,6 @@ import {StartPage} from "../../pages/startPage";
 import {OrderPage} from "../../pages/orderPage";
 import {OrderFinish} from "../OrderContent/Step5";
 
-
 export const AppRouter = () => {
     return (
         <Switch>

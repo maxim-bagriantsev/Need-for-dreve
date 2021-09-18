@@ -1,6 +1,6 @@
 import React from 'react';
-import './menu.scss';
 import icons from '../../../assets/icons.svg';
+import './menu.scss';
 
 export const Menu = ({isMenuOpen, openMenu}) => {
 

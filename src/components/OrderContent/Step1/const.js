@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export const towns = [
     {
         defaultGeometry: '[53.2001, 50.15]',

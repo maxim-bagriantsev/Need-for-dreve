@@ -38,7 +38,6 @@ label {
   height: 0;
   position: absolute;
   z-index: -1;
-
 }
 
 /* *********************************
@@ -55,13 +54,12 @@ label {
   border-radius: 50%;
   margin-right: 8px;
   vertical-align: bottom;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   align-items: center;
 }
 
 .custom-radio-btn::before {
   content: "";
-
   /* Рисуем внешний круг */
   display: inline-block;
   width: 12px;
@@ -75,7 +73,6 @@ label {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0);
-
   transition: 0.2s ease-in;
 }
 

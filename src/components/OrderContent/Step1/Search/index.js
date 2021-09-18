@@ -2,7 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import './index.css';
 import {Input} from 'antd';
-import './search.scss'
+import './search.scss';
 
 const onChange = e => {
     console.log(e);
@@ -16,7 +16,6 @@ export const Search = () => {
                 <Input className='input-town' placeholder="Выберите город" allowClear onChange={onChange}/>
                 <span
                 >
-
                 </span>
             </div>
             <div className='select-town'>

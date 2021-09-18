@@ -1,9 +1,8 @@
 import React from 'react';
-import './main.scss';
-
 import {Header} from './Header/';
 import {Footer} from './Footer';
 import {NavLink} from "react-router-dom";
+import './main.scss';
 
 export const Main = () => {
     return (

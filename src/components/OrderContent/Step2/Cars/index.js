@@ -1,6 +1,6 @@
 import React from "react";
-import {cars} from './const'
-import './cars.scss'
+import {cars} from './const';
+import './cars.scss';
 
 export const Cars = () => {
     const listCars = cars.map((car, id) => {

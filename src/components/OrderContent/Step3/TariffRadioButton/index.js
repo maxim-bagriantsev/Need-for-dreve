@@ -1,12 +1,13 @@
 import React from "react";
 import {radioBtnTariff} from "./const";
-import './radioButtonTariff.scss'
+import './radioButtonTariff.scss';
 
 export const TariffRadioButton = () => {
     const radioButtonTariff = radioBtnTariff.map((btn, id) => {
         return (
             <label htmlFor={btn.htmlFor} key={id}>
-                <input onChange={()=>console.log(btn.id)} id={btn.id} type="radio" name="radioTariff" value="1" className="real-radio-btn" checked/>
+                <input onChange={() => console.log('#')} id={btn.id} type="radio" name="radioTariff" value="1"
+                       className="real-radio-btn" checked/>
                 <span className="custom-radio-btn"/>
                 {btn.text}
             </label>

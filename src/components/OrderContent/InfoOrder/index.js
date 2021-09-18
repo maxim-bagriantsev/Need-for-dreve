@@ -2,7 +2,6 @@ import React from "react";
 import './infoOrder.scss'
 import {InfoOrderButton} from "../InfoOrderButton";
 
-
 export const InfoOrder = () => {
     return (
         <div className='info-order'>
