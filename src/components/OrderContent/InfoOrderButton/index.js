@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Modal} from 'antd';
-import {NavLink} from "react-router-dom";
 import './button.scss';
 import 'antd/dist/antd.css';
 import './index.css';
