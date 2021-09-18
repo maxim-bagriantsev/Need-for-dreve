@@ -13,16 +13,14 @@ export const InfoOrderButton = () => {
         setVisible(true);
     };
 
+
     const handleOk = () => {
         setConfirmLoading(true);
         setTimeout(() => {
             setVisible(false);
             setConfirmLoading(false);
         }, 2000);
-        return (
-            <NavLink to='/orderFinish' style={{width: '100%'}} type="primary">
-            </NavLink>
-        )
+        window.location.assign('http://localhost:3000/orderFinish/')
     };
 
     const handleCancel = () => {
@@ -45,9 +43,7 @@ export const InfoOrderButton = () => {
                    okText='Подтвердить'
                    cancelText='Вернуться'
             >
-                <NavLink to='/orderFinish' style={{width: '100%'}} type="primary">
-                    <p>Подвердить заказ</p>
-                </NavLink>
+                <p>Подвердить заказ</p>
             </Modal>
         </>
     )
