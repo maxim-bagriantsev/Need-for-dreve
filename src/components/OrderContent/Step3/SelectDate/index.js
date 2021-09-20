@@ -22,7 +22,7 @@ export const SelectDate = () => {
                     onChange={onChange}
                     onOk={onOk}
                     placeholder='Введите дату и время'
-                    format='DD.MM.YYYY. HH:mm'
+                    format='DD.MM.YYYY HH:mm'
                     size='small'
                 />
             </div>

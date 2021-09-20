@@ -12,7 +12,6 @@ export const InfoOrderButton = () => {
         setVisible(true);
     };
 
-
     const handleOk = () => {
         setConfirmLoading(true);
         setTimeout(() => {
