@@ -50,7 +50,6 @@ export const Carousel = () => {
                 keyboard={true}
                 loop={true}
                 loopedSlides={5}
-                slidesPerview={0}
                 className="slider">
                 {elementSlide}
             </Swiper>
