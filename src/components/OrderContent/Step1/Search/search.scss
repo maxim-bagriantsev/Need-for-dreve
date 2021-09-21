@@ -44,6 +44,45 @@
   padding-left: 8px;
 }
 
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  width: 200px;
+  height: 26px;
+  border-style: none;
+  outline: none;
+  border-bottom: 1px solid #999;
+  margin-left: 8px;
+  padding-left: 8px;
+}
+.ant-select-single .ant-select-selector .ant-select-selection-search{
+  left: 6px;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector:hover {
+  border-bottom: 1px solid #999;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  box-shadow: none;
+  border-color: #999;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-radius: 0;
+}
+
+.ant-select-selection-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  color: #999999;
+  font-weight: 300;
+}
+
+
+.select-town {
+  border-style: none;
+  outline: none;
+}
+
 .ant-input-affix-wrapper, .input-town {
   height: 21px;
 }
