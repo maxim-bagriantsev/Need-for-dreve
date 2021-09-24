@@ -13,11 +13,19 @@ const axiosInstance = axios.create({
 // получаем список городов
 export const getAllTowns = () => {
     return axiosInstance.get(urls.cities())
-        .then(response => {
-            debugger
-            return response.data
-        })
 }
+
+// получаем список машин
+export const getAllCars = () => {
+    return axiosInstance.get(urls.cars())
+}
+
+// получаем список андресов
+export const getAddress = () => {
+    return axiosInstance.get(urls.address())
+}
+
+
 
 
 

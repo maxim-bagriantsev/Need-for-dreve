@@ -1,45 +1,48 @@
 import React from 'react';
-import {Input} from 'antd';
 import 'antd/dist/antd.css';
 import './index.css';
 import './search.scss';
-import {AutoComplete} from 'antd';
-
-
-// Выпадающий список городов
-const optionsTowns = [
-    {
-        value: 'Ульяновск',
-    },
-    {
-        value: 'Москва',
-    },
-    {
-        value: 'Казань',
-    },
-];
-
-// Выпадающий список улиц
-const optionsStrits = [
-    {
-        value: 'Пример 1',
-    },
-    {
-        value: 'Пример 2',
-    },
-    {
-        value: 'Пример 3',
-    },
-];
-
+import {AutoComplete, Spin} from 'antd';
+import {useSelector} from "react-redux";
 
 export const Search = () => {
+
+// вытаскиваем данные городов из store
+    const towns = useSelector((state) => {
+        return state.reducerData.townData
+    })
+
+    // вытаскиваем данные адресов из store
+    const address = useSelector((state) => {
+        return state.reducerData.addressData
+
+    })
+
+// если данные не загружены показываем спиннер
+    if (!towns) {
+        return <Spin/>
+    }
+// если данные не загружены показываем спиннер
+    if (!address) {
+        return <Spin/>
+    }
+
+    const optionsTowns = towns.map(town => {
+        return {
+            value: town.name
+        }
+    })
+
+    const optionsStrits = address.map(item => {
+        return {
+            value: item.address
+        }
+    })
 
     return (
         <div className='search'>
             <div className='select-town'>
                 <p>Город</p>
-
                 <AutoComplete
                     allowClear={true}
                     options={optionsTowns}

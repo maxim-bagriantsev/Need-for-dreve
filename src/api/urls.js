@@ -1,6 +1,7 @@
 export const urls = {
-    cities: () => '/db/city/',
-    cars: () => '/db/car',
+    cities: () => '/db/city/', // запрос на города
+    cars: () => '/db/car', // запрос на машины
+    address: ()=>'/db/point', // запрос на адреса выдачи машин
 }
 
 
