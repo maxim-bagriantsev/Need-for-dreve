@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Modal} from 'antd';
+import {Button, Modal} from 'antd';
 import './button.scss';
 import 'antd/dist/antd.css';
 import './index.css';
@@ -27,9 +27,14 @@ export const InfoOrderButton = () => {
     };
     return (
         <>
-            <button className='info-order-btn' type="primary" onClick={showModal}>
+            <Button
+                type="primary"
+                className='info-order-btn'
+                onClick={showModal}
+                disabled={false} // доступна или не доступна кнопка
+            >
                 <p>Выбрать модель</p>
-            </button>
+            </Button>
             <Modal showModal={showModal}
                    visible={visible}
                    onOk={handleOk}

@@ -7,6 +7,7 @@ import {itemMenu} from "./const";
 import {StepRouter} from "./StepRouter";
 import './orderContent.scss';
 
+
 export const OrderContent = () => {
 
     const stepsMenu = itemMenu.map((item, id) => {

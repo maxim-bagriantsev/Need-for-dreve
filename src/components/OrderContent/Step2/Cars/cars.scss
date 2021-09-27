@@ -3,7 +3,32 @@
   width: calc(50% - 0px);
 }
 
+.item-car:hover {
+  content: '';
+  background: rgba(14, 194, 97, 0.1);;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.item-car:active {
+  border-color: rgba(14, 194, 97, 0.8);
+}
+
+.cars-item {
+  width: 256px;
+  height: auto;
+  min-width: 120px;
+}
+
+.info-car-price {
+  display: flex;
+}
+
+.price-car-separator {
+  margin: 0 4px;
+}
+
 .item-car img {
+  max-width: 100%;
   float: right;
 }
 
@@ -22,6 +47,29 @@
 .price-car {
   margin: 0;
   color: #999999;
+}
+
+.ant-spin-lg .ant-spin-dot {
+  font-size: 32px;
+}
+
+.ant-spin-dot-spin {
+  transform: rotate(
+                  45deg);
+  -webkit-animation: antRotate 1.2s infinite linear;
+  animation: antRotate 1.2s infinite linear;
+}
+
+.ant-spin-dot {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  width: 1em;
+  height: 1em;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 @media (max-width: 767px) {

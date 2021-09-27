@@ -1,7 +1,10 @@
 const initialState = {
     townData: null,
     carData: null,
-    addressData: null
+    addressData: null,
+    selectedTown: '',
+    selectedStreetAndHouse: '',
+    selectedCar: null
 };
 
 export const reducerData = (state = initialState, action) => {
@@ -13,6 +16,12 @@ export const reducerData = (state = initialState, action) => {
             return {...state, carData: action.payload}
         case 'GET_ALL_ADDRESS':
             return {...state, addressData: action.payload}
+        case 'SELECT_TOWN':
+            return {...state, selectedTown: action.payload}
+        case 'SELECT_STREET_AND_HOUSE':
+            return {...state, selectedStreetAndHouse: action.payload}
+        case 'SELECT_CAR':
+            return {...state, selectedCar: action.payload}
         default:
             return state
     }

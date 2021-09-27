@@ -1,29 +1,19 @@
-import React, {useState} from "react";
+/*
+
+import React from "react";
+import {useState} from "react";
 import {Map, ObjectManager, Placemark, YMaps} from "react-yandex-maps";
-import './map.scss';
-import {addressList} from "./addressList";
+import './map.scss'
 import geoObjects from "./geoObjects.json";
 
-export const Maps = () => {
+export const Custom = (props) => {
 
-    const maps = addressList.map((map, id) => {
-
-        return (
-            <Placemark key={id}
-                       defaultGeometry={map.address}
-                       properties={{
-                           balloonContentBody:
-                           map.address.name
-                       }}
-            />
-        )
-    })
 
 
     const mapState = {
         center: [54.3187, 48.3978],
         zoom: 12,
-        load: 'package.full',
+        controls: ['zoomControl', 'fullscreenControl'],
     };
 
     return (
@@ -42,36 +32,43 @@ export const Maps = () => {
                     defaultState={{
                         center: [54.3187, 48.3978],
                         zoom: 12,
-                        load: 'package.full',
+                        controls: ['zoomControl', 'fullscreenControl'],
                     }}
-
+                    modules={["geolocation", "geocode"]}
                 >
                     <ObjectManager
                         options={{
                             clusterize: true,
-
+                            gridSize: 32,
                         }}
                         objects={{
                             openBalloonOnClick: true,
                             preset: 'islands#greenDotIcon',
                         }}
                         clusters={{
-                            preset: 'islands#greenClusterIcons',
+                            preset: 'islands#redClusterIcons',
                         }}
+                        filter={object => object.id % 2 === 0}
+                        defaultFeatures={geoObjects.features}
                         modules={[
                             'objectManager.addon.objectsBalloon',
-                            'objectManager.addon.objectsHint'
+                            'objectManager.addon.objectsHint',
                         ]}
-                        defaultFeatures={geoObjects.features}
+                    />
+                    <Placemark
+                        geometry={{
+                            type: 'Point',
+                            coordinates: 'Самара',
+                        }}
+                        properties={{
+                            iconContent: ''
+                        }}
+                        options={{
+                            preset: 'islands#blackStretchyIcon',
+                        }}
                     />
                 </Map>
             </YMaps>
         </div>
     )
-}
-
-
-
-
-
-
+};*/

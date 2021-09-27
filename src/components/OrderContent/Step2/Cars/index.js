@@ -1,17 +1,32 @@
 import React from "react";
-import {cars} from './const';
+import {useAllCars} from "../../../../hooks/useAllCars";
+import {useSelector} from "react-redux";
+import {CardCar} from "./CardCar/CardCar";
+import {Spiner} from "../../../../Tools/Spiner/Spiner";
 import './cars.scss';
 
 export const Cars = () => {
+    useAllCars()
+
+// вытаскиваем данные машин из store
+    const cars = useSelector((state) => {
+        return state.reducerData.carData
+    })
+
+// если данные не загружены показываем спиннер
+    if (!cars) {
+        return <Spiner/>
+    }
+
     const listCars = cars.map((car, id) => {
         return (
-            <div className='item-car' key={id}>
-                <div className='item-car-info'>
-                    <h3 className='title-modelCar'>{car.model}</h3>
-                    <p className='price-car'>{car.price}</p>
-                </div>
-                <img src={car.img}/>
-            </div>
+            <CardCar
+                car={car}
+                carId={id}
+                name={car.name}
+                priceMin={car.priceMin}
+                priceMax={car.priceMax}
+            />
         )
     })
     return (

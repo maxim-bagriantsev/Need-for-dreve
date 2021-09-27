@@ -1,10 +1,9 @@
 import React from "react";
 import {Search} from "./Search";
-import {Maps} from "./Map";
 import './step1.scss';
 import {useAllTowns} from "../../../hooks/useAllTowns";
 import {useAllAddress} from "../../../hooks/useAllAddress";
-
+import {Maps} from "./Map";
 
 export const Step1 = () => {
 
@@ -16,7 +15,7 @@ export const Step1 = () => {
     return (
         <>
             <div className='step-one'>
-                <Search />
+                <Search/>
                 <Maps/>
             </div>
         </>

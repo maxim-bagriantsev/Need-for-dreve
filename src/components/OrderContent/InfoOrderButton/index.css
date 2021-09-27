@@ -113,6 +113,35 @@
     display: none;
 }
 
+.info-order-btn{
+    width: 287px;
+    height: 48px;
+    border-radius: 8px;
+   background: #EEEEEE;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 32px;
+    align-items: center;
+}
+
+
+.info-order-btn:hover {
+    background: linear-gradient(90deg, #0a944a 2.61%, #026f47 112.6%);
+}
+
+.info-order-btn:active {
+    background: linear-gradient(90deg, #076432 2.61%, #013C27 150%);
+    background-blend-mode: darken;
+}
+
+.info-order-btn:focus {
+    background: linear-gradient(90deg, #076432 2.61%, #013C27 150%);
+    background-blend-mode: darken;
+}
+
+
+
 @media (max-width: 767px) {
     .ant-modal-body {
         margin-bottom: 0px;
