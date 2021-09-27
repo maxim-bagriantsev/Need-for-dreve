@@ -12,7 +12,7 @@ export const CardCar = (props) => {
 
 
     const hendleChengeCar = () => {
-        dispatch({type: 'SELECT_CAR', payload: props})
+        dispatch({type: 'SELECT_CAR', payload: props.name})
     }
 
     return (

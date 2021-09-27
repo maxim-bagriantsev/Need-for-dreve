@@ -11,7 +11,7 @@ export const InfoOrder = () => {
         return {
             town: state.reducerData.selectedTown,
             streetAndHouse: state.reducerData.selectedStreetAndHouse,
-            car: state.reducerData.selectedCar.name
+            car: state.reducerData.selectedCar
         }
     })
 

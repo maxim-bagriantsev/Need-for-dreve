@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import 'antd/dist/antd.css';
 import './index.css';
 import './search.scss';
-import {AutoComplete, Spin} from 'antd';
+import {AutoComplete} from 'antd';
 import {useDispatch, useSelector} from "react-redux";
 import {Spiner} from "../../../../Tools/Spiner/Spiner";
 
