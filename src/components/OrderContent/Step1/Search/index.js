@@ -64,8 +64,8 @@ export const Search = () => {
                     filterOption={(inputValue, option) =>
                         option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
                     }
-                    onSelect={(event, newSelecteTown) => {
-                        dispatch({type: 'SELECT_TOWN', payload: newSelecteTown.value})
+                    onSelect={(event, newSelectTown) => {
+                        dispatch({type: 'SELECT_TOWN', payload: newSelectTown.value})
                     }}
                 />
             </div>
@@ -83,8 +83,8 @@ export const Search = () => {
                     filterOption={(inputValue, option) =>
                         option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
                     }
-                    onSelect={(event, newSelecteAddress) => {
-                        dispatch({type: 'SELECT_STREET_AND_HOUSE', payload: newSelecteAddress.value})
+                    onSelect={(event, newSelectAddress) => {
+                        dispatch({type: 'SELECT_STREET_AND_HOUSE', payload: newSelectAddress.value})
                     }}
                 />
             </div>

@@ -4,14 +4,14 @@ import {InfoOrderButton} from "../InfoOrderButton";
 import {useSelector} from "react-redux";
 import {OrderRow} from "./orderRow";
 
-
 export const InfoOrder = () => {
     // Новый способ ES2015
-    const {town, streetAndHouse, car} = useSelector((state) => {
+    const {town, streetAndHouse, car, color} = useSelector((state) => {
         return {
             town: state.reducerData.selectedTown,
             streetAndHouse: state.reducerData.selectedStreetAndHouse,
-            car: state.reducerData.selectedCar
+            car: state.reducerData.selectedCar,
+            color: state.reducerData.selectedColor
         }
     })
 
@@ -28,7 +28,8 @@ export const InfoOrder = () => {
                 {town && <OrderRow label="Пункт выдачи" value={`${town}, ${streetAndHouse}`}/>}
                 {/*// если выбрана машина, отображаем информацию в меню заказа*/}
                 {car && <OrderRow label="Модель" value={`${car}`}/>}
-                <OrderRow label="Цвет" value="Голубой"/>
+                {/*// если выбран цвет, отображаем информацию в меню заказа*/}
+                {color && <OrderRow label="Цвет" value={`${color}`}/>}
                 <OrderRow label="Длительность аренды" value="1д 2ч"/>
                 <OrderRow label="Тариф" value="На сутки"/>
                 <OrderRow label="Полный бак" value="Да"/>
