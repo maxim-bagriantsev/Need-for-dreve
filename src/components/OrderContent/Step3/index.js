@@ -1,8 +1,9 @@
 import React from 'react';
 import {ColorRadioButton} from "./ColorRadioButton";
-import {SelectDate} from "./SelectDate";
+import { SelectDateStart} from "./SelectDate/selectDateStart";
+import {SelectDateEnd} from "./SelectDate/SelectDateEnd";
 import {TariffRadioButton} from "./TariffRadioButton";
-import {AdditionalRadioButton} from "./AdditionalChecbox";
+import {AdditionalServices} from "./AdditionalCheckbox";
 import './step3.scss';
 
 export const Step3 = () => {
@@ -16,11 +17,11 @@ export const Step3 = () => {
                 <p>Дата аренды</p>
                 <div className='start-date'>
                     <span>С</span>
-                    <SelectDate/>
+                    <SelectDateStart/>
                 </div>
                 <div className='end-date'>
                     <span>По</span>
-                    <SelectDate/>
+                    <SelectDateEnd/>
                 </div>
             </div>
             <div className='select-tariff'>
@@ -32,7 +33,7 @@ export const Step3 = () => {
             <div className='select-additional-services'>
                 <span>Доп услуги</span>
                 <div className='radio-btn-group'>
-                    <AdditionalRadioButton/>
+                    <AdditionalServices/>
                 </div>
             </div>
         </div>

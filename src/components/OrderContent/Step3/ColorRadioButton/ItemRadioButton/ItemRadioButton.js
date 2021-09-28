@@ -5,7 +5,7 @@ export const ItemRadioButton = (props) => {
 
     const dispatch = useDispatch()
 
-    const color = useSelector((state)=>{
+    const color = useSelector((state) => {
         return state.reducerData.selectedColor
     })
 
@@ -20,7 +20,7 @@ export const ItemRadioButton = (props) => {
                 type="radio"
                 name="radioColor"
                 value="1"
-                className="real-radio-btn" checked/>
+                className="real-radio-btn"/>
             <span className="custom-radio-btn"/>
             {props.text}
         </label>

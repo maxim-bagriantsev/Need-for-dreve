@@ -9,7 +9,7 @@ const slides = [
         img: free_parking,
         title: 'Бесплатная парковка',
         text: 'Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.',
-        classNameButton: 'slider-btn-1'
+        classNameButton: 'slider-btn-RightDriveCheckbox'
     },
     {
         id: 2,

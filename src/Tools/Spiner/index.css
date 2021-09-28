@@ -1,3 +1,9 @@
 .ant-spin-dot-item {
     background-color: #0ec261;
 }
+
+.ant-spin-lg .ant-spin-dot {
+    margin-top: 30px;
+    font-size: 40px !important;
+}
+

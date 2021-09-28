@@ -1,8 +1,8 @@
 export const radioBtn = [
     {
-        htmlFor: 'radio-1',
+        htmlFor: 'radio-RightDriveCheckbox',
         text: 'Все модели',
-        id: 'radio-1'
+        id: 'radio-RightDriveCheckbox'
     },
     {
         htmlFor: 'radio-2',

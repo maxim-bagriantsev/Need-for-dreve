@@ -8,7 +8,7 @@ export const addressList = [
             {coordinates: [54.30925, 48.33164], name: 'Московское шоссе, 92'},
             {coordinates: [54.312700, 48.380090], name: 'Ленина, 25'},
             {coordinates: [54.306580, 48.359653], name: 'Московское ш., 108'},
-            {coordinates: [54.369156, 48.587242], name: 'Ульяновский просп., 1'},
+            {coordinates: [54.369156, 48.587242], name: 'Ульяновский просп., RightDriveCheckbox'},
             {coordinates: [54.374501, 48.582588], name: 'Ульяновский,14'}
         ]
     },
@@ -31,7 +31,7 @@ export const addressList = [
         id: 3,
         cityName: 'Санкт-Петербург',
         address: [
-            {coordinates: [59.925728, 30.296240], name: 'Театральная площадь, 1'},
+            {coordinates: [59.925728, 30.296240], name: 'Театральная площадь, RightDriveCheckbox'},
         ]
     },
     {
@@ -55,7 +55,7 @@ export const addressList = [
             {coordinates: [45.037318, 38.996918], name: 'ул. Северная 413'},
             {coordinates: [45.023482, 38.977370], name: 'ул.Седина 46'},
             {coordinates: [45.042413, 39.033344], name: 'ул. Разведчика Леонова'},
-            {coordinates: [45.034490, 39.052586], name: 'ул. Уральская, 79/1'},
+            {coordinates: [45.034490, 39.052586], name: 'ул. Уральская, 79/RightDriveCheckbox'},
             {coordinates: [45.072580, 39.019780], name: 'Солнечная, 22'},
         ]
     },

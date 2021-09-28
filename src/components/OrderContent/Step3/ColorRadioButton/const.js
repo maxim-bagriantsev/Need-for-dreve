@@ -1,8 +1,8 @@
 export const radioBtnColor = [
     {
-        htmlFor: 'radio-1',
+        htmlFor: 'radio-RightDriveCheckbox',
         text: 'Любой',
-        id: 'radio-1'
+        id: 'radio-RightDriveCheckbox'
     },
     {
         htmlFor: 'radio-2',

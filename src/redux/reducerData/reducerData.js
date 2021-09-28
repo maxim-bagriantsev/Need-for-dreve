@@ -5,7 +5,13 @@ const initialState = {
     selectedTown: '',
     selectedStreetAndHouse: '',
     selectedCar: null,
-    selectedColor: null
+    selectedColor: null,
+    selectedDateStart: null,
+    selectedDateEnd: null,
+    selectedTariff: null,
+    selectedFullTank: null,
+    selectedBabyChair: null,
+    selectedRightDrive: null
 };
 
 export const reducerData = (state = initialState, action) => {
@@ -25,6 +31,18 @@ export const reducerData = (state = initialState, action) => {
             return {...state, selectedCar: action.payload}
         case 'SELECT_COLOR':
             return {...state, selectedColor: action.payload}
+        case 'SELECT_DATE_START':
+            return {...state, selectedDateStart: action.payload}
+        case 'SELECT_DATE_END':
+            return {...state, selectedDateEnd: action.payload}
+        case 'SELECT_TARIFF':
+            return {...state, selectedTariff: action.payload}
+        case 'SELECT_FULL_TANK':
+            return {...state, selectedFullTank: action.payload}
+        case 'SELECT_BABY_CHAIR':
+            return {...state, selectedBabyChair: action.payload}
+        case 'SELECT_RIGHT_DRIVE':
+            return {...state, selectedRightDrive: action.payload}
         default:
             return state
     }

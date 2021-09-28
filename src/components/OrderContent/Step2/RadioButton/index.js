@@ -8,7 +8,7 @@ export const RadioButton = () => {
         return (
             <label htmlFor={btn.htmlFor} key={id}>
                 <input onChange={() => console.log('#')} id={btn.id} type="radio" name="radioCar" value="1"
-                       className="real-radio-btn" checked/>
+                       className="real-radio-btn" />
                 <span className="custom-radio-btn"/>
                 {btn.text}
             </label>
