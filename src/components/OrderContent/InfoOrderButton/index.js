@@ -26,7 +26,7 @@ export const InfoOrderButton = () => {
         setVisible(false);
     };
     return (
-        <>
+        <React.Fragment>
             <Button
                 type="primary"
                 className='info-order-btn'
@@ -48,6 +48,6 @@ export const InfoOrderButton = () => {
             >
                 <p>Подвердить заказ</p>
             </Modal>
-        </>
+        </React.Fragment>
     )
 }

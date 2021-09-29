@@ -16,12 +16,12 @@ export const RadioButton = () => {
     })
 
     return (
-        <>
+        <React.Fragment>
             <div className='button-radio'>
                 <div className="form-group">
                     {radioButtonAll}
                 </div>
             </div>
-        </>
+        </React.Fragment>
     )
 }

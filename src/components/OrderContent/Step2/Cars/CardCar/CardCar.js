@@ -15,7 +15,7 @@ export const CardCar = (props) => {
     }
 
     return (
-        <div onClick={hendleChengeCar} className='item-car' key={props?.id}>
+        <div onClick={hendleChengeCar} className='item-car' key={props.id}>
             <div className='item-car-info'>
                 <h3 className='title-modelCar'>{props.name}</h3>
                 <div className='info-car-price'>
@@ -27,9 +27,9 @@ export const CardCar = (props) => {
             <img
                 className='cars-item'
                 src={
-                    props.car?.thumbnail?.path.includes('base64')
-                        ? props.car?.thumbnail?.path
-                        : 'https://api-factory.simbirsoft1.com' + props.car?.thumbnail?.path
+                    props.car.thumbnail.path.includes('base64')
+                        ? props.car.thumbnail.path
+                        : 'https://api-factory.simbirsoft1.com' + props.car.thumbnail.path
                 }
             />
         </div>

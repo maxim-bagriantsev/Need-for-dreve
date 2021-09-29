@@ -13,12 +13,12 @@ export const Step1 = () => {
     useAllAddress()
 
     return (
-        <>
+        <React.Fragment>
             <div className='step-one'>
                 <Search/>
                 <Maps/>
             </div>
-        </>
+        </React.Fragment>
     )
 }
 

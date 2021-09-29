@@ -4,11 +4,6 @@ import {useDispatch, useSelector} from "react-redux";
 import 'antd/dist/antd.css';
 import './index.css';
 
-function onChange(value, dateString) {
-
-    console.log('Selected Time: ', value);
-    console.log('Formatted Selected Time: ', dateString);
-}
 
 export const SelectDateEnd = () => {
 
@@ -25,10 +20,10 @@ export const SelectDateEnd = () => {
         <Space direction="vertical" size={12}>
             <div>
                 <DatePicker
-                    showTime
-                    onChange={onChange}
                     onOk={hendleSelectDate}
                     placeholder='Введите дату и время'
+                    showTime={{format: 'HH:mm'}}
+                    showNow={false}
                     format='DD.MM.YYYY HH:mm'
                     size='small'
                 />

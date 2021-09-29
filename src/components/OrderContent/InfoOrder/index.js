@@ -3,6 +3,9 @@ import './infoOrder.scss'
 import {InfoOrderButton} from "../InfoOrderButton";
 import {useSelector} from "react-redux";
 import {OrderRow} from "./orderRow";
+import moment from 'moment'
+import Moment from "react-moment";
+
 
 export const InfoOrder = () => {
     // Новый способ ES2015
@@ -31,17 +34,29 @@ export const InfoOrder = () => {
             selectedRightDrive: state.reducerData.selectedRightDrive
         }
     })
-
-    //расчет количества времени аренды
-    const oneDay = 24 * 60 * 60 * 1000;
-
-    const totalRentalPeriod = Math.round(Math.abs((selectedDateStart - selectedDateEnd) / (oneDay)));
-    console.log(totalRentalPeriod)
-
     //Аналогичный вариант
     // const selectedData = useSelector((state)=>{
     //     return {town: state.reducerData.selectedTown, streetAndHouse: state.reducerData.selectedStreetAndHouse}
     // })
+
+
+
+//Определение периода времени между двумя датами
+    const dateA = moment(selectedDateEnd, 'DD HH');
+    const dateB = moment(selectedDateStart, 'DD HH');
+    const minute = dateA.diff(dateB, 'minute',)
+
+    const ConvertDate = (num) => {
+        const days = Math.floor(num / 1440);
+        const hours = Math.floor((num % 1440) / 60);
+        const minutes = (num % 1440) % 60;
+        return {
+            days: days,
+            hours: hours,
+            minutes: minutes
+        };
+    }
+    const date = ConvertDate(minute)
 
     return (
         <div className='info-order'>
@@ -54,13 +69,15 @@ export const InfoOrder = () => {
                 {/*// если выбран цвет, отображаем информацию в меню заказа*/}
                 {color && <OrderRow label="Цвет" value={`${color}`}/>}
                 {/*// если выбран период времени, отображаем информацию в меню заказа*/}
-                {selectedDateEnd && < OrderRow label="Длительность аренды" value={`${totalRentalPeriod} д. ${10} ч.`}/>}
+                {selectedDateEnd && < OrderRow label="Длительность аренды" value={`${date.days} д. ${date.hours} ч.`}/>}
                 {/*// если выбран тариф времени, отображаем информацию в меню заказа*/}
                 {selectedTariff && <OrderRow label="Тариф" value={`${selectedTariff}`}/>}
                 {/*// если выбран дополнительный сервис, отображаем информацию в меню заказа*/}
                 {selectedFullTank && <OrderRow label="Полный бак" value='Да'/>}
-                {selectedBabyChair && <OrderRow label="Детское кресло, 200р" value='Да'/>}
-                {selectedRightDrive && <OrderRow label="Правый руль, 1600р" value='Да'/>}
+                {selectedBabyChair && <OrderRow label="Детское кресло" value='Да'/>}
+                {selectedRightDrive && <OrderRow label="Правый руль" value='Да'/>}
+
+
                 <p>Цена: от 8 000 до 12 000 ₽ </p>
             </div>
             <InfoOrderButton/>
