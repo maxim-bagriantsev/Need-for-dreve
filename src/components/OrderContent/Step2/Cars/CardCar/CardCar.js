@@ -12,6 +12,8 @@ export const CardCar = (props) => {
 
     const hendleChengeCar = () => {
         dispatch({type: 'SELECT_CAR', payload: props.name})
+        dispatch({type: 'PRICE_MIN', payload: props.priceMin})
+        dispatch({type: 'PRICE_MAX', payload: props.priceMax})
     }
 
     return (

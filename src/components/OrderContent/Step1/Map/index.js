@@ -19,7 +19,6 @@ export const Maps = () => {
         )
     })
 
-
     const mapState = {
         center: [54.3187, 48.3978],
         zoom: 12,
@@ -44,12 +43,10 @@ export const Maps = () => {
                         zoom: 12,
                         load: 'package.full',
                     }}
-
                 >
                     <ObjectManager
                         options={{
                             clusterize: true,
-
                         }}
                         objects={{
                             openBalloonOnClick: true,

@@ -1,20 +1,35 @@
 import React from "react";
 import i30N from "../../../assets/imeges/i30.png";
 import './step4.scss';
+import {useSelector} from "react-redux";
 
 export const Step4 = () => {
+
+    const {
+        car,
+        selectedDateStart,
+        selectedFullTank,
+
+    } = useSelector((state) => {
+        return {
+            car: state.reducerData.selectedCar,
+            selectedDateStart: state.reducerData.selectedDateStart,
+            selectedFullTank: state.reducerData.selectedFullTank,
+        }
+    })
+
     return (
         <div className='total-order'>
             <div>
-                <h3>Hyndai, i30 N</h3>
+                <h3>{car}</h3>
                 <p className='car-number'>K 761 HA 73</p>
                 <p>
                     <strong>Топливо </strong>
-                    100%
+                    {/*{selectedFullTank}*/}
                 </p>
                 <p>
                     <strong>Доступна с </strong>
-                    12.06.2019 12:00
+                    {/*{selectedDateStart}*/}
                 </p>
             </div>
             <div>

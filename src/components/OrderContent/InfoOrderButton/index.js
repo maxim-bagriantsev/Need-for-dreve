@@ -1,10 +1,34 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, Modal} from 'antd';
 import './button.scss';
 import 'antd/dist/antd.css';
 import './index.css';
+import {selectModel, additionally, inTotal, toOrder} from './ItemInfoOrderButton/itemInfoOrderButton.constans'
+import {ItemInfoOrderButton} from "./ItemInfoOrderButton";
+import {useSelector} from "react-redux";
+import {useForm} from "react-hook-form";
+import {NavLink} from "react-router-dom";
+import {ItemStepMenu} from "../ItemStepMenu";
 
 export const InfoOrderButton = () => {
+
+    //===============================Состояние кнопки в компоненте InfoOrder================================//
+    // Новый способ ES2015
+    const {
+        streetAndHouse,
+        car,
+        selectedTariff
+
+    } = useSelector((state) => {
+        return {
+            streetAndHouse: state.reducerData.selectedStreetAndHouse,
+            car: state.reducerData.selectedCar,
+            selectedTariff: state.reducerData.selectedTariff
+        }
+    })
+    //======================================================================================================//
+
+    //===============================Модальное окно================================//
     const [visible, setVisible] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
 
@@ -18,23 +42,38 @@ export const InfoOrderButton = () => {
             setVisible(false);
             setConfirmLoading(false);
         }, 2000);
-        window.location.assign('http://localhost:3000/orderFinish/')
+        window.location.assign('orderFinish/')
     };
 
     const handleCancel = () => {
         console.log('Clicked cancel button');
         setVisible(false);
     };
+    //===============================================================================//
+    const [state, setState] = useState(false)
+
+    const onChange = () => {
+        return setState(state(true))
+    }
+
+
     return (
-        <React.Fragment>
-            <Button
-                type="primary"
-                className='info-order-btn'
-                onClick={showModal}
-                disabled={false} // доступна или не доступна кнопка
-            >
-                <p>Выбрать модель</p>
-            </Button>
+        <>
+            <NavLink to={'/orderPage/step2'}>
+                <ItemInfoOrderButton lable={selectModel} disabled={!streetAndHouse} />
+            </NavLink>
+
+            <NavLink to={'/orderPage/step3'}>
+                 <ItemInfoOrderButton lable={additionally} disabled={!car}/>
+            </NavLink>
+
+            <NavLink to={'/orderPage/step4'}>
+                <ItemInfoOrderButton lable={inTotal} disabled={!selectedTariff}/>
+            </NavLink>
+
+            <ItemInfoOrderButton
+                lable={toOrder} onClick={showModal} disabled={!selectedTariff}/>
+
             <Modal showModal={showModal}
                    visible={visible}
                    onOk={handleOk}
@@ -48,6 +87,6 @@ export const InfoOrderButton = () => {
             >
                 <p>Подвердить заказ</p>
             </Modal>
-        </React.Fragment>
+        </>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {RadioButton} from "./RadioButton";
+import {RadioButton} from "./ClassCarRadioButton";
 import {Cars} from './Cars';
 import './step2.scss';
 

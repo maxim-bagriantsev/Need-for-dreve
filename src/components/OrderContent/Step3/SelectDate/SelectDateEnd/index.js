@@ -3,6 +3,7 @@ import {DatePicker, Space} from 'antd';
 import {useDispatch, useSelector} from "react-redux";
 import 'antd/dist/antd.css';
 import './index.css';
+import moment from "moment";
 
 
 export const SelectDateEnd = () => {
@@ -23,6 +24,10 @@ export const SelectDateEnd = () => {
                     onOk={hendleSelectDate}
                     placeholder='Введите дату и время'
                     showTime={{format: 'HH:mm'}}
+                    disabledDate={(current) => {
+                        const customDate = moment().format();
+                        return current && current < moment(customDate);
+                    }}
                     showNow={false}
                     format='DD.MM.YYYY HH:mm'
                     size='small'

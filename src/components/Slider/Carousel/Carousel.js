@@ -41,7 +41,7 @@ export const Carousel = () => {
         )
     })
     return (
-        <React.Fragment>
+        <>
             <Swiper
                 cssMode={true}
                 navigation={true}
@@ -53,6 +53,6 @@ export const Carousel = () => {
                 className="slider">
                 {elementSlide}
             </Swiper>
-        </React.Fragment>
+        </>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo, useState} from 'react';
 import 'antd/dist/antd.css';
 import './index.css';
 import './search.scss';
@@ -18,9 +18,9 @@ export const Search = () => {
         return state.reducerData.townData
     })
 
-    // вытаскиваем данные адресов из store
-    const address = useSelector((state) => {
-        return state.reducerData.addressData
+    // вытаскиваем данные улиц из store
+    const streets = useSelector((state) => {
+        return state.reducerData.streets
     })
 
     //вытаскиваем выбранный город в input из store
@@ -28,22 +28,34 @@ export const Search = () => {
         return state.reducerData.selectedTown
     })
 
+    //фильтр улиц в выбранном городе
+    const streetFiltered = useMemo(() => {
+        if (selectedTown) {
+            return streets.filter(street => {
+                if (selectedTown === street.cityId.name) {
+                    return street.address
+                }
+            })
+        }
+        return []
+    }, [selectedTown])
+
 // если данные не загружены показываем спиннер
     if (!towns) {
         return <Spiner/>
     }
 // если данные не загружены показываем спиннер
-    if (!address) {
+    if (!streets) {
         return <Spiner/>
     }
 
     const optionsTowns = towns.map(town => {
-        return {
+                return {
             value: town.name
         }
     })
 
-    const optionsStrits = address.map(item => {
+    const optionsStrits = streetFiltered.map(item => {
         return {
             value: item.address
         }
@@ -59,6 +71,8 @@ export const Search = () => {
                         dispatch({type: 'SELECT_STREET_AND_HOUSE', payload: ''})
                     }}
                     allowClear={true}
+
+                    value={selectedTown}
                     options={optionsTowns}
                     placeholder="Название города"
                     filterOption={(inputValue, option) =>

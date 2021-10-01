@@ -15,12 +15,12 @@ export const TariffRadioButton = () => {
         )
     })
     return (
-        <React.Fragment>
+        <>
             <div className='button-radio-tariff'>
                 <div className="form-group-tariff">
                     {radioButtonTariff}
                 </div>
             </div>
-        </React.Fragment>
+        </>
     )
 }

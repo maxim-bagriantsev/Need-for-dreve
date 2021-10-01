@@ -4,10 +4,11 @@ import {InfoOrderButton} from "../InfoOrderButton";
 import {useSelector} from "react-redux";
 import {OrderRow} from "./orderRow";
 import moment from 'moment'
-import Moment from "react-moment";
+import {Spiner} from "../../../Tools/Spiner/Spiner";
+import {CardCar} from "../Step2/Cars/CardCar/CardCar";
 
+export const InfoOrder = (props) => {
 
-export const InfoOrder = () => {
     // Новый способ ES2015
     const {
         town,
@@ -19,8 +20,13 @@ export const InfoOrder = () => {
         selectedTariff,
         selectedFullTank,
         selectedBabyChair,
-        selectedRightDrive
+        selectedRightDrive,
+
+        priceMin,
+        priceMax
+
     } = useSelector((state) => {
+
         return {
             town: state.reducerData.selectedTown,
             streetAndHouse: state.reducerData.selectedStreetAndHouse,
@@ -31,7 +37,11 @@ export const InfoOrder = () => {
             selectedTariff: state.reducerData.selectedTariff,
             selectedFullTank: state.reducerData.selectedFullTank,
             selectedBabyChair: state.reducerData.selectedBabyChair,
-            selectedRightDrive: state.reducerData.selectedRightDrive
+            selectedRightDrive: state.reducerData.selectedRightDrive,
+
+            priceMin: state.reducerData.priceMin,
+            priceMax: state.reducerData.priceMax
+
         }
     })
     //Аналогичный вариант
@@ -40,8 +50,7 @@ export const InfoOrder = () => {
     // })
 
 
-
-//Определение периода времени между двумя датами
+//=========Определение периода времени между двумя датами===========//
     const dateA = moment(selectedDateEnd, 'DD HH');
     const dateB = moment(selectedDateStart, 'DD HH');
     const minute = dateA.diff(dateB, 'minute',)
@@ -57,6 +66,7 @@ export const InfoOrder = () => {
         };
     }
     const date = ConvertDate(minute)
+//==================================================================//
 
     return (
         <div className='info-order'>
@@ -76,9 +86,12 @@ export const InfoOrder = () => {
                 {selectedFullTank && <OrderRow label="Полный бак" value='Да'/>}
                 {selectedBabyChair && <OrderRow label="Детское кресло" value='Да'/>}
                 {selectedRightDrive && <OrderRow label="Правый руль" value='Да'/>}
+                {/*<p>Цена: от 8 000 до 12 000 ₽</p>*/}
+                <div className='price-range'>
+                    <span className='price-range-title'>Цена:</span>
+                    {car && ` от ${priceMin} до ${priceMax} ₽`}
+                </div>
 
-
-                <p>Цена: от 8 000 до 12 000 ₽ </p>
             </div>
             <InfoOrderButton/>
         </div>

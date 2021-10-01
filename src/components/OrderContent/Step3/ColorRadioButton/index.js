@@ -14,12 +14,12 @@ export const ColorRadioButton = () => {
         )
     })
     return (
-        <React.Fragment>
+        <>
             <div className='button-radio'>
                 <div className="form-group">
                     {radioButtonColor}
                 </div>
             </div>
-        </React.Fragment>
+        </>
     )
 }

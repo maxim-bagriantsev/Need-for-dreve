@@ -7,12 +7,12 @@ import './index.css';
 export const AdditionalServices = () => {
 
     return (
-        <React.Fragment>
+        <>
             <div className='checkbox'>
                 <FullTankCheckbox/>
                 <BabyChairCheckbox/>
                 <RightDriveCheckbox/>
             </div>
-        </React.Fragment>
+        </>
     )
 }

@@ -9,18 +9,19 @@ export const ItemRadioButton = (props) => {
         return state.reducerData.selectedColor
     })
 
-    const hendleChengeColor = () => {
+    const hendleChangeColor = () => {
         dispatch({type: 'SELECT_COLOR', payload: props.text})
     }
 
     return (
-        <label onClick={hendleChengeColor}>
+        <label onClick={hendleChangeColor}>
             <input
                 id={props.id}
                 type="radio"
                 name="radioColor"
                 value="1"
-                className="real-radio-btn"/>
+                className="real-radio-btn"
+            />
             <span className="custom-radio-btn"/>
             {props.text}
         </label>

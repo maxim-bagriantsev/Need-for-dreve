@@ -1,7 +1,7 @@
 const initialState = {
     townData: null,
     carData: null,
-    addressData: null,
+    streets: null,
     selectedTown: '',
     selectedStreetAndHouse: '',
     selectedCar: null,
@@ -11,18 +11,22 @@ const initialState = {
     selectedTariff: null,
     selectedFullTank: null,
     selectedBabyChair: null,
-    selectedRightDrive: null
-};
+    selectedRightDrive: null,
+    selectedClassCar: null,
+
+    priceMin: '',
+    priceMax: ''
+    };
 
 export const reducerData = (state = initialState, action) => {
 
     switch (action.type) {
-        case 'GET_ALL_TOWNS':
+        case 'SET_ALL_TOWNS':
             return {...state, townData: action.payload}
-        case 'GET_ALL_CARS':
+        case 'SET_ALL_CARS':
             return {...state, carData: action.payload}
-        case 'GET_ALL_ADDRESS':
-            return {...state, addressData: action.payload}
+        case 'SET_ALL_STREET_AND_HOUSE':
+            return {...state, streets: action.payload}
         case 'SELECT_TOWN':
             return {...state, selectedTown: action.payload}
         case 'SELECT_STREET_AND_HOUSE':
@@ -43,6 +47,20 @@ export const reducerData = (state = initialState, action) => {
             return {...state, selectedBabyChair: action.payload}
         case 'SELECT_RIGHT_DRIVE':
             return {...state, selectedRightDrive: action.payload}
+        case 'SELECT_CLASS_CAR':
+            return {...state, selectedClassCar: action.payload}
+
+
+
+        case 'PRICE_MIN':
+            return {...state, priceMin: action.payload}
+
+        case 'PRICE_MAX':
+            return {...state, priceMax: action.payload}
+
+
+
+
         default:
             return state
     }

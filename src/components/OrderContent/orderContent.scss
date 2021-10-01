@@ -49,17 +49,9 @@
   display: none;
 }
 
-li a {
-  color: #999999;
-}
-
 .steps-menu ul li a {
+  color: #999999;
   text-decoration: none;
-}
-
-
-.steps-menu ul li a:hover {
-  color: #0EC261;
 }
 
 //Иконка - play (треугольник)
@@ -67,6 +59,10 @@ li a {
   display: flex;
   margin: 4px 16px 4px 16px;
   fill: #999999;
+}
+
+.active {
+  color: #0EC261!important;
 }
 
 // Меню настроек
@@ -135,7 +131,7 @@ li a {
 .address-name {
   display: flex;
   flex-direction: row;
-  max-width: 141px;
+  max-width: 140px;
   align-items: flex-end;
   text-align: end;
 }
