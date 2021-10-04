@@ -16,6 +16,7 @@ export const OrderContent = () => {
         color,
         selectedDateEnd,
         selectedTariff,
+        activePage,
 
     } = useSelector((state) => {
         return {
@@ -25,9 +26,9 @@ export const OrderContent = () => {
             selectedDateStart: state.reducerData.selectedDateStart,
             selectedDateEnd: state.reducerData.selectedDateEnd,
             selectedTariff: state.reducerData.selectedTariff,
+            activePage: state.reducerData.activePage,
         }
     })
-
 
     return (
         <div className='order-content'>
@@ -35,11 +36,13 @@ export const OrderContent = () => {
             <div className='steps-menu'>
                 <section>
                     <ul>
-                        <ItemStepMenu lable="Местоположение" link='/orderPage/step1'/>
-                        <ItemStepMenu lable="Модель" link={streetAndHouse ? `${'/orderPage/step2'}` : `${'#'}`}/>
-                        <ItemStepMenu lable="Дополнительно" link={car ? `${'/orderPage/step3'}` : `${'#'}`}/>
-                        <ItemStepMenu lable="Итого"
-                                      link={color && selectedDateEnd && selectedTariff ? `${'/orderPage/step4'}` : `${'#'}`}/>
+                        <ItemStepMenu lable="Местоположение" link={`${'/orderPage/step1'}`}
+                                      isActive={activePage === 'SELECT_LOCATION'}/>
+                        <ItemStepMenu lable="Модель" link={streetAndHouse ? `${'/orderPage/step2'}` : `${'#'}`}
+                                      isActive={activePage === 'SELECT_MODEL_CAR'}/>
+                        <ItemStepMenu lable="Дополнительно" link={car ? `${'/orderPage/step3'}` : `${'#'}`}
+                                      isActive={activePage === 'SELECT_ADDITIONAL'}/>
+                        <ItemStepMenu lable="Итого" link={`${'/orderPage/step4'}`} isActive={activePage === 'TOTAL'}/>
                     </ul>
                 </section>
             </div>

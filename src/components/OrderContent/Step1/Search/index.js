@@ -6,26 +6,24 @@ import {AutoComplete} from 'antd';
 import {useDispatch, useSelector} from "react-redux";
 import {Spiner} from "../../../../Tools/Spiner/Spiner";
 
+
 export const Search = () => {
 
     const dispatch = useDispatch()
 
-    const selectedStreetAndHouse = useSelector((state) => {
-        return state.reducerData.selectedStreetAndHouse
-    })
-// вытаскиваем данные городов из store
-    const towns = useSelector((state) => {
-        return state.reducerData.townData
-    })
+    const {
+        selectedStreetAndHouse,
+        towns,
+        streets,
+        selectedTown
+    } = useSelector((state) => {
 
-    // вытаскиваем данные улиц из store
-    const streets = useSelector((state) => {
-        return state.reducerData.streets
-    })
-
-    //вытаскиваем выбранный город в input из store
-    const selectedTown = useSelector((state) => {
-        return state.reducerData.selectedTown
+        return {
+            selectedStreetAndHouse: state.reducerData.selectedStreetAndHouse,
+            towns: state.reducerData.townData,
+            streets: state.reducerData.streets,
+            selectedTown: state.reducerData.selectedTown
+        }
     })
 
     //фильтр улиц в выбранном городе
@@ -44,13 +42,15 @@ export const Search = () => {
     if (!towns) {
         return <Spiner/>
     }
+
+
 // если данные не загружены показываем спиннер
     if (!streets) {
         return <Spiner/>
     }
 
     const optionsTowns = towns.map(town => {
-                return {
+        return {
             value: town.name
         }
     })

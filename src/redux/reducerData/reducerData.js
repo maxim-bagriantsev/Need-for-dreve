@@ -13,10 +13,14 @@ const initialState = {
     selectedBabyChair: null,
     selectedRightDrive: null,
     selectedClassCar: null,
-
+    colorsCar: null,
     priceMin: '',
-    priceMax: ''
-    };
+    priceMax: '',
+    registerSign: '',
+    imageSelectedCar: '',
+
+    activePage: '',
+};
 
 export const reducerData = (state = initialState, action) => {
 
@@ -49,17 +53,19 @@ export const reducerData = (state = initialState, action) => {
             return {...state, selectedRightDrive: action.payload}
         case 'SELECT_CLASS_CAR':
             return {...state, selectedClassCar: action.payload}
-
-
-
+        case 'COLORS-CAR':
+            return {...state, colorsCar: action.payload}
         case 'PRICE_MIN':
             return {...state, priceMin: action.payload}
-
         case 'PRICE_MAX':
             return {...state, priceMax: action.payload}
+        case 'REGISTER-SING':
+            return {...state, registerSign: action.payload}
+        case 'IMAGE-SELECT_CAR':
+            return {...state, imageSelectedCar: action.payload}
 
-
-
+        case 'SET_CURRENT_ORDER_PAGE':
+            return {...state, activePage: action.payload}
 
         default:
             return state

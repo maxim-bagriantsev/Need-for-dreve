@@ -1,0 +1,16 @@
+.ant-btn[disabled], .ant-btn[disabled]:hover, .ant-btn[disabled]:focus, .ant-btn[disabled]:active {
+    color: rgba(0, 0, 0, 0.25);
+    border-color: #d9d9d9;
+    background: #EEEEEE;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.ant-btn, .ant-btn-default, .info-order-btn:active {
+    background: linear-gradient(
+            90deg, #0ec261 2.61%, #039f67 112.6%);
+}
+
+
+
+

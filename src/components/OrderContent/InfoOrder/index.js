@@ -4,8 +4,6 @@ import {InfoOrderButton} from "../InfoOrderButton";
 import {useSelector} from "react-redux";
 import {OrderRow} from "./orderRow";
 import moment from 'moment'
-import {Spiner} from "../../../Tools/Spiner/Spiner";
-import {CardCar} from "../Step2/Cars/CardCar/CardCar";
 
 export const InfoOrder = (props) => {
 
@@ -23,8 +21,7 @@ export const InfoOrder = (props) => {
         selectedRightDrive,
 
         priceMin,
-        priceMax
-
+        priceMax,
     } = useSelector((state) => {
 
         return {
@@ -40,10 +37,11 @@ export const InfoOrder = (props) => {
             selectedRightDrive: state.reducerData.selectedRightDrive,
 
             priceMin: state.reducerData.priceMin,
-            priceMax: state.reducerData.priceMax
-
+            priceMax: state.reducerData.priceMax,
         }
     })
+
+
     //Аналогичный вариант
     // const selectedData = useSelector((state)=>{
     //     return {town: state.reducerData.selectedTown, streetAndHouse: state.reducerData.selectedStreetAndHouse}
@@ -86,12 +84,10 @@ export const InfoOrder = (props) => {
                 {selectedFullTank && <OrderRow label="Полный бак" value='Да'/>}
                 {selectedBabyChair && <OrderRow label="Детское кресло" value='Да'/>}
                 {selectedRightDrive && <OrderRow label="Правый руль" value='Да'/>}
-                {/*<p>Цена: от 8 000 до 12 000 ₽</p>*/}
                 <div className='price-range'>
                     <span className='price-range-title'>Цена:</span>
-                    {car && ` от ${priceMin} до ${priceMax} ₽`}
+                    {car && ` от ${priceMin.toLocaleString()} до ${priceMax.toLocaleString()} ₽`}
                 </div>
-
             </div>
             <InfoOrderButton/>
         </div>

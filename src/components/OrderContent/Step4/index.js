@@ -1,39 +1,49 @@
-import React from "react";
-import i30N from "../../../assets/imeges/i30.png";
+import React, {useEffect} from "react";
 import './step4.scss';
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import Moment from "react-moment";
 
 export const Step4 = () => {
 
+    // вытаскиваем необходимые данные store
     const {
-        car,
-        selectedDateStart,
+        selectedCar,
         selectedFullTank,
-
+        selectedDateStart,
+        registerSign,
+        imageSelectedCar
     } = useSelector((state) => {
         return {
-            car: state.reducerData.selectedCar,
-            selectedDateStart: state.reducerData.selectedDateStart,
+            selectedCar: state.reducerData.selectedCar,
             selectedFullTank: state.reducerData.selectedFullTank,
+            selectedDateStart: state.reducerData.selectedDateStart,
+            registerSign: state.reducerData.registerSign,
+            imageSelectedCar: state.reducerData.imageSelectedCar,
         }
     })
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch({type: 'SET_CURRENT_ORDER_PAGE', payload: 'TOTAL'})
+    }, [])
 
     return (
         <div className='total-order'>
             <div>
-                <h3>{car}</h3>
-                <p className='car-number'>K 761 HA 73</p>
+                <h3>{selectedCar}</h3>
+                <p className='car-number'>{registerSign}</p>
                 <p>
                     <strong>Топливо </strong>
-                    {/*{selectedFullTank}*/}
+                    {selectedFullTank ? `${'100%'}` : ''}
                 </p>
                 <p>
                     <strong>Доступна с </strong>
-                    {/*{selectedDateStart}*/}
+                    <Moment format='DD.MM.YYYY H:mm'>{selectedDateStart}</Moment>
                 </p>
             </div>
-            <div>
-                <img className='total-car-img' src={i30N}/>
+            <div className='total-car-img'>
+                <img className='car-img' src={imageSelectedCar}/>
             </div>
         </div>
     )

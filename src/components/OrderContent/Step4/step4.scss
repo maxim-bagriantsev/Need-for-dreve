@@ -26,7 +26,13 @@
 }
 
 .total-car-img {
-  padding-right: 20px;
+  width: 55%;
+  text-align: end;
+  padding-right: 40px;
+}
+
+.car-img {
+    width: inherit;
 }
 
 @media (max-width: 767px) {
@@ -34,7 +40,8 @@
     flex-wrap: wrap;
   }
   .total-car-img {
-    align-items: center;
+    width: 50%;
+    padding-right: 0;
   }
 }
 

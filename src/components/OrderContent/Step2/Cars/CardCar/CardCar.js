@@ -9,15 +9,17 @@ export const CardCar = (props) => {
         return state.reducerData.selectedCar
     })
 
-
     const hendleChengeCar = () => {
-        dispatch({type: 'SELECT_CAR', payload: props.name})
-        dispatch({type: 'PRICE_MIN', payload: props.priceMin})
-        dispatch({type: 'PRICE_MAX', payload: props.priceMax})
+        dispatch({type: 'SELECT_CAR', payload: props.name}) // марка авто
+        dispatch({type: 'PRICE_MIN', payload: props.priceMin}) //минимальная цена авто
+        dispatch({type: 'PRICE_MAX', payload: props.priceMax}) // максимальная цена авто
+        dispatch({type: 'COLORS-CAR', payload: props.colors}) // доступные цвета
+        dispatch({type: 'REGISTER-SING', payload: props.registerSign}) // регистрационный знак
+        dispatch({type: 'IMAGE-SELECT_CAR', payload: props.imageCar}) // Картинка
     }
 
     return (
-        <div onClick={hendleChengeCar} className='item-car' key={props.id}>
+        <div onClick={hendleChengeCar} className='item-car' key={props.carId}>
             <div className='item-car-info'>
                 <h3 className='title-modelCar'>{props.name}</h3>
                 <div className='info-car-price'>
@@ -28,11 +30,7 @@ export const CardCar = (props) => {
             </div>
             <img
                 className='cars-item'
-                src={
-                    props.car.thumbnail.path.includes('base64')
-                        ? props.car.thumbnail.path
-                        : 'https://api-factory.simbirsoft1.com' + props.car.thumbnail.path
-                }
+                src={props.imageCar}
             />
         </div>
     )

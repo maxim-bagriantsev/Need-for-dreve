@@ -1,14 +1,13 @@
-import React, {useEffect, useState} from 'react';
-import {Button, Modal} from 'antd';
+import React, {useState} from 'react';
+import {Modal} from 'antd';
 import './button.scss';
 import 'antd/dist/antd.css';
 import './index.css';
 import {selectModel, additionally, inTotal, toOrder} from './ItemInfoOrderButton/itemInfoOrderButton.constans'
 import {ItemInfoOrderButton} from "./ItemInfoOrderButton";
 import {useSelector} from "react-redux";
-import {useForm} from "react-hook-form";
 import {NavLink} from "react-router-dom";
-import {ItemStepMenu} from "../ItemStepMenu";
+
 
 export const InfoOrderButton = () => {
 
@@ -17,13 +16,21 @@ export const InfoOrderButton = () => {
     const {
         streetAndHouse,
         car,
-        selectedTariff
+        selectedTariff,
+        color,
+        selectedDateStart,
+        selectedDateEnd,
+        activePage
 
     } = useSelector((state) => {
         return {
             streetAndHouse: state.reducerData.selectedStreetAndHouse,
             car: state.reducerData.selectedCar,
-            selectedTariff: state.reducerData.selectedTariff
+            selectedTariff: state.reducerData.selectedTariff,
+            color: state.reducerData.selectedColor,
+            selectedDateStart: state.reducerData.selectedDateStart,
+            selectedDateEnd: state.reducerData.selectedDateEnd,
+            activePage: state.reducerData.activePage
         }
     })
     //======================================================================================================//
@@ -42,7 +49,8 @@ export const InfoOrderButton = () => {
             setVisible(false);
             setConfirmLoading(false);
         }, 2000);
-        window.location.assign('orderFinish/')
+        window.location.assign('/orderFinish/')
+        // window.location.assign('/orderFinish/')
     };
 
     const handleCancel = () => {
@@ -50,29 +58,26 @@ export const InfoOrderButton = () => {
         setVisible(false);
     };
     //===============================================================================//
-    const [state, setState] = useState(false)
-
-    const onChange = () => {
-        return setState(state(true))
-    }
-
+    const isInTotalDisabled = !selectedTariff || !color || !selectedDateStart || !selectedDateEnd
 
     return (
         <>
             <NavLink to={'/orderPage/step2'}>
-                <ItemInfoOrderButton lable={selectModel} disabled={!streetAndHouse} />
+                <ItemInfoOrderButton lable={selectModel} disabled={!streetAndHouse} type={'link'}
+                                     isVisible={activePage === 'SELECT_LOCATION'}/>
             </NavLink>
-
             <NavLink to={'/orderPage/step3'}>
-                 <ItemInfoOrderButton lable={additionally} disabled={!car}/>
-            </NavLink>
-
+                <ItemInfoOrderButton lable={additionally} disabled={!car} type={'link'}
+                                     isVisible={activePage === 'SELECT_MODEL_CAR'}/>
+            < /NavLink>
             <NavLink to={'/orderPage/step4'}>
-                <ItemInfoOrderButton lable={inTotal} disabled={!selectedTariff}/>
+                <ItemInfoOrderButton lable={inTotal} disabled={isInTotalDisabled} type={'link'}
+                                     isVisible={activePage === 'SELECT_ADDITIONAL'}/>
             </NavLink>
 
-            <ItemInfoOrderButton
-                lable={toOrder} onClick={showModal} disabled={!selectedTariff}/>
+
+            <ItemInfoOrderButton lable={toOrder} onClick={showModal} disabled={!selectedTariff}
+                                 isVisible={activePage === 'TOTAL'}/>
 
             <Modal showModal={showModal}
                    visible={visible}

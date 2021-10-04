@@ -1,15 +1,33 @@
 import React from 'react';
 import {Header} from "../../Main/Header";
 import {InfoOrder} from "../InfoOrder";
-import i30N from "../../../assets/imeges/i30.png";
 import {Sidebar} from "../../Sidebar";
+import {useSelector} from "react-redux";
+import Moment from "react-moment";
 import './orderFinish.scss';
+import {Step4} from "../Step4";
 
 export const OrderFinish = () => {
 
+    const {
+        selectedCar,
+        selectedFullTank,
+        selectedDateStart,
+        registerSign,
+        imageSelectedCar
+    } = useSelector((state) => {
+        return {
+            selectedCar: state.reducerData.selectedCar,
+            selectedFullTank: state.reducerData.selectedFullTank,
+            selectedDateStart: state.reducerData.selectedDateStart,
+            registerSign: state.reducerData.registerSign,
+            imageSelectedCar: state.reducerData.imageSelectedCar,
+        }
+    })
+
     return (
-        <div className='order'>
-            <div className='wrapper'>
+        <div className='finish-order'>
+            <div className='finish-wrapper'>
                 <Sidebar/>
             </div>
             <div className='order-content'>
@@ -23,21 +41,20 @@ export const OrderFinish = () => {
                 </div>
                 <div className='step-settings'>
                     <div className='total-order'>
-                        <div className='total-order-content'>
-                            <h2>Ваш заказ подтверждён</h2>
-                            <h3>Hyndai, i30 N</h3>
-                            <p className='car-number'>K 761 HA 73</p>
+                        <div>
+                            <h3>{selectedCar}</h3>
+                            <p className='car-number'>{registerSign}</p>
                             <p>
                                 <strong>Топливо </strong>
-                                100%
+                                {selectedFullTank ? `${'100%'}` : ''}
                             </p>
                             <p>
                                 <strong>Доступна с </strong>
-                                12.06.2019 12:00
+                                <Moment format='DD.MM.YYYY H:mm'>{selectedDateStart}</Moment>
                             </p>
                         </div>
-                        <div>
-                            <img className='total-car-img' src={i30N}/>
+                        <div className='total-car-img'>
+                            <img className='car-img' src={imageSelectedCar}/>
                         </div>
                     </div>
                     <InfoOrder/>

@@ -1,12 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {ColorRadioButton} from "./ColorRadioButton";
 import { SelectDateStart} from "./SelectDate/selectDateStart";
 import {SelectDateEnd} from "./SelectDate/SelectDateEnd";
 import {TariffRadioButton} from "./TariffRadioButton";
 import {AdditionalServices} from "./AdditionalCheckbox";
 import './step3.scss';
+import {useDispatch} from "react-redux";
 
 export const Step3 = () => {
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch({type: 'SET_CURRENT_ORDER_PAGE', payload: 'SELECT_ADDITIONAL'})
+    }, [])
+
     return (
         <div className='step-three'>
             <div className='color-select'>

@@ -50,8 +50,13 @@
 }
 
 .steps-menu ul li a {
-  color: #999999;
+  color: #121212;
+
   text-decoration: none;
+}
+
+.step-menu-text-active a{
+  color: #0EC261!important;
 }
 
 //Иконка - play (треугольник)
@@ -59,10 +64,6 @@
   display: flex;
   margin: 4px 16px 4px 16px;
   fill: #999999;
-}
-
-.active {
-  color: #0EC261!important;
 }
 
 // Меню настроек
