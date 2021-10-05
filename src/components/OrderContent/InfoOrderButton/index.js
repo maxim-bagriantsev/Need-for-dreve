@@ -3,9 +3,9 @@ import {Modal} from 'antd';
 import './button.scss';
 import 'antd/dist/antd.css';
 import './index.css';
-import {selectModel, additionally, inTotal, toOrder} from './ItemInfoOrderButton/itemInfoOrderButton.constans'
+import {selectModel, additionally, inTotal, toOrder, toCancel} from './ItemInfoOrderButton/itemInfoOrderButton.constans'
 import {ItemInfoOrderButton} from "./ItemInfoOrderButton";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {NavLink} from "react-router-dom";
 
 
@@ -39,17 +39,23 @@ export const InfoOrderButton = () => {
     const [visible, setVisible] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
 
+    const dispatch = useDispatch()
+
     const showModal = () => {
         setVisible(true);
     };
 
     const handleOk = () => {
+        dispatch({type: 'SET_CURRENT_ORDER_PAGE', payload: 'CANCEL'})
         setConfirmLoading(true);
         setTimeout(() => {
             setVisible(false);
             setConfirmLoading(false);
         }, 2000);
-        window.location.assign('/orderFinish/')
+        // return <NavLink to={'/orderFinish/'}/>
+
+
+        // window.location.assign('/orderFinish/')
         // window.location.assign('/orderFinish/')
     };
 
@@ -75,23 +81,29 @@ export const InfoOrderButton = () => {
                                      isVisible={activePage === 'SELECT_ADDITIONAL'}/>
             </NavLink>
 
-
             <ItemInfoOrderButton lable={toOrder} onClick={showModal} disabled={!selectedTariff}
                                  isVisible={activePage === 'TOTAL'}/>
+            <div className='btn-cancel'>
+                <ItemInfoOrderButton lable={toCancel} onClick={showModal} disabled={!selectedTariff}
+                                     isVisible={activePage === 'CANCEL'}/>
+            </div>
 
-            <Modal showModal={showModal}
-                   visible={visible}
-                   onOk={handleOk}
-                   onCancel={handleCancel}
-                   confirmLoading={confirmLoading}
-                   width='auto'
-                   height='500px'
-                   closeIcon={false}
-                   okText='Подтвердить'
-                   cancelText='Вернуться'
-            >
-                <p>Подвердить заказ</p>
-            </Modal>
+
+            <NavLink to={'/orderFinish/'}>
+                <Modal showModal={showModal}
+                       visible={visible}
+                       onOk={handleOk}
+                       onCancel={handleCancel}
+                       confirmLoading={confirmLoading}
+                       width='auto'
+                       height='500px'
+                       closeIcon={false}
+                       okText='Подтвердить'
+                       cancelText='Вернуться'
+                >
+                    <p>Подвердить заказ</p>
+                </Modal>
+            </NavLink>
         </>
     )
 }

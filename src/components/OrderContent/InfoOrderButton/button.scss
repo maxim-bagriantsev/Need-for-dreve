@@ -10,6 +10,14 @@
   align-items: center;
 }
 
+.btn-cancel .ant-btn, .info-order-btn:active {
+  background: linear-gradient(90deg, #493013 2.61%, #7B0C3B 150%);
+}
+
+.btn-cancel .info-order-btn:hover {
+  background: linear-gradient(90deg, #493013 2.61%, #2f0416 150%);
+}
+
 .info-order-btn p {
   margin: 0 auto;
   text-align: center;
@@ -24,7 +32,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
-  .info-order-btn{
+  .info-order-btn {
     align-items: center;
   }
 }

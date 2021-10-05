@@ -25,6 +25,11 @@ export const getAddress = () => {
     return axiosInstance.get(urls.address())
 }
 
+// подтверждаем заказ
+export const getOrderById = () => {
+    return axiosInstance.get(urls.orderId())
+}
+
 
 
 

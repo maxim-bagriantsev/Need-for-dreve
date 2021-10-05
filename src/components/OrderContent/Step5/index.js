@@ -5,7 +5,6 @@ import {Sidebar} from "../../Sidebar";
 import {useSelector} from "react-redux";
 import Moment from "react-moment";
 import './orderFinish.scss';
-import {Step4} from "../Step4";
 
 export const OrderFinish = () => {
 
@@ -26,8 +25,8 @@ export const OrderFinish = () => {
     })
 
     return (
-        <div className='finish-order'>
-            <div className='finish-wrapper'>
+        <div className='order'>
+            <div className='wrapper'>
                 <Sidebar/>
             </div>
             <div className='order-content'>
@@ -42,6 +41,7 @@ export const OrderFinish = () => {
                 <div className='step-settings'>
                     <div className='total-order'>
                         <div>
+                            <h2 className='confirm-order-title'>Ваш заказ подтверждён</h2>
                             <h3>{selectedCar}</h3>
                             <p className='car-number'>{registerSign}</p>
                             <p>

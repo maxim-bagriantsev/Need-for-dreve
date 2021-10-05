@@ -4,6 +4,7 @@ import {InfoOrderButton} from "../InfoOrderButton";
 import {useSelector} from "react-redux";
 import {OrderRow} from "./orderRow";
 import moment from 'moment'
+import {PriceOrder} from "./PriceOrder";
 
 export const InfoOrder = (props) => {
 
@@ -11,7 +12,7 @@ export const InfoOrder = (props) => {
     const {
         town,
         streetAndHouse,
-        car,
+        selectedCar,
         color,
         selectedDateStart,
         selectedDateEnd,
@@ -22,12 +23,14 @@ export const InfoOrder = (props) => {
 
         priceMin,
         priceMax,
+
+        activePage
     } = useSelector((state) => {
 
         return {
             town: state.reducerData.selectedTown,
             streetAndHouse: state.reducerData.selectedStreetAndHouse,
-            car: state.reducerData.selectedCar,
+            selectedCar: state.reducerData.selectedCar,
             color: state.reducerData.selectedColor,
             selectedDateStart: state.reducerData.selectedDateStart,
             selectedDateEnd: state.reducerData.selectedDateEnd,
@@ -38,6 +41,7 @@ export const InfoOrder = (props) => {
 
             priceMin: state.reducerData.priceMin,
             priceMax: state.reducerData.priceMax,
+            activePage:state.reducerData.activePage,
         }
     })
 
@@ -73,7 +77,7 @@ export const InfoOrder = (props) => {
                 {/*// если выбран город, отображаем информацию в меню заказа*/}
                 {town && <OrderRow label="Пункт выдачи" value={`${town}, ${streetAndHouse}`}/>}
                 {/*// если выбрана машина, отображаем информацию в меню заказа*/}
-                {car && <OrderRow label="Модель" value={`${car}`}/>}
+                {selectedCar && <OrderRow label="Модель" value={`${selectedCar}`}/>}
                 {/*// если выбран цвет, отображаем информацию в меню заказа*/}
                 {color && <OrderRow label="Цвет" value={`${color}`}/>}
                 {/*// если выбран период времени, отображаем информацию в меню заказа*/}
@@ -84,10 +88,16 @@ export const InfoOrder = (props) => {
                 {selectedFullTank && <OrderRow label="Полный бак" value='Да'/>}
                 {selectedBabyChair && <OrderRow label="Детское кресло" value='Да'/>}
                 {selectedRightDrive && <OrderRow label="Правый руль" value='Да'/>}
-                <div className='price-range'>
-                    <span className='price-range-title'>Цена:</span>
-                    {car && ` от ${priceMin.toLocaleString()} до ${priceMax.toLocaleString()} ₽`}
-                </div>
+                <PriceOrder
+                    selectedCar={selectedCar}
+                    priceMin={priceMin}
+                    priceMax={priceMax}
+                    isVisible={activePage === 'SELECT_ADDITIONAL'}
+                />
+                {/*<div className='price-range'>*/}
+                {/*    <span className='price-range-title'>Цена:</span>*/}
+                {/*    {selectedCar && ` от ${priceMin.toLocaleString()} до ${priceMax.toLocaleString()} ₽`}*/}
+                {/*</div>*/}
             </div>
             <InfoOrderButton/>
         </div>
