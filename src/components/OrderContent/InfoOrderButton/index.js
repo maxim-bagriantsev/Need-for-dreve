@@ -52,10 +52,6 @@ export const InfoOrderButton = () => {
             setVisible(false);
             setConfirmLoading(false);
         }, 2000);
-        // return <NavLink to={'/orderFinish/'}/>
-
-
-        // window.location.assign('/orderFinish/')
         // window.location.assign('/orderFinish/')
     };
 
@@ -65,6 +61,10 @@ export const InfoOrderButton = () => {
     };
     //===============================================================================//
     const isInTotalDisabled = !selectedTariff || !color || !selectedDateStart || !selectedDateEnd
+
+    const isDisabled = () => {
+        window.location.assign('/orderPage/step1')
+    }
 
     return (
         <>
@@ -83,11 +83,11 @@ export const InfoOrderButton = () => {
 
             <ItemInfoOrderButton lable={toOrder} onClick={showModal} disabled={!selectedTariff}
                                  isVisible={activePage === 'TOTAL'}/>
+
             <div className='btn-cancel'>
-                <ItemInfoOrderButton lable={toCancel} onClick={showModal} disabled={!selectedTariff}
+                <ItemInfoOrderButton lable={toCancel} onClick={isDisabled}
                                      isVisible={activePage === 'CANCEL'}/>
             </div>
-
 
             <NavLink to={'/orderFinish/'}>
                 <Modal showModal={showModal}

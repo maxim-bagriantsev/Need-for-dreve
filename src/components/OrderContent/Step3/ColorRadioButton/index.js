@@ -7,10 +7,13 @@ export const ColorRadioButton = () => {
     const radioButtonColor = radioBtnColor.map((btn, id) => {
 
         return (
-            <ItemRadioButton
-                id={btn.id}
-                text={btn.text}
-            />
+            <React.Fragment key={id}>
+                <ItemRadioButton
+                    id={btn.id}
+                    text={btn.text}
+                />
+            </React.Fragment>
+
         )
     })
     return (

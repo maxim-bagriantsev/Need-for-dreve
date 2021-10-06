@@ -3,16 +3,7 @@ import {useSelector} from "react-redux";
 
 export const PriceOrder = (props) => {
 
-
-    const {
-        priceMin,
-    } = useSelector((state) => {
-
-        return {
-            priceMin: state.reducerData.priceMin,
-        }
-    })
-//====При переходе на вкладку дополнительно, отображаем минимальную цены за выбранную марку авто=====//
+//====При переходе на вкладку дополнительно, отображаем минимальную цену за выбранную марку авто=====//
     if (props.isVisible) {
         return (
             <div className='price-range'>

@@ -40,9 +40,9 @@ export const Cars = () => {
         return <Spiner/>
     }
 
-    const listCars = classCarFiltered.map((car) => {
+    const listCars = classCarFiltered.map((car, id) => {
         return (
-            <>
+            <React.Fragment key={id}>
                 {classCarFiltered && <CardCar
                     car={car}
                     carId={car.id}
@@ -58,7 +58,7 @@ export const Cars = () => {
                             : 'https://api-factory.simbirsoft1.com' + car.thumbnail.path
                     }
                 />}
-            </>
+            </React.Fragment>
         )
     })
     return (

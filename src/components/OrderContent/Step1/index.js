@@ -4,8 +4,9 @@ import './step1.scss';
 import {useAllTowns} from "../../../hooks/useAllTowns";
 import {useAllAddress} from "../../../hooks/useAllAddress";
 import {Maps} from "./Map";
-import YMapContainer from "./Map/Ymap/Custom";
+
 import {useDispatch} from "react-redux";
+import {YMapContainer} from "./Map/Ymap/Custom";
 
 export const Step1 = () => {
 
@@ -25,7 +26,7 @@ export const Step1 = () => {
             <div className='step-one'>
                 <Search/>
                 <Maps/>
-                {/*<YMapContainer/>*/}
+
             </div>
         </>
     )

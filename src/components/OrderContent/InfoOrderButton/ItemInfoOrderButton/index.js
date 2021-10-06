@@ -13,6 +13,7 @@ export const ItemInfoOrderButton = (props) => {
             className='info-order-btn'
             onClick={props.onClick}
             disabled={props.disabled} // доступна или не доступна кнопка
+            isDisabled={props.isDisabled}
         >
             <p>{props.lable}</p>
         </Button>

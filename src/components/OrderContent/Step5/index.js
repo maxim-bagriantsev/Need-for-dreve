@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Header} from "../../Main/Header";
 import {InfoOrder} from "../InfoOrder";
 import {Sidebar} from "../../Sidebar";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import Moment from "react-moment";
 import './orderFinish.scss';
 
@@ -23,6 +23,12 @@ export const OrderFinish = () => {
             imageSelectedCar: state.reducerData.imageSelectedCar,
         }
     })
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch({type: 'SET_CURRENT_ORDER_PAGE', payload: 'CANCEL'})
+    }, [])
 
     return (
         <div className='order'>

@@ -8,10 +8,12 @@ export const TariffRadioButton = () => {
     const radioButtonTariff = radioBtnTariff.map((btn, id) => {
 
         return (
-            <ItemRadioButton
-                id={btn.id}
-                text={btn.text}
-            />
+            <React.Fragment key={id}>
+                <ItemRadioButton
+                    id={btn.id}
+                    text={btn.text}
+                />
+            </React.Fragment>
         )
     })
     return (
