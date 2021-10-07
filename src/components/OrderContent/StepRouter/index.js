@@ -13,7 +13,7 @@ export const StepRouter = () => {
             <Route path="/orderPage/step2" component={Step2} exact/>
             <Route path="/orderPage/step3" component={Step3} exact/>
             <Route path="/orderPage/step4" component={Step4} exact/>
-            <Route path="/orderFinish/" component={OrderFinish} exact/>
+            <Route path="/orderFinish/:orderId" component={OrderFinish} exact/>
         </Switch>
     );
 };

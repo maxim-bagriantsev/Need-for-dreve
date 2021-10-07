@@ -4,9 +4,8 @@ import './step1.scss';
 import {useAllTowns} from "../../../hooks/useAllTowns";
 import {useAllAddress} from "../../../hooks/useAllAddress";
 import {Maps} from "./Map";
-
-import {useDispatch} from "react-redux";
-import {YMapContainer} from "./Map/Ymap/Custom";
+import {useDispatch, useSelector} from "react-redux";
+import {useOrderStatus} from "../../../hooks/useOrderStatus";
 
 export const Step1 = () => {
 
@@ -14,6 +13,12 @@ export const Step1 = () => {
     useAllTowns()
     // отправляем запрос на бэк и кладем в store - адреса выдачи машин
     useAllAddress()
+    // отправляем запрос на бэк и кладем в store - статус заказа
+    useOrderStatus()
+
+    const orderStatusId = useSelector((state) => {
+        return state.reducerData.orderStatusId
+    })
 
     const dispatch = useDispatch()
 
@@ -26,7 +31,6 @@ export const Step1 = () => {
             <div className='step-one'>
                 <Search/>
                 <Maps/>
-
             </div>
         </>
     )

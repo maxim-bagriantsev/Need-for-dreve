@@ -13,16 +13,15 @@ export const Search = () => {
 
     const {
         selectedStreetAndHouse,
-        towns,
+        townData,
         streets,
-        selectedTown
+        selectedTown,
     } = useSelector((state) => {
-
         return {
             selectedStreetAndHouse: state.reducerData.selectedStreetAndHouse,
-            towns: state.reducerData.townData,
+            townData: state.reducerData.townData,
             streets: state.reducerData.streets,
-            selectedTown: state.reducerData.selectedTown
+            selectedTown: state.reducerData.selectedTown,
         }
     })
 
@@ -30,7 +29,8 @@ export const Search = () => {
     const streetFiltered = useMemo(() => {
         if (selectedTown) {
             return streets.filter(street => {
-                if (selectedTown === street.cityId.name) {
+
+                if (selectedTown === street?.cityId?.name) {
                     return street.address
                 }
             })
@@ -39,25 +39,26 @@ export const Search = () => {
     }, [selectedTown])
 
 // если данные не загружены показываем спиннер
-    if (!towns) {
+    if (!townData) {
         return <Spiner/>
     }
-
 
 // если данные не загружены показываем спиннер
     if (!streets) {
         return <Spiner/>
     }
 
-    const optionsTowns = towns.map(town => {
+    const optionsTowns = townData.map((town) => {
         return {
-            value: town.name
+            value: town.name,
+            id: town.id
         }
     })
 
     const optionsStrits = streetFiltered.map(item => {
         return {
-            value: item.address
+            value: item.address,
+            id: item.id
         }
     })
 
@@ -71,15 +72,15 @@ export const Search = () => {
                         dispatch({type: 'SELECT_STREET_AND_HOUSE', payload: ''})
                     }}
                     allowClear={true}
-
                     value={selectedTown}
                     options={optionsTowns}
                     placeholder="Название города"
                     filterOption={(inputValue, option) =>
                         option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
                     }
-                    onSelect={(event, newSelectTown) => {
+                    onSelect={(event, newSelectTown, id) => {
                         dispatch({type: 'SELECT_TOWN', payload: newSelectTown.value})
+                        dispatch({type: 'SELECT_TOWN_ID', payload: newSelectTown})
                     }}
                 />
             </div>
@@ -99,6 +100,7 @@ export const Search = () => {
                     }
                     onSelect={(event, newSelectAddress) => {
                         dispatch({type: 'SELECT_STREET_AND_HOUSE', payload: newSelectAddress.value})
+                        dispatch({type: 'SELECT_STREET_AND_HOUSE_ID', payload: newSelectAddress})
                     }}
                 />
             </div>

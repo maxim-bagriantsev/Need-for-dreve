@@ -1,4 +1,4 @@
-import {getAllTowns} from "../api/getData";
+import {getAllTowns} from "../api/api";
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
 

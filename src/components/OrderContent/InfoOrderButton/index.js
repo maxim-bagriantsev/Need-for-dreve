@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useHistory} from "react-router-dom";
 import {Modal} from 'antd';
 import './button.scss';
 import 'antd/dist/antd.css';
@@ -7,11 +8,12 @@ import {selectModel, additionally, inTotal, toOrder, toCancel} from './ItemInfoO
 import {ItemInfoOrderButton} from "./ItemInfoOrderButton";
 import {useDispatch, useSelector} from "react-redux";
 import {NavLink} from "react-router-dom";
+import {postOrder} from "../../../api/api";
 
+export const InfoOrderButton = (orderId) => {
 
-export const InfoOrderButton = () => {
+    let history = useHistory();
 
-    //===============================Состояние кнопки в компоненте InfoOrder================================//
     // Новый способ ES2015
     const {
         streetAndHouse,
@@ -20,8 +22,17 @@ export const InfoOrderButton = () => {
         color,
         selectedDateStart,
         selectedDateEnd,
-        activePage
-
+        activePage,
+        selectedStreetAndHouseId,
+        selectedTownId,
+        selectedCar,
+        selectedColor,
+        selectedClassCar,
+        priceMax,
+        selectedFullTank,
+        selectedBabyChair,
+        selectedRightDrive,
+        order
     } = useSelector((state) => {
         return {
             streetAndHouse: state.reducerData.selectedStreetAndHouse,
@@ -30,9 +41,20 @@ export const InfoOrderButton = () => {
             color: state.reducerData.selectedColor,
             selectedDateStart: state.reducerData.selectedDateStart,
             selectedDateEnd: state.reducerData.selectedDateEnd,
-            activePage: state.reducerData.activePage
+            activePage: state.reducerData.activePage,
+            selectedTownId: state.reducerData.selectedTownId,
+            selectedCar: state.reducerData.selectedCar,
+            selectedColor: state.reducerData.selectedColor,
+            selectedClassCar: state.reducerData.selectedClassCar,
+            priceMax: state.reducerData.priceMax,
+            selectedStreetAndHouseId: state.reducerData.selectedStreetAndHouseId,
+            selectedFullTank: state.reducerData.selectedFullTank,
+            selectedBabyChair: state.reducerData.selectedBabyChair,
+            selectedRightDrive: state.reducerData.selectedRightDrive,
+            order: state.reducerData.order
         }
     })
+
     //======================================================================================================//
 
     //===============================Модальное окно================================//
@@ -47,13 +69,31 @@ export const InfoOrderButton = () => {
 
     const handleOk = () => {
         dispatch({type: 'SET_CURRENT_ORDER_PAGE', payload: 'CANCEL'})
-        setConfirmLoading(true);
-        setTimeout(() => {
-            setVisible(false);
-            setConfirmLoading(false);
-        }, 2000);
-        // window.location.assign('/orderFinish/')
-    };
+
+        const order = {
+            orderStatusId: {
+                "name": "Новые",
+                "id": "5e26a191099b810b946c5d89"
+            },
+            cityId: {id: selectedTownId.id},
+            pointId: {id: selectedStreetAndHouseId.id},
+            carId: selectedCar,
+            color: {type: selectedColor},
+            dateFrom: {selectedDateStart},
+            dateTo: {selectedDateEnd},
+            rateId: {selectedClassCar},
+            price: {priceMax},
+            isFullTank: selectedFullTank,
+            isNeedChildChair: selectedBabyChair,
+            isRightWheel: selectedRightDrive
+        }
+        postOrder(order)
+            .then(response => {
+                dispatch({type: 'GET_ORDER', payload: response.data})
+                debugger
+                history.push(`/orderFinish/${response.data.data.id}`);
+            })
+    }
 
     const handleCancel = () => {
         console.log('Clicked cancel button');
@@ -89,21 +129,21 @@ export const InfoOrderButton = () => {
                                      isVisible={activePage === 'CANCEL'}/>
             </div>
 
-            <NavLink to={'/orderFinish/'}>
-                <Modal showModal={showModal}
-                       visible={visible}
-                       onOk={handleOk}
-                       onCancel={handleCancel}
-                       confirmLoading={confirmLoading}
-                       width='auto'
-                       height='500px'
-                       closeIcon={false}
-                       okText='Подтвердить'
-                       cancelText='Вернуться'
-                >
-                    <p>Подвердить заказ</p>
-                </Modal>
-            </NavLink>
+            {/*<NavLink to={`/orderFinish/`}>*/}
+            <Modal showModal={showModal}
+                   visible={visible}
+                   onOk={handleOk}
+                   onCancel={handleCancel}
+                   confirmLoading={confirmLoading}
+                   width='auto'
+                   height='500px'
+                   closeIcon={false}
+                   okText='Подтвердить'
+                   cancelText='Вернуться'
+            >
+                <p>Подвердить заказ</p>
+            </Modal>
+            {/*</NavLink>*/}
         </>
     )
 }

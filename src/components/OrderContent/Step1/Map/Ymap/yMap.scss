@@ -4,21 +4,22 @@
 }
 
 .map {
-  //width: 640px;
-  //height: 480px;
+  //  //width: 640px;
+  //  //height: 480px;
+  //
 }
 
-//[class*='copyrights-pane'] {
-//  display: none !important;
-//}
-//
-//[class*='ground-pane'] {
-//  filter: grayscale(1);
-//}
-//
-//[class*='image'] {
-//  background-repeat: no-repeat;
-//}
+[class*='copyrights-pane'] {
+  display: none !important;
+}
+
+[class*='ground-pane'] {
+  filter: grayscale(1);
+}
+
+[class*='image'] {
+  background-repeat: no-repeat;
+}
 
 .placemark {
   background-repeat: no-repeat;

@@ -1,4 +1,4 @@
-import {getAllCars} from "../api/getData";
+import {getAllCars} from "../api/api";
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
 

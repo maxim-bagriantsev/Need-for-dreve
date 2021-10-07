@@ -25,10 +25,16 @@ export const getAddress = () => {
     return axiosInstance.get(urls.address())
 }
 
-// подтверждаем заказ
-export const getOrderById = () => {
-    return axiosInstance.get(urls.orderId())
+// получаем статус
+export const getOrderStatus = () => {
+    return axiosInstance.get(urls.orderStatus())
 }
+
+// отправить заказ
+export const postOrder = (order) => {
+    return axiosInstance.post(urls.orderId(), order)
+}
+
 
 
 

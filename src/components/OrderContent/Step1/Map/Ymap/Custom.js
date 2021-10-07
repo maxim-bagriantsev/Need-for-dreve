@@ -27,6 +27,8 @@ export const YMapContainer = () => {
         }
     })
 
+
+
     const [defaultStateCity, setDefaultStateCity] = useState({
         center: [54.3187, 48.3978],
         zoom: 12,
@@ -60,7 +62,7 @@ export const YMapContainer = () => {
         const temp = [];
         for (const point of points) {
             await ymaps.current
-                .geocode(`${point.cityId.name}, ${point.address}`, {
+                .geocode(`${point.cityId?.name}, ${point.address}`, {
                     result: 1,
                 })
                 .then(async (res) => {

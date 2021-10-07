@@ -3,7 +3,9 @@ const initialState = {
     carData: null,
     streets: null,
     selectedTown: '',
+    selectedTownId: '',
     selectedStreetAndHouse: '',
+    selectedStreetAndHouseId: '',
     selectedCar: null,
     selectedColor: null,
     selectedDateStart: null,
@@ -18,8 +20,10 @@ const initialState = {
     priceMax: '',
     registerSign: '',
     imageSelectedCar: '',
-
     activePage: '',
+    orderStatus: null,
+    orderConfirm: null
+
 };
 
 export const reducerData = (state = initialState, action) => {
@@ -33,8 +37,12 @@ export const reducerData = (state = initialState, action) => {
             return {...state, streets: action.payload}
         case 'SELECT_TOWN':
             return {...state, selectedTown: action.payload}
+        case 'SELECT_TOWN_ID':
+            return {...state, selectedTownId: action.payload}
         case 'SELECT_STREET_AND_HOUSE':
             return {...state, selectedStreetAndHouse: action.payload}
+        case 'SELECT_STREET_AND_HOUSE_ID':
+            return {...state, selectedStreetAndHouseId: action.payload}
         case 'SELECT_CAR':
             return {...state, selectedCar: action.payload}
         case 'SELECT_COLOR':
@@ -66,7 +74,10 @@ export const reducerData = (state = initialState, action) => {
 
         case 'SET_CURRENT_ORDER_PAGE':
             return {...state, activePage: action.payload}
-
+        case 'SET_ORDER_STATUS':
+            return {...state, orderStatus: action.payload}
+        case 'GET_ORDER':
+            return {...state, order: action.payload}
         default:
             return state
     }

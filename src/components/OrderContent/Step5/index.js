@@ -13,7 +13,8 @@ export const OrderFinish = () => {
         selectedFullTank,
         selectedDateStart,
         registerSign,
-        imageSelectedCar
+        imageSelectedCar,
+        orderConfirm
     } = useSelector((state) => {
         return {
             selectedCar: state.reducerData.selectedCar,
@@ -21,6 +22,7 @@ export const OrderFinish = () => {
             selectedDateStart: state.reducerData.selectedDateStart,
             registerSign: state.reducerData.registerSign,
             imageSelectedCar: state.reducerData.imageSelectedCar,
+            orderConfirm: state.reducerData.order,
         }
     })
 
@@ -28,7 +30,10 @@ export const OrderFinish = () => {
 
     useEffect(() => {
         dispatch({type: 'SET_CURRENT_ORDER_PAGE', payload: 'CANCEL'})
+
     }, [])
+
+    const orderId = orderConfirm?.data?.id
 
     return (
         <div className='order'>
@@ -40,7 +45,7 @@ export const OrderFinish = () => {
                 <div className='steps-menu'>
                     <section>
                         <ul>
-                            Заказ номер RU58491823
+                            {`Заказ номер ${orderId}`}
                         </ul>
                     </section>
                 </div>
