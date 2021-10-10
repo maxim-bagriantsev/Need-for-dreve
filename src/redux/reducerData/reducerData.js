@@ -22,8 +22,7 @@ const initialState = {
     imageSelectedCar: '',
     activePage: '',
     orderStatus: null,
-    orderConfirm: null
-
+    orderConfirm: null,
 };
 
 export const reducerData = (state = initialState, action) => {

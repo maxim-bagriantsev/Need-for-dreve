@@ -48,15 +48,17 @@ export const Search = () => {
         return <Spiner/>
     }
 
-    const optionsTowns = townData.map((town) => {
+    const optionsTowns = townData.map((town, id) => {
         return {
+            key: id,
             value: town.name,
             id: town.id
         }
     })
 
-    const optionsStrits = streetFiltered.map(item => {
+    const optionsStrits = streetFiltered.map((item,id) => {
         return {
+            key: id,
             value: item.address,
             id: item.id
         }

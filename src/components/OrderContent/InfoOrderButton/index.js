@@ -10,11 +10,10 @@ import {useDispatch, useSelector} from "react-redux";
 import {NavLink} from "react-router-dom";
 import {postOrder} from "../../../api/api";
 
-export const InfoOrderButton = (orderId) => {
+export const InfoOrderButton = () => {
 
     let history = useHistory();
 
-    // Новый способ ES2015
     const {
         streetAndHouse,
         car,
@@ -32,7 +31,7 @@ export const InfoOrderButton = (orderId) => {
         selectedFullTank,
         selectedBabyChair,
         selectedRightDrive,
-        order
+
     } = useSelector((state) => {
         return {
             streetAndHouse: state.reducerData.selectedStreetAndHouse,
@@ -51,7 +50,6 @@ export const InfoOrderButton = (orderId) => {
             selectedFullTank: state.reducerData.selectedFullTank,
             selectedBabyChair: state.reducerData.selectedBabyChair,
             selectedRightDrive: state.reducerData.selectedRightDrive,
-            order: state.reducerData.order
         }
     })
 
@@ -90,9 +88,12 @@ export const InfoOrderButton = (orderId) => {
         postOrder(order)
             .then(response => {
                 dispatch({type: 'GET_ORDER', payload: response.data})
-                debugger
                 history.push(`/orderFinish/${response.data.data.id}`);
             })
+    }
+
+    const isDisabled = () => {
+        window.location.assign('/orderPage/step1')
     }
 
     const handleCancel = () => {
@@ -101,10 +102,6 @@ export const InfoOrderButton = (orderId) => {
     };
     //===============================================================================//
     const isInTotalDisabled = !selectedTariff || !color || !selectedDateStart || !selectedDateEnd
-
-    const isDisabled = () => {
-        window.location.assign('/orderPage/step1')
-    }
 
     return (
         <>
@@ -129,7 +126,6 @@ export const InfoOrderButton = (orderId) => {
                                      isVisible={activePage === 'CANCEL'}/>
             </div>
 
-            {/*<NavLink to={`/orderFinish/`}>*/}
             <Modal showModal={showModal}
                    visible={visible}
                    onOk={handleOk}
@@ -143,7 +139,6 @@ export const InfoOrderButton = (orderId) => {
             >
                 <p>Подвердить заказ</p>
             </Modal>
-            {/*</NavLink>*/}
         </>
     )
 }

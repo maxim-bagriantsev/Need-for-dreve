@@ -41,7 +41,7 @@ export const InfoOrder = (props) => {
 
             priceMin: state.reducerData.priceMin,
             priceMax: state.reducerData.priceMax,
-            activePage:state.reducerData.activePage,
+            activePage: state.reducerData.activePage,
         }
     })
 
@@ -50,7 +50,6 @@ export const InfoOrder = (props) => {
     // const selectedData = useSelector((state)=>{
     //     return {town: state.reducerData.selectedTown, streetAndHouse: state.reducerData.selectedStreetAndHouse}
     // })
-
 
 //=========Определение периода времени между двумя датами===========//
     const dateA = moment(selectedDateEnd, 'DD HH');
@@ -94,10 +93,6 @@ export const InfoOrder = (props) => {
                     priceMax={priceMax}
                     isVisible={activePage === 'SELECT_ADDITIONAL'}
                 />
-                {/*<div className='price-range'>*/}
-                {/*    <span className='price-range-title'>Цена:</span>*/}
-                {/*    {selectedCar && ` от ${priceMin.toLocaleString()} до ${priceMax.toLocaleString()} ₽`}*/}
-                {/*</div>*/}
             </div>
             <InfoOrderButton/>
         </div>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {Header} from "../Main/Header";
 import {InfoOrder} from "./InfoOrder";
 import {StepRouter} from "./StepRouter";
@@ -14,6 +14,7 @@ export const OrderContent = () => {
         streetAndHouse,
         car,
         color,
+        selectedDateStart,
         selectedDateEnd,
         selectedTariff,
         activePage,
@@ -30,6 +31,8 @@ export const OrderContent = () => {
         }
     })
 
+    const orderSelect = color && selectedTariff && selectedDateStart && selectedDateEnd
+
     return (
         <div className='order-content'>
             <Header/>
@@ -42,7 +45,9 @@ export const OrderContent = () => {
                                       isActive={activePage === 'SELECT_MODEL_CAR'}/>
                         <ItemStepMenu lable="Дополнительно" link={car ? `${'/orderPage/step3'}` : `${'#'}`}
                                       isActive={activePage === 'SELECT_ADDITIONAL'}/>
-                        <ItemStepMenu lable="Итого" link={`${'/orderPage/step4'}`} isActive={activePage === 'TOTAL'}/>
+                        <ItemStepMenu lable="Итого"
+                                      link={orderSelect ? `${'/orderPage/step4'}` : `${'#'}`}
+                                      isActive={activePage === 'TOTAL'}/>
                     </ul>
                 </section>
             </div>

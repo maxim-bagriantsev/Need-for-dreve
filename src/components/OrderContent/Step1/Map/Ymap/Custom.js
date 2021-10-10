@@ -1,11 +1,11 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Map, Placemark, YMaps} from 'react-yandex-maps';
-import ellipse from './ellipse.svg';
-import './yMap.scss'
 import {useSelector} from "react-redux";
 import {OrderData} from "./OrderData";
+import ellipse from './ellipse.svg';
+import './yMap.scss'
 
-const stylePIcons = {
+const styleIcons = {
     iconLayout: 'default#image',
     iconImageHref: ellipse,
     iconImageSize: [14, 14],
@@ -13,11 +13,14 @@ const stylePIcons = {
 const modules = ['geocode', 'Placemark'];
 
 export const YMapContainer = () => {
+    const ymaps = useRef(null);
+    const [orderInfo, setOrderInfo] = useState(OrderData)
+    const [coordsOfAllPoints, setCoordsOfAllPoints] = useState([])
 
     const {
         streets,
         selectedTown,
-        selectedStreetAndHouse
+        selectedStreetAndHouse,
     } = useSelector((state) => {
 
         return {
@@ -27,18 +30,10 @@ export const YMapContainer = () => {
         }
     })
 
-
-
     const [defaultStateCity, setDefaultStateCity] = useState({
         center: [54.3187, 48.3978],
         zoom: 12,
     })
-
-    const [orderInfo, setOrderInfo] = useState(OrderData)
-
-    const [coordsOfAllPoints, setCoordsOfAllPoints] = useState([])
-
-    const ymaps = useRef(null);
 
     function getCoordByCityNameAndSetToDefaultStateCity(city) {
         ymaps.current.geocode(city, {result: 1}).then((res) => {
@@ -87,6 +82,7 @@ export const YMapContainer = () => {
         }
     }, [streets]);
 
+
     useEffect(() => {
         if (selectedStreetAndHouse && coordsOfAllPoints.length > 0) {
             const pointNow = coordsOfAllPoints.find(
@@ -109,13 +105,13 @@ export const YMapContainer = () => {
     };
 
     return (
+
         <YMaps
             query={{
                 apikey: 'af28acb6-4b1c-4cd1-8251-b2f67a908cac',
             }}
         >
             <Map
-
                 className='size'
                 defaultState={defaultStateCity}
                 state={defaultStateCity}
@@ -129,7 +125,7 @@ export const YMapContainer = () => {
                         className='placemark'
                         key={item.point}
                         geometry={[item.lat, item.long]}
-                        options={stylePIcons}
+                        options={styleIcons}
                         onClick={() => onClickHandler(item.point)}
                     />
                 ))}
