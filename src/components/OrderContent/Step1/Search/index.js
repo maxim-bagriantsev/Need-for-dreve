@@ -86,7 +86,7 @@ export const Search = () => {
                     }}
                 />
             </div>
-            <div className='select-town'>
+            <div className='select-street'>
                 <p>Пункт выдачи</p>
                 <AutoComplete
                     onClear={() => {

@@ -34,6 +34,7 @@ export const OrderFinish = () => {
     }, [])
 
     const orderId = orderConfirm?.data?.id
+    const orderIsFullTank = orderConfirm.data?.isFullTank
 
     return (
         <div className='order'>
@@ -57,7 +58,7 @@ export const OrderFinish = () => {
                             <p className='car-number'>{registerSign}</p>
                             <p>
                                 <strong>Топливо </strong>
-                                {selectedFullTank ? `${'100%'}` : ''}
+                                {orderIsFullTank ? `${'100%'}` : ''}
                             </p>
                             <p>
                                 <strong>Доступна с </strong>

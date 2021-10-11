@@ -8,12 +8,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {useOrderStatus} from "../../../hooks/useOrderStatus";
 
 export const Step1 = () => {
-
-    // отправляем запрос на бэк и кладем в store - города
     useAllTowns()
-    // отправляем запрос на бэк и кладем в store - адреса выдачи машин
     useAllAddress()
-    // отправляем запрос на бэк и кладем в store - статус заказа
     useOrderStatus()
 
     const orderStatusId = useSelector((state) => {

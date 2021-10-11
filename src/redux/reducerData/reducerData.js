@@ -34,7 +34,7 @@ export const reducerData = (state = initialState, action) => {
             return {...state, carData: action.payload}
         case 'SET_ALL_STREET_AND_HOUSE':
             return {...state, streets: action.payload}
-        case 'SELECT_TOWN':
+                case 'SELECT_TOWN':
             return {...state, selectedTown: action.payload}
         case 'SELECT_TOWN_ID':
             return {...state, selectedTownId: action.payload}

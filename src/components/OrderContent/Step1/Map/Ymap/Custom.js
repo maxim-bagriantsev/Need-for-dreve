@@ -1,6 +1,6 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {Map, Placemark, YMaps} from 'react-yandex-maps';
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {OrderData} from "./OrderData";
 import ellipse from './ellipse.svg';
 import './yMap.scss'
@@ -17,12 +17,13 @@ export const YMapContainer = () => {
     const [orderInfo, setOrderInfo] = useState(OrderData)
     const [coordsOfAllPoints, setCoordsOfAllPoints] = useState([])
 
+    const dispatch = useDispatch()
+
     const {
         streets,
         selectedTown,
         selectedStreetAndHouse,
     } = useSelector((state) => {
-
         return {
             streets: state.reducerData.streets,
             selectedTown: state.reducerData.selectedTown,
@@ -57,7 +58,7 @@ export const YMapContainer = () => {
         const temp = [];
         for (const point of points) {
             await ymaps.current
-                .geocode(`${point.cityId?.name}, ${point.address}`, {
+                .geocode(`${point.cityId?.name} ${point.address}`, {
                     result: 1,
                 })
                 .then(async (res) => {
@@ -65,16 +66,17 @@ export const YMapContainer = () => {
                     const coordsPoint = await firstGeoObject.geometry.getCoordinates();
 
                     temp.push({
-                        point: point.name,
+                        point: point.address,
                         lat: coordsPoint[0],
                         long: coordsPoint[1],
                     });
                 })
-
                 .catch((error) => console.log('getGeo', error));
         }
         setCoordsOfAllPoints([...temp]);
     }
+
+    console.log(streets)
 
     useEffect(async () => {
         if (ymaps.current) {
@@ -84,6 +86,7 @@ export const YMapContainer = () => {
 
 
     useEffect(() => {
+
         if (selectedStreetAndHouse && coordsOfAllPoints.length > 0) {
             const pointNow = coordsOfAllPoints.find(
                 (item) => item.point === selectedStreetAndHouse,
@@ -98,10 +101,12 @@ export const YMapContainer = () => {
     }, [orderInfo.location.point]);
 
     const onClickHandler = async (point) => {
+        debugger
         setOrderInfo((prev) => ({
             ...prev,
             location: {...prev.location, point},
         }));
+        dispatch({type: 'SELECT_STREET_AND_HOUSE', payload: point})
     };
 
     return (
@@ -120,7 +125,7 @@ export const YMapContainer = () => {
                     ymaps.current = api;
                 }}
             >
-                {coordsOfAllPoints?.map((item) => (
+                {coordsOfAllPoints.map((item) => (
                     <Placemark
                         className='placemark'
                         key={item.point}

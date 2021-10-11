@@ -29,6 +29,20 @@
   font-style: normal;
 }
 
+.select-street {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.select-street p {
+  text-align: right;
+  font-weight: 500;
+  line-height: 16px;
+  font-style: normal;
+  margin: 8px 0;
+}
+
 // стилизация input-placeholder - при клике убирается содержимое
 :focus::-webkit-input-placeholder {
   color: transparent
@@ -54,7 +68,8 @@
   padding-left: 8px;
   margin-bottom: 6px;
 }
-.ant-select-single .ant-select-selector .ant-select-selection-search{
+
+.ant-select-single .ant-select-selector .ant-select-selection-search {
   left: 6px;
 }
 
