@@ -17,12 +17,13 @@ export const Search = () => {
         streets,
         selectedTown,
     } = useSelector((state) => {
-        return {
-            selectedStreetAndHouse: state.reducerData.selectedStreetAndHouse,
-            townData: state.reducerData.townData,
-            streets: state.reducerData.streets,
-            selectedTown: state.reducerData.selectedTown,
-        }
+        // return {
+        //     selectedStreetAndHouse: state.reducerData.selectedStreetAndHouse,
+        //     townData: state.reducerData.townData,
+        //     streets: state.reducerData.streets,
+        //     selectedTown: state.reducerData.selectedTown,
+        // }
+        return state.reducerData
     })
 
     //фильтр улиц в выбранном городе

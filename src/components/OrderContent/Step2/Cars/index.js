@@ -11,32 +11,33 @@ export const Cars = () => {
 // вытаскиваем данные машин из store
     const {
         selectedClassCar,
-        cars
+        carData
     } = useSelector((state) => {
-        return {
-            selectedClassCar: state.reducerData.selectedClassCar,
-            cars: state.reducerData.carData
-        }
+        // return {
+        //     selectedClassCar: state.reducerData.selectedClassCar,
+        //     carData: state.reducerData.carData
+        // }
+        return state.reducerData
     })
 
     // =================фильтр машин по классу=============================//
     const classCarFiltered = useMemo(() => {
         if (selectedClassCar === null) {
-            return cars
+            return carData
         } else if (selectedClassCar) {
-            return cars.filter(fileteCar => {
+            return carData.filter(fileteCar => {
                 if (selectedClassCar === fileteCar.categoryId?.name) {
                     return fileteCar.categoryId?.name
                 } else if (selectedClassCar === 'Все модели') {
-                    return cars
+                    return carData
                 }
             })
         }
-    },  [cars] [selectedClassCar])
+    },  [carData] [selectedClassCar])
     // ========================================================================//
 
     // если данные не загружены показываем спиннер
-    if (!cars) {
+    if (!carData) {
         return <Spiner/>
     }
 

@@ -13,13 +13,14 @@ export const Step4 = () => {
         registerSign,
         imageSelectedCar
     } = useSelector((state) => {
-        return {
-            selectedCar: state.reducerData.selectedCar,
-            selectedFullTank: state.reducerData.selectedFullTank,
-            selectedDateStart: state.reducerData.selectedDateStart,
-            registerSign: state.reducerData.registerSign,
-            imageSelectedCar: state.reducerData.imageSelectedCar,
-        }
+        // return {
+        //     selectedCar: state.reducerData.selectedCar,
+        //     selectedFullTank: state.reducerData.selectedFullTank,
+        //     selectedDateStart: state.reducerData.selectedDateStart,
+        //     registerSign: state.reducerData.registerSign,
+        //     imageSelectedCar: state.reducerData.imageSelectedCar,
+        // }
+        return state.reducerData
     })
 
     const dispatch = useDispatch()

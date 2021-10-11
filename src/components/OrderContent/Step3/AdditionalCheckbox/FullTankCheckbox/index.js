@@ -8,7 +8,6 @@ export const FullTankCheckbox = () => {
     const dispatch = useDispatch()
 
     const hendleSelectFullTank = (event) => {
-
         dispatch({type: 'SELECT_FULL_TANK', payload: event.target.checked})
     }
 

@@ -15,10 +15,8 @@ export const InfoOrderButton = () => {
     let history = useHistory();
 
     const {
-        streetAndHouse,
-        car,
+        selectedStreetAndHouse,
         selectedTariff,
-        color,
         selectedDateStart,
         selectedDateEnd,
         activePage,
@@ -31,26 +29,24 @@ export const InfoOrderButton = () => {
         selectedFullTank,
         selectedBabyChair,
         selectedRightDrive,
-
     } = useSelector((state) => {
-        return {
-            streetAndHouse: state.reducerData.selectedStreetAndHouse,
-            car: state.reducerData.selectedCar,
-            selectedTariff: state.reducerData.selectedTariff,
-            color: state.reducerData.selectedColor,
-            selectedDateStart: state.reducerData.selectedDateStart,
-            selectedDateEnd: state.reducerData.selectedDateEnd,
-            activePage: state.reducerData.activePage,
-            selectedTownId: state.reducerData.selectedTownId,
-            selectedCar: state.reducerData.selectedCar,
-            selectedColor: state.reducerData.selectedColor,
-            selectedClassCar: state.reducerData.selectedClassCar,
-            priceMax: state.reducerData.priceMax,
-            selectedStreetAndHouseId: state.reducerData.selectedStreetAndHouseId,
-            selectedFullTank: state.reducerData.selectedFullTank,
-            selectedBabyChair: state.reducerData.selectedBabyChair,
-            selectedRightDrive: state.reducerData.selectedRightDrive,
-        }
+        // return {
+        //     selectedStreetAndHouse: state.reducerData.selectedStreetAndHouse,
+        //     selectedTariff: state.reducerData.selectedTariff,
+        //     selectedDateStart: state.reducerData.selectedDateStart,
+        //     selectedDateEnd: state.reducerData.selectedDateEnd,
+        //     activePage: state.reducerData.activePage,
+        //     selectedTownId: state.reducerData.selectedTownId,
+        //     selectedCar: state.reducerData.selectedCar,
+        //     selectedColor: state.reducerData.selectedColor,
+        //     selectedClassCar: state.reducerData.selectedClassCar,
+        //     priceMax: state.reducerData.priceMax,
+        //     selectedStreetAndHouseId: state.reducerData.selectedStreetAndHouseId,
+        //     selectedFullTank: state.reducerData.selectedFullTank,
+        //     selectedBabyChair: state.reducerData.selectedBabyChair,
+        //     selectedRightDrive: state.reducerData.selectedRightDrive,
+        // }
+        return state.reducerData
     })
 
     //======================================================================================================//
@@ -101,29 +97,43 @@ export const InfoOrderButton = () => {
         setVisible(false);
     };
     //===============================================================================//
-    const isInTotalDisabled = !selectedTariff || !color || !selectedDateStart || !selectedDateEnd
-
+    const isInTotalDisabled = !selectedTariff || !selectedColor || !selectedDateStart || !selectedDateEnd
+    debugger
     return (
         <>
             <NavLink to={'/orderPage/step2'}>
-                <ItemInfoOrderButton lable={selectModel} disabled={!streetAndHouse} type={'link'}
-                                     isVisible={activePage === 'SELECT_LOCATION'}/>
+                <ItemInfoOrderButton lable={selectModel}
+                                     disabled={!selectedStreetAndHouse}
+                                     type={'link'}
+                                     isVisible={activePage === 'SELECT_LOCATION'}
+                />
             </NavLink>
             <NavLink to={'/orderPage/step3'}>
-                <ItemInfoOrderButton lable={additionally} disabled={!car} type={'link'}
-                                     isVisible={activePage === 'SELECT_MODEL_CAR'}/>
+                <ItemInfoOrderButton lable={additionally}
+                                     disabled={!selectedCar}
+                                     type={'link'}
+                                     isVisible={activePage === 'SELECT_MODEL_CAR'}
+                />
             < /NavLink>
             <NavLink to={'/orderPage/step4'}>
-                <ItemInfoOrderButton lable={inTotal} disabled={isInTotalDisabled} type={'link'}
-                                     isVisible={activePage === 'SELECT_ADDITIONAL'}/>
+                <ItemInfoOrderButton lable={inTotal}
+                                     disabled={isInTotalDisabled}
+                                     type={'link'}
+                                     isVisible={activePage === 'SELECT_ADDITIONAL'}
+                />
             </NavLink>
 
-            <ItemInfoOrderButton lable={toOrder} onClick={showModal} disabled={!selectedTariff}
-                                 isVisible={activePage === 'TOTAL'}/>
+            <ItemInfoOrderButton lable={toOrder}
+                                 onClick={showModal}
+                                 disabled={!selectedTariff}
+                                 isVisible={activePage === 'TOTAL'}
+            />
 
             <div className='btn-cancel'>
-                <ItemInfoOrderButton lable={toCancel} onClick={isDisabled}
-                                     isVisible={activePage === 'CANCEL'}/>
+                <ItemInfoOrderButton lable={toCancel}
+                                     onClick={isDisabled}
+                                     isVisible={activePage === 'CANCEL'}
+                />
             </div>
 
             <Modal showModal={showModal}

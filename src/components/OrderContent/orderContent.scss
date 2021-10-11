@@ -49,13 +49,18 @@
   display: none;
 }
 
-.steps-menu ul li a {
+
+.step-menu-text a {
   color: #999;
   text-decoration: none;
 }
 
 .step-menu-text-active a {
-  color: #0EC261 !important;
+  color: #0EC261 ;
+}
+
+.step-menu-text-enabled a {
+  color: black ;
 }
 
 //Иконка - play (треугольник)

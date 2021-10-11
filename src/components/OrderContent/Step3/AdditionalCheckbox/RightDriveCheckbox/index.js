@@ -8,7 +8,6 @@ export const RightDriveCheckbox = () => {
     const dispatch = useDispatch()
 
     const hendleSelectRightDrive = (event) => {
-
         dispatch({type: 'SELECT_RIGHT_DRIVE', payload: event.target.checked})
     }
 

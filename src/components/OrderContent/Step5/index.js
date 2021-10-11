@@ -14,16 +14,17 @@ export const OrderFinish = () => {
         selectedDateStart,
         registerSign,
         imageSelectedCar,
-        orderConfirm
+        order
     } = useSelector((state) => {
-        return {
-            selectedCar: state.reducerData.selectedCar,
-            selectedFullTank: state.reducerData.selectedFullTank,
-            selectedDateStart: state.reducerData.selectedDateStart,
-            registerSign: state.reducerData.registerSign,
-            imageSelectedCar: state.reducerData.imageSelectedCar,
-            orderConfirm: state.reducerData.order,
-        }
+        // return {
+        //     selectedCar: state.reducerData.selectedCar,
+        //     selectedFullTank: state.reducerData.selectedFullTank,
+        //     selectedDateStart: state.reducerData.selectedDateStart,
+        //     registerSign: state.reducerData.registerSign,
+        //     imageSelectedCar: state.reducerData.imageSelectedCar,
+        //     order: state.reducerData.order,
+        // }
+        return state.reducerData
     })
 
     const dispatch = useDispatch()
@@ -33,8 +34,8 @@ export const OrderFinish = () => {
 
     }, [])
 
-    const orderId = orderConfirm?.data?.id
-    const orderIsFullTank = orderConfirm.data?.isFullTank
+    const orderId = order?.data?.id
+    const orderIsFullTank = order.data?.isFullTank
 
     return (
         <div className='order'>

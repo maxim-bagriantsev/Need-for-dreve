@@ -10,39 +10,38 @@ export const InfoOrder = (props) => {
 
     // Новый способ ES2015
     const {
-        town,
-        streetAndHouse,
+        selectedTown,
+        selectedStreetAndHouse,
         selectedCar,
-        color,
+        selectedColor,
         selectedDateStart,
         selectedDateEnd,
         selectedTariff,
         selectedFullTank,
         selectedBabyChair,
         selectedRightDrive,
-
         priceMin,
         priceMax,
 
         activePage
     } = useSelector((state) => {
 
-        return {
-            town: state.reducerData.selectedTown,
-            streetAndHouse: state.reducerData.selectedStreetAndHouse,
-            selectedCar: state.reducerData.selectedCar,
-            color: state.reducerData.selectedColor,
-            selectedDateStart: state.reducerData.selectedDateStart,
-            selectedDateEnd: state.reducerData.selectedDateEnd,
-            selectedTariff: state.reducerData.selectedTariff,
-            selectedFullTank: state.reducerData.selectedFullTank,
-            selectedBabyChair: state.reducerData.selectedBabyChair,
-            selectedRightDrive: state.reducerData.selectedRightDrive,
-
-            priceMin: state.reducerData.priceMin,
-            priceMax: state.reducerData.priceMax,
-            activePage: state.reducerData.activePage,
-        }
+        // return {
+        //     selectedTown: state.reducerData.selectedTown,
+        //     selectedStreetAndHouse: state.reducerData.selectedStreetAndHouse,
+        //     selectedCar: state.reducerData.selectedCar,
+        //     selectedColor: state.reducerData.selectedColor,
+        //     selectedDateStart: state.reducerData.selectedDateStart,
+        //     selectedDateEnd: state.reducerData.selectedDateEnd,
+        //     selectedTariff: state.reducerData.selectedTariff,
+        //     selectedFullTank: state.reducerData.selectedFullTank,
+        //     selectedBabyChair: state.reducerData.selectedBabyChair,
+        //     selectedRightDrive: state.reducerData.selectedRightDrive,
+        //     priceMin: state.reducerData.priceMin,
+        //     priceMax: state.reducerData.priceMax,
+        //     activePage: state.reducerData.activePage,
+        // }
+        return state.reducerData
     })
 
 
@@ -74,11 +73,11 @@ export const InfoOrder = (props) => {
             <p>Ваш заказ:</p>
             <div className='info-order-data'>
                 {/*// если выбран город, отображаем информацию в меню заказа*/}
-                {town && <OrderRow label="Пункт выдачи" value={`${town}, ${streetAndHouse}`}/>}
+                {selectedTown && <OrderRow label="Пункт выдачи" value={`${selectedTown}, ${selectedStreetAndHouse}`}/>}
                 {/*// если выбрана машина, отображаем информацию в меню заказа*/}
                 {selectedCar && <OrderRow label="Модель" value={`${selectedCar}`}/>}
                 {/*// если выбран цвет, отображаем информацию в меню заказа*/}
-                {color && <OrderRow label="Цвет" value={`${color}`}/>}
+                {selectedColor && <OrderRow label="Цвет" value={`${selectedColor}`}/>}
                 {/*// если выбран период времени, отображаем информацию в меню заказа*/}
                 {selectedDateEnd && < OrderRow label="Длительность аренды" value={`${date.days} д. ${date.hours} ч.`}/>}
                 {/*// если выбран тариф времени, отображаем информацию в меню заказа*/}

@@ -11,43 +11,55 @@ export const OrderContent = () => {
 
     // Новый способ ES2015
     const {
-        streetAndHouse,
-        car,
-        color,
+        selectedStreetAndHouse,
+        selectedCar,
+        selectedColor,
         selectedDateStart,
         selectedDateEnd,
         selectedTariff,
         activePage,
 
     } = useSelector((state) => {
-        return {
-            streetAndHouse: state.reducerData.selectedStreetAndHouse,
-            car: state.reducerData.selectedCar,
-            color: state.reducerData.selectedColor,
-            selectedDateStart: state.reducerData.selectedDateStart,
-            selectedDateEnd: state.reducerData.selectedDateEnd,
-            selectedTariff: state.reducerData.selectedTariff,
-            activePage: state.reducerData.activePage,
-        }
+        // return {
+        //     selectedStreetAndHouse: state.reducerData.selectedStreetAndHouse,
+        //     selectedCar: state.reducerData.selectedCar,
+        //     selectedColor: state.reducerData.selectedColor,
+        //     selectedDateStart: state.reducerData.selectedDateStart,
+        //     selectedDateEnd: state.reducerData.selectedDateEnd,
+        //     selectedTariff: state.reducerData.selectedTariff,
+        //     activePage: state.reducerData.activePage,
+        // }
+        return state.reducerData
     })
 
-    const orderSelect = color && selectedTariff && selectedDateStart && selectedDateEnd
-
+    const orderSelect = selectedColor && selectedTariff && selectedDateStart && selectedDateEnd
+    const isInTotalDisabled = !selectedTariff || !selectedColor || !selectedDateStart || !selectedDateEnd
     return (
         <div className='order-content'>
             <Header/>
             <div className='steps-menu'>
                 <section>
                     <ul>
-                        <ItemStepMenu lable="Местоположение" link={`${'/orderPage/step1'}`}
-                                      isActive={activePage === 'SELECT_LOCATION'}/>
-                        <ItemStepMenu lable="Модель" link={streetAndHouse ? `${'/orderPage/step2'}` : `${'#'}`}
-                                      isActive={activePage === 'SELECT_MODEL_CAR'}/>
-                        <ItemStepMenu lable="Дополнительно" link={car ? `${'/orderPage/step3'}` : `${'#'}`}
-                                      isActive={activePage === 'SELECT_ADDITIONAL'}/>
+                        <ItemStepMenu lable="Местоположение"
+                                      link={`${'/orderPage/step1'}`}
+                                      isActive={activePage === 'SELECT_LOCATION'}
+                                      isEnabled={selectedStreetAndHouse}
+                        />
+                        <ItemStepMenu lable="Модель"
+                                      link={selectedStreetAndHouse ? `${'/orderPage/step2'}` : `${'#'}`}
+                                      isActive={activePage === 'SELECT_MODEL_CAR'}
+                                      isEnabled={selectedCar || selectedStreetAndHouse}
+                        />
+                        <ItemStepMenu lable="Дополнительно"
+                                      link={selectedCar ? `${'/orderPage/step3'}` : `${'#'}`}
+                                      isActive={activePage === 'SELECT_ADDITIONAL'}
+                                      isEnabled={!isInTotalDisabled || selectedCar}
+                        />
                         <ItemStepMenu lable="Итого"
                                       link={orderSelect ? `${'/orderPage/step4'}` : `${'#'}`}
-                                      isActive={activePage === 'TOTAL'}/>
+                                      isActive={activePage === 'TOTAL'}
+                                      isEnabled={selectedTariff || !isInTotalDisabled}
+                        />
                     </ul>
                 </section>
             </div>
