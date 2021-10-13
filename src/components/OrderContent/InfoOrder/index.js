@@ -8,7 +8,6 @@ import {PriceOrder} from "./PriceOrder";
 
 export const InfoOrder = (props) => {
 
-    // Новый способ ES2015
     const {
         selectedTown,
         selectedStreetAndHouse,

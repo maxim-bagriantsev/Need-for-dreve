@@ -9,7 +9,7 @@ export const useAllTowns = () => {
     useEffect(() => {
         getAllTowns()
             .then(response => {
-                dispatch({type: 'SET_ALL_TOWNS', payload: response.data.data}) // - action {type: 'GET_ALL_TOWNS', payload: response.data}
+                dispatch({type: 'SET_ALL_TOWNS', payload: response.data.data})
             })
     }, [])
 }

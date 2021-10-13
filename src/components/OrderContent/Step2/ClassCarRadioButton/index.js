@@ -1,8 +1,15 @@
-import React, {useMemo} from "react";
-import {allModel,sport,superEconomy,luxury,name, economyClass, premiumClass} from "./itemClassCarRarioButton.constans";
+import React, {useEffect, useMemo} from "react";
+import {
+    allModel,
+    sport,
+    superEconomy,
+    luxury,
+    name,
+    economyClass,
+    premiumClass
+} from "./itemClassCarRarioButton.constans";
 import {ItemClassCarRadioButton} from "./ItemClassCarRadioButton/ItemClassCarRadioButton";
 import './radioButton.scss';
-
 
 export const RadioButton = () => {
 

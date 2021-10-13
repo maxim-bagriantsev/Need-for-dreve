@@ -76,8 +76,6 @@ export const YMapContainer = () => {
         setCoordsOfAllPoints([...temp]);
     }
 
-    console.log(streets)
-
     useEffect(async () => {
         if (ymaps.current) {
             getGeo(streets);
@@ -101,7 +99,7 @@ export const YMapContainer = () => {
     }, [orderInfo.location.point]);
 
     const onClickHandler = async (point) => {
-        debugger
+
         setOrderInfo((prev) => ({
             ...prev,
             location: {...prev.location, point},

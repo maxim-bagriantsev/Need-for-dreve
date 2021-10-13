@@ -9,7 +9,7 @@ export const useAllCars = () => {
     useEffect(() => {
         getAllCars()
             .then(response => {
-                dispatch({type: 'SET_ALL_CARS', payload: response.data.data}) // - action {type: 'SET_ALL_CARS', payload: response.data}
+                dispatch({type: 'SET_ALL_CARS', payload: response.data.data})
             })
     }, [])
 }

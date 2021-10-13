@@ -16,6 +16,7 @@ export const CardCar = (props) => {
         dispatch({type: 'COLORS-CAR', payload: props.colors}) // доступные цвета
         dispatch({type: 'REGISTER-SING', payload: props.registerSign}) // регистрационный знак
         dispatch({type: 'IMAGE-SELECT_CAR', payload: props.imageCar}) // Картинка
+        dispatch({type: 'SELECT_CAR_ID', payload: props.carId}) // Id машины
     }
 
     return (

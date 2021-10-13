@@ -6,7 +6,9 @@ const initialState = {
     selectedTownId: '',
     selectedStreetAndHouse: '',
     selectedStreetAndHouseId: '',
+    selectedCategory: '',
     selectedCar: null,
+    selectedCarId: null,
     selectedColor: null,
     selectedDateStart: null,
     selectedDateEnd: null,
@@ -34,7 +36,7 @@ export const reducerData = (state = initialState, action) => {
             return {...state, carData: action.payload}
         case 'SET_ALL_STREET_AND_HOUSE':
             return {...state, streets: action.payload}
-                case 'SELECT_TOWN':
+        case 'SELECT_TOWN':
             return {...state, selectedTown: action.payload}
         case 'SELECT_TOWN_ID':
             return {...state, selectedTownId: action.payload}
@@ -42,8 +44,12 @@ export const reducerData = (state = initialState, action) => {
             return {...state, selectedStreetAndHouse: action.payload}
         case 'SELECT_STREET_AND_HOUSE_ID':
             return {...state, selectedStreetAndHouseId: action.payload}
+        case 'GET_CATEGORY':
+            return {...state, selectedCategory: action.payload}
         case 'SELECT_CAR':
             return {...state, selectedCar: action.payload}
+        case 'SELECT_CAR_ID':
+            return {...state, selectedCarId: action.payload}
         case 'SELECT_COLOR':
             return {...state, selectedColor: action.payload}
         case 'SELECT_DATE_START':

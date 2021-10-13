@@ -9,7 +9,6 @@ import {useSelector} from "react-redux";
 
 export const OrderContent = () => {
 
-    // Новый способ ES2015
     const {
         selectedStreetAndHouse,
         selectedCar,

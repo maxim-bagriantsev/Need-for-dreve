@@ -35,6 +35,11 @@ export const postOrder = (order) => {
     return axiosInstance.post(urls.orderId(), order)
 }
 
+// отправить категорию
+export const postCategory = (categoryName) => {
+    return axiosInstance.post(urls.category(), categoryName)
+}
+
 
 
 

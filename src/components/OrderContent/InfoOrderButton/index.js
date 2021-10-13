@@ -22,6 +22,7 @@ export const InfoOrderButton = () => {
         activePage,
         selectedStreetAndHouseId,
         selectedTownId,
+        selectedCarId,
         selectedCar,
         selectedColor,
         selectedClassCar,
@@ -71,7 +72,7 @@ export const InfoOrderButton = () => {
             },
             cityId: {id: selectedTownId.id},
             pointId: {id: selectedStreetAndHouseId.id},
-            carId: selectedCar,
+            carId: selectedCarId,
             color: {type: selectedColor},
             dateFrom: {selectedDateStart},
             dateTo: {selectedDateEnd},
@@ -98,7 +99,7 @@ export const InfoOrderButton = () => {
     };
     //===============================================================================//
     const isInTotalDisabled = !selectedTariff || !selectedColor || !selectedDateStart || !selectedDateEnd
-    debugger
+
     return (
         <>
             <NavLink to={'/orderPage/step2'}>

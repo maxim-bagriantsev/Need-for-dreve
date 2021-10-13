@@ -35,7 +35,12 @@ export const OrderFinish = () => {
     }, [])
 
     const orderId = order?.data?.id
-    const orderIsFullTank = order.data?.isFullTank
+    const orderIsFullTank = order?.data?.isFullTank
+    const orderCarName = order?.data?.carId.name
+    const orderCarNumber = order?.data?.carId.number
+    const orderCarImg = order?.data?.carId?.thumbnail.path.includes('base64')
+        ? order?.data?.carId?.thumbnail.path
+        : 'https://api-factory.simbirsoft1.com' + order?.data?.carId?.thumbnail.path
 
     return (
         <div className='order'>
@@ -55,8 +60,8 @@ export const OrderFinish = () => {
                     <div className='total-order'>
                         <div>
                             <h2 className='confirm-order-title'>Ваш заказ подтверждён</h2>
-                            <h3>{selectedCar}</h3>
-                            <p className='car-number'>{registerSign}</p>
+                            <h3>{orderCarName}</h3>
+                            <p className='car-number'>{orderCarNumber}</p>
                             <p>
                                 <strong>Топливо </strong>
                                 {orderIsFullTank ? `${'100%'}` : ''}
@@ -67,7 +72,7 @@ export const OrderFinish = () => {
                             </p>
                         </div>
                         <div className='total-car-img'>
-                            <img className='car-img' src={imageSelectedCar}/>
+                            <img className='car-img' src={orderCarImg}/>
                         </div>
                     </div>
                     <InfoOrder/>
