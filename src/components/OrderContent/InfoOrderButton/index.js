@@ -82,6 +82,7 @@ export const InfoOrderButton = () => {
             isNeedChildChair: selectedBabyChair,
             isRightWheel: selectedRightDrive
         }
+
         postOrder(order)
             .then(response => {
                 dispatch({type: 'GET_ORDER', payload: response.data})

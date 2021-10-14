@@ -30,15 +30,21 @@ export const getOrderStatus = () => {
     return axiosInstance.get(urls.orderStatus())
 }
 
+// получаем категории авто
+export const getCategory = () => {
+    return axiosInstance.get(urls.category())
+}
+
+export const getFilterCategory = (selectedCategoryId) => {
+    return axiosInstance.get(urls.categoryId(selectedCategoryId))
+}
+
 // отправить заказ
 export const postOrder = (order) => {
     return axiosInstance.post(urls.orderId(), order)
 }
 
-// отправить категорию
-export const postCategory = (categoryName) => {
-    return axiosInstance.post(urls.category(), categoryName)
-}
+
 
 
 

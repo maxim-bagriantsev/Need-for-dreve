@@ -1,7 +1,1 @@
 export const allModel = 'Все модели'
-export const sport = 'Спор'
-export const superEconomy = 'Супер-эконом'
-export const luxury = 'Люкс'
-export const name = 'Name'
-export const economyClass = 'Эконом+'
-export const premiumClass = 'Бизнес'

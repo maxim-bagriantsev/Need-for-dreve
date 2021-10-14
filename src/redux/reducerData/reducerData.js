@@ -2,11 +2,14 @@ const initialState = {
     townData: null,
     carData: null,
     streets: null,
+    categories: null,
     selectedTown: '',
     selectedTownId: '',
     selectedStreetAndHouse: '',
     selectedStreetAndHouseId: '',
-    selectedCategory: '',
+    selectedCategoryId: null,
+    filteredCategoryCar: null,
+    selectedCategory: null,
     selectedCar: null,
     selectedCarId: null,
     selectedColor: null,
@@ -28,7 +31,7 @@ const initialState = {
 };
 
 export const reducerData = (state = initialState, action) => {
-
+    debugger
     switch (action.type) {
         case 'SET_ALL_TOWNS':
             return {...state, townData: action.payload}
@@ -36,6 +39,12 @@ export const reducerData = (state = initialState, action) => {
             return {...state, carData: action.payload}
         case 'SET_ALL_STREET_AND_HOUSE':
             return {...state, streets: action.payload}
+        case 'SET_ALL_CATEGORY':
+            return {...state, categories: action.payload}
+        case 'SELECT_CLASS_CAR_ID':
+            return {...state, selectedCategoryId: action.payload}
+        case 'GET_FILTER_CATEGORY_CARS':
+            return {...state, filteredCategoryCar: action.payload}
         case 'SELECT_TOWN':
             return {...state, selectedTown: action.payload}
         case 'SELECT_TOWN_ID':
@@ -76,7 +85,6 @@ export const reducerData = (state = initialState, action) => {
             return {...state, registerSign: action.payload}
         case 'IMAGE-SELECT_CAR':
             return {...state, imageSelectedCar: action.payload}
-
         case 'SET_CURRENT_ORDER_PAGE':
             return {...state, activePage: action.payload}
         case 'SET_ORDER_STATUS':

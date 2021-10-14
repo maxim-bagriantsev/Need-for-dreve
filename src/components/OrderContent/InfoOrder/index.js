@@ -21,33 +21,11 @@ export const InfoOrder = (props) => {
         selectedRightDrive,
         priceMin,
         priceMax,
-
         activePage
     } = useSelector((state) => {
-
-        // return {
-        //     selectedTown: state.reducerData.selectedTown,
-        //     selectedStreetAndHouse: state.reducerData.selectedStreetAndHouse,
-        //     selectedCar: state.reducerData.selectedCar,
-        //     selectedColor: state.reducerData.selectedColor,
-        //     selectedDateStart: state.reducerData.selectedDateStart,
-        //     selectedDateEnd: state.reducerData.selectedDateEnd,
-        //     selectedTariff: state.reducerData.selectedTariff,
-        //     selectedFullTank: state.reducerData.selectedFullTank,
-        //     selectedBabyChair: state.reducerData.selectedBabyChair,
-        //     selectedRightDrive: state.reducerData.selectedRightDrive,
-        //     priceMin: state.reducerData.priceMin,
-        //     priceMax: state.reducerData.priceMax,
-        //     activePage: state.reducerData.activePage,
-        // }
         return state.reducerData
     })
 
-
-    //Аналогичный вариант
-    // const selectedData = useSelector((state)=>{
-    //     return {town: state.reducerData.selectedTown, streetAndHouse: state.reducerData.selectedStreetAndHouse}
-    // })
 
 //=========Определение периода времени между двумя датами===========//
     const dateA = moment(selectedDateEnd, 'DD HH');

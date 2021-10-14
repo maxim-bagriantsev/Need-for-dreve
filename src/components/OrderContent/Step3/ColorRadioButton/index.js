@@ -11,17 +11,6 @@ export const ColorRadioButton = () => {
         return state.reducerData
     })
 
-    // const radioButtonColor = radioBtnColor.map((btn, id) => {
-    //
-    //     return (
-    //         <ItemRadioButton
-    //             key={id}
-    //             id={btn.id}
-    //             text={btn.text}
-    //         />
-    //     )
-    // })
-
     const radioButtonColor = colorsCar.map((btn, id) => {
 
         return (

@@ -6,7 +6,6 @@ import './orderContent.scss';
 import {ItemStepMenu} from "./ItemStepMenu";
 import {useSelector} from "react-redux";
 
-
 export const OrderContent = () => {
 
     const {
@@ -17,18 +16,8 @@ export const OrderContent = () => {
         selectedDateEnd,
         selectedTariff,
         activePage,
-
     } = useSelector((state) => {
-        // return {
-        //     selectedStreetAndHouse: state.reducerData.selectedStreetAndHouse,
-        //     selectedCar: state.reducerData.selectedCar,
-        //     selectedColor: state.reducerData.selectedColor,
-        //     selectedDateStart: state.reducerData.selectedDateStart,
-        //     selectedDateEnd: state.reducerData.selectedDateEnd,
-        //     selectedTariff: state.reducerData.selectedTariff,
-        //     activePage: state.reducerData.activePage,
-        // }
-        return state.reducerData
+                return state.reducerData
     })
 
     const orderSelect = selectedColor && selectedTariff && selectedDateStart && selectedDateEnd

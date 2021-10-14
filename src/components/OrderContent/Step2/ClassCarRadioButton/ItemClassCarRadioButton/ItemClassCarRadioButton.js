@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {postCategory, postOrder} from "../../../../../api/api";
+import {getFilterCategory, postCategory, postOrder} from "../../../../../api/api";
 import {useHistory} from "react-router-dom";
 
 
@@ -9,31 +9,35 @@ export const ItemClassCarRadioButton = (props) => {
     const dispatch = useDispatch()
 
     const {
+        filteredCategoryCar,
         selectedCategory,
+        categories,
+        selectedClassCar,
+        selectedCategoryId,
+        carData
     } = useSelector((state) => {
         return state.reducerData
     })
 
-    const hendleChangeColor = () => {
+    const hendleChangeClass = () => {
         dispatch({type: 'SELECT_CLASS_CAR', payload: props.text})
+        dispatch({type: 'SELECT_CLASS_CAR_ID', payload: props.id})
 
-        // const categoryName = {
-        //     name: "Эконом+",
-        //     description: "Комфортные машины среднего класса"
-        // }
-        // postCategory(categoryName)
-        //     .then(response => {
-        //         dispatch({type: 'GET_CATEGORY', payload: response.data})
-        //     })
+        getFilterCategory(selectedCategoryId)
+            .then(response => {
+                dispatch({type: 'GET_FILTER_CATEGORY_CARS', payload: response.data.data})
+            })
     }
 
     return (
-        <label key={props.id} onClick={hendleChangeColor}>
+        <label key={props.id} onClick={hendleChangeClass}>
             <input
                 type="radio"
                 name="radioCar"
                 value="1"
                 className="real-radio-btn"
+                checked={props.isChecked}
+                onChange={props.onChange}
             />
             <span className="custom-radio-btn"/>
             {props.text}
