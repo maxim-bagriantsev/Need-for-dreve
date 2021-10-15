@@ -31,22 +31,6 @@ export const InfoOrderButton = () => {
         selectedBabyChair,
         selectedRightDrive,
     } = useSelector((state) => {
-        // return {
-        //     selectedStreetAndHouse: state.reducerData.selectedStreetAndHouse,
-        //     selectedTariff: state.reducerData.selectedTariff,
-        //     selectedDateStart: state.reducerData.selectedDateStart,
-        //     selectedDateEnd: state.reducerData.selectedDateEnd,
-        //     activePage: state.reducerData.activePage,
-        //     selectedTownId: state.reducerData.selectedTownId,
-        //     selectedCar: state.reducerData.selectedCar,
-        //     selectedColor: state.reducerData.selectedColor,
-        //     selectedClassCar: state.reducerData.selectedClassCar,
-        //     priceMax: state.reducerData.priceMax,
-        //     selectedStreetAndHouseId: state.reducerData.selectedStreetAndHouseId,
-        //     selectedFullTank: state.reducerData.selectedFullTank,
-        //     selectedBabyChair: state.reducerData.selectedBabyChair,
-        //     selectedRightDrive: state.reducerData.selectedRightDrive,
-        // }
         return state.reducerData
     })
 

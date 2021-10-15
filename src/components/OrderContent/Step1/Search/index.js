@@ -17,12 +17,6 @@ export const Search = () => {
         streets,
         selectedTown,
     } = useSelector((state) => {
-        // return {
-        //     selectedStreetAndHouse: state.reducerData.selectedStreetAndHouse,
-        //     townData: state.reducerData.townData,
-        //     streets: state.reducerData.streets,
-        //     selectedTown: state.reducerData.selectedTown,
-        // }
         return state.reducerData
     })
 
@@ -57,7 +51,7 @@ export const Search = () => {
         }
     })
 
-    const optionsStrits = streetFiltered.map((item,id) => {
+    const optionsStrits = streetFiltered.map((item, id) => {
         return {
             key: id,
             value: item.address,

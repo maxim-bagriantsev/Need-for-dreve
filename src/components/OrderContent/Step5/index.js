@@ -16,14 +16,6 @@ export const OrderFinish = () => {
         imageSelectedCar,
         order
     } = useSelector((state) => {
-        // return {
-        //     selectedCar: state.reducerData.selectedCar,
-        //     selectedFullTank: state.reducerData.selectedFullTank,
-        //     selectedDateStart: state.reducerData.selectedDateStart,
-        //     registerSign: state.reducerData.registerSign,
-        //     imageSelectedCar: state.reducerData.imageSelectedCar,
-        //     order: state.reducerData.order,
-        // }
         return state.reducerData
     })
 

@@ -13,7 +13,6 @@ export const Cars = () => {
         carData,
         filteredCategoryCar,
     } = useSelector((state) => {
-
         return state.reducerData
     })
 
