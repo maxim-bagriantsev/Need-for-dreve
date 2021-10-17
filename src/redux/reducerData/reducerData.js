@@ -31,7 +31,7 @@ const initialState = {
 };
 
 export const reducerData = (state = initialState, action) => {
-    debugger
+
     switch (action.type) {
         case 'SET_ALL_TOWNS':
             return {...state, townData: action.payload}

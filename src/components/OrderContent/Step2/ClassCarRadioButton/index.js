@@ -11,6 +11,7 @@ export const RadioButton = () => {
 
     useCategoryCar()
 
+
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -33,14 +34,15 @@ export const RadioButton = () => {
     })
 
     const hendleChange = () => {
-      setIsChecked(true)
+        setIsChecked(true)
     }
 
     return (
         <>
             <div className='button-radio'>
                 <div className="form-group">
-                    <ItemClassCarRadioButton text={allModel} isChecked={!selectedClassCar || isChecked} onChange={hendleChange}/>
+                    <ItemClassCarRadioButton text={allModel} isChecked={!selectedClassCar || isChecked}
+                                             onChange={hendleChange}/>
                     {categoryName}
                 </div>
             </div>

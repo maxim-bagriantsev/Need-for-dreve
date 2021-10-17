@@ -1,20 +1,13 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {getFilterCategory, postCategory, postOrder} from "../../../../../api/api";
-import {useHistory} from "react-router-dom";
-
+import {getFilterCategory} from "../../../../../api/api";
 
 export const ItemClassCarRadioButton = (props) => {
 
     const dispatch = useDispatch()
 
     const {
-        filteredCategoryCar,
-        selectedCategory,
-        categories,
-        selectedClassCar,
         selectedCategoryId,
-        carData
     } = useSelector((state) => {
         return state.reducerData
     })
