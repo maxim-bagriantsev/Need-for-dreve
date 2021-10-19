@@ -26,7 +26,6 @@ export const InfoOrder = (props) => {
         return state.reducerData
     })
 
-
 //=========Определение периода времени между двумя датами===========//
     const dateA = moment(selectedDateEnd, 'DD HH');
     const dateB = moment(selectedDateStart, 'DD HH');

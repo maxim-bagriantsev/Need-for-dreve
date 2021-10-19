@@ -4,11 +4,16 @@ import {ItemClassCarRadioButton} from "./ItemClassCarRadioButton/ItemClassCarRad
 import './radioButton.scss';
 import {useCategoryCar} from "../../../../hooks/useCategoryCar";
 import {useDispatch, useSelector} from "react-redux";
-import {getAllCars} from "../../../../api/api";
+import {getAllCars, getFilterCategory} from "../../../../api/api";
 
 export const RadioButton = () => {
     const [isChecked, setIsChecked] = useState(false)
-
+    const {
+        categories,
+        selectedClassCar
+    } = useSelector((state) => {
+        return state.reducerData
+    })
     useCategoryCar()
 
 
@@ -16,18 +21,11 @@ export const RadioButton = () => {
 
     useEffect(() => {
 
-        getAllCars()
+        getFilterCategory()
             .then(response => {
                 dispatch({type: 'GET_FILTER_CATEGORY_CARS', payload: response.data.data})
             })
     }, [])
-
-    const {
-        categories,
-        selectedClassCar
-    } = useSelector((state) => {
-        return state.reducerData
-    })
 
     const categoryName = categories?.map((item, id) => {
         return <ItemClassCarRadioButton text={item.name} id={item.id} key={id}/>
